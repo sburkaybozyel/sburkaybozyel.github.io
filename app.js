@@ -294,7 +294,6 @@ const projectGalleries = {
     "assets/erp-aeon/Ekran Resmi 2026-07-12 16.13.56.png",
     "assets/erp-aeon/Ekran Resmi 2026-07-12 16.30.03.png",
     "assets/erp-aeon/Ekran Resmi 2026-07-12 16.30.32.png",
-    "assets/erp-aeon/Ekran Resmi 2026-07-12 16.35.10.png"
   ],
   "Web Design": [
     "assets/bozburun-yacht-club/byc-home.png",
