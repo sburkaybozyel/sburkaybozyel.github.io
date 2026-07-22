@@ -3,139 +3,317 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Salih Burkay Bozyel | Polymath Inventor</title>
-  <meta name="description" content="Salih Burkay Bozyel: polymath inventor, independent researcher, product thinker, and systems designer.">
+  <meta name="theme-color" content="#08080c">
+  <title>AEON | Investor Brief</title>
+  <meta name="description" content="AEON is raising a $100K pre-seed validation round to scale Vent and launch Forge's global partner network.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AEON | Two products. One human thesis.">
+  <meta property="og:description" content="A concise investor brief for Vent and Forge, built by one founder without institutional capital.">
+  <meta property="og:image" content="https://sburkaybozyel.github.io/assets/aeon-investor-preview.png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="AEON — Two products. One human thesis. $100K pre-seed.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sburkaybozyel.github.io/assets/aeon-investor-preview.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" data-i18n="brand">Salih Burkay Bozyel</a>
-    <nav class="nav">
-      <a href="#web" data-i18n="navWeb">Web</a>
-      <a href="#apps" data-i18n="navApps">Apps</a>
-      <a href="#social" data-i18n="navSocial">Social</a>
-      <a href="#future" data-i18n="navFuture">Future</a>
-      <a href="#articles" data-i18n="navArticles">Articles</a>
-      <a href="#contact" data-i18n="navContact">Contact</a>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="AEON home">
+      <span class="brand-mark">A</span>
+      <span>AEON <em>Investor Brief</em></span>
+    </a>
+    <nav class="nav" id="siteNav" aria-label="Primary navigation">
+      <a href="#thesis" data-i18n="navThesis">Thesis</a>
+      <a href="#vent" data-i18n="navVent">Vent</a>
+      <a href="#forge" data-i18n="navForge">Forge</a>
+      <a href="#round" data-i18n="navRound">The round</a>
     </nav>
-    <div class="language-switch" aria-label="Language switch">
-      <button class="active" type="button" data-lang="en">EN</button>
-      <button type="button" data-lang="tr">TR</button>
+    <div class="header-actions">
+      <div class="language-switch" aria-label="Language selection">
+        <button class="active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+      </div>
+      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow" data-i18n="heroEyebrow">Salih Burkay Bozyel · polymath inventor · independent researcher</p>
-        <h1 data-i18n="heroTitle">I turn ideas across disciplines into systems people can use.</h1>
-        <p class="hero-lede" data-i18n="heroLede">I am an inventor and self-directed polymath working across products, science, design, hospitality, and operations. This is not a traditional CV. It is a proof page.</p>
+  <main>
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow" data-i18n="heroEyebrow">AEON · Private investor brief · 2026</p>
+        <h1 data-i18n="heroTitle">I built two global products with one MacBook. Now I’m ready to scale them.</h1>
+        <p class="hero-lede" data-i18n="heroLede">Vent turns a difficult moment into human connection. Forge turns the intention to move into people, places, events and commerce. Both were built without institutional capital.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#web" data-i18n="heroPrimary">See the work</a>
-          <a class="button secondary" href="#contact" data-i18n="heroSecondary">Open conversation</a>
+          <a class="button button-primary" href="#thesis" data-i18n="heroPrimary">Explore the thesis</a>
+          <a class="button button-ghost" href="#round"><span data-i18n="heroSecondary">View the $100K round</span><span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="proof-row" aria-label="Company proof points">
+          <div><strong>1</strong><span data-i18n="proofFounder">founder</span></div>
+          <div><strong>2</strong><span data-i18n="proofProducts">global products</span></div>
+          <div><strong>$0</strong><span data-i18n="proofCapital">institutional capital</span></div>
         </div>
       </div>
-      <aside class="hero-panel glass-panel">
-        <div class="hero-profile-wrap">
-          <img class="hero-profile" src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel">
-          <span class="hero-profile-caption">SB / 01</span>
+      <div class="hero-visual reveal" aria-label="Vent and Forge product previews">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <article class="product-phone vent-phone">
+          <div class="phone-topline"><span>VENT</span><span data-i18n="heroConnection">Human connection</span></div>
+          <div class="phone-frame"><img src="assets/vent/E5D25810-6887-4CD4-8B16-0FC8B03FF755_4_5005_c.jpeg" alt="Vent conversation intent screen"></div>
+        </article>
+        <article class="product-phone forge-phone">
+          <div class="phone-topline"><span>FORGE</span><span data-i18n="heroAction">Real-world action</span></div>
+          <div class="phone-frame"><img src="assets/forge/35AAA5C6-10D5-45F9-B9A0-430ED640463E.png" alt="Forge action map screen"></div>
+        </article>
+        <div class="global-stamp"><span class="pulse-dot"></span><span data-i18n="globalStamp">Global by design</span></div>
+      </div>
+    </section>
+
+    <section class="signal-band section-shell reveal" aria-label="Investment summary">
+      <span data-i18n="signalOne">English-first products</span>
+      <span data-i18n="signalTwo">Founder-built</span>
+      <span data-i18n="signalThree">Capital-efficient</span>
+      <span data-i18n="signalFour">Venture-scale ambition</span>
+    </section>
+
+    <section class="section-shell section-block" id="thesis">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="thesisEyebrow">The AEON thesis</p>
+        <h2 data-i18n="thesisTitle">Two products. One human operating system.</h2>
+        <p data-i18n="thesisIntro">I build intent-driven networks: products that understand what a person needs now, then create the shortest path to a meaningful outcome.</p>
+      </div>
+      <div class="thesis-grid">
+        <article class="thesis-card vent-accent reveal">
+          <div class="thesis-index">01</div>
+          <img src="assets/vent/vent-logo.png" alt="Vent logo" loading="lazy" decoding="async">
+          <p class="card-label" data-i18n="thesisVentLabel">Emotional intent</p>
+          <h3 data-i18n="thesisVentTitle">From “I need someone who understands” to a relevant person.</h3>
+          <div class="flow-line"><span data-i18n="thesisVentFlowOne">A specific moment</span><i>→</i><span data-i18n="thesisVentFlowTwo">Mutual connection</span></div>
+        </article>
+        <article class="thesis-card forge-accent reveal">
+          <div class="thesis-index">02</div>
+          <img src="assets/forge/forge-logo.png" alt="Forge logo" loading="lazy" decoding="async">
+          <p class="card-label" data-i18n="thesisForgeLabel">Physical intent</p>
+          <h3 data-i18n="thesisForgeTitle">From “I should move” to a person, place, event or business.</h3>
+          <div class="flow-line"><span data-i18n="thesisForgeFlowOne">Intent to move</span><i>→</i><span data-i18n="thesisForgeFlowTwo">Real-world action</span></div>
+        </article>
+      </div>
+      <blockquote class="thesis-quote reveal" data-i18n="thesisQuote">Technology is not the story. The story is how quickly an isolated intention becomes a real human outcome.</blockquote>
+    </section>
+
+    <section class="product-section vent-section" id="vent">
+      <div class="section-shell">
+        <div class="product-intro reveal">
+          <div>
+            <p class="eyebrow" data-i18n="ventEyebrow">Vent · Live product · Early traction</p>
+            <h2 data-i18n="ventTitle">People meet through what they are going through—not who they pretend to be.</h2>
+          </div>
+          <p data-i18n="ventIntro">Vent is a context-first peer connection network. A user chooses a specific topic, states what kind of conversation they need, sends or accepts a request and enters a focused 24-hour conversation by mutual consent.</p>
         </div>
-        <div class="hero-profile-intro" data-i18n="heroProfileIntro">An independent inventor working across products, hospitality, research, design, and culture. More than 25 original projects sit behind this page, connected by one habit: turn an unusual idea into something people can experience.</div>
-      </aside>
-    </section>
 
-    <section class="intro-band glass-panel">
-      <div class="section-kicker" data-i18n="thesisKicker">Positioning</div>
-      <div class="split">
-        <h2 data-i18n="thesisTitle">I did not follow one profession. I built a connected body of work.</h2>
-        <div class="rich-text">
-          <p data-i18n="thesisOne">I studied industrial engineering through the fourth year, then left before graduation when I realized the learning velocity and breadth I needed were larger than the school container.</p>
-          <p data-i18n="thesisTwo">I am not presenting myself as a software engineer. My role is inventor, product thinker, systems designer, and operator.</p>
+        <div class="vent-showcase">
+          <div class="phone-stack reveal">
+            <div class="showcase-phone front"><img src="assets/vent/E5D25810-6887-4CD4-8B16-0FC8B03FF755_4_5005_c.jpeg" alt="Vent conversation intent screen" loading="lazy" decoding="async"></div>
+          </div>
+          <div class="product-story reveal">
+            <p class="story-kicker" data-i18n="ventWhyLabel">The gap</p>
+            <p class="story-copy" data-i18n="ventWhy">Social media optimizes visibility. Forums are slow. Therapy is not always available and Vent does not replace it. Vent is built for the moment someone simply needs the right human being now.</p>
+            <div class="journey-strip" aria-label="Vent product journey">
+              <span data-i18n="ventStepOne">Choose a topic</span>
+              <i>→</i>
+              <span data-i18n="ventStepTwo">State the intent</span>
+              <i>→</i>
+              <span data-i18n="ventStepThree">Mutual invite</span>
+              <i>→</i>
+              <span data-i18n="ventStepFour">Talk</span>
+            </div>
+            <div class="detail-list">
+              <div><strong>12</strong><span data-i18n="ventCategories">structured categories</span></div>
+              <div><strong>222</strong><span data-i18n="ventTopics">specific topics</span></div>
+              <div><strong>37</strong><span data-i18n="ventLanguages">localized interfaces</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="metrics-heading reveal">
+          <div>
+            <p class="eyebrow" data-i18n="metricsEyebrow">Early proof</p>
+            <h3 data-i18n="metricsTitle">Small enough to be early. Real enough to learn from.</h3>
+          </div>
+          <p data-i18n="metricsNote">Product analytics snapshot · July 2026 · definitions and source exports available during diligence.</p>
+        </div>
+        <div class="metrics-grid">
+          <article class="metric reveal"><strong>860</strong><span data-i18n="metricMau">30-day active users</span></article>
+          <article class="metric reveal"><strong>220</strong><span data-i18n="metricWau">7-day active users</span></article>
+          <article class="metric reveal"><strong>46.1%</strong><span data-i18n="metricAcceptance">invite acceptance</span></article>
+          <article class="metric reveal"><strong>88.7%</strong><span data-i18n="metricMatch">matched within 24 hours</span></article>
+          <article class="metric reveal"><strong>19:23</strong><span data-i18n="metricEngagement">engagement per active user</span></article>
         </div>
       </div>
     </section>
 
-    <section class="section-block" id="web">
-      <div class="section-heading">
-        <div><div class="section-kicker" data-i18n="webSectionKicker">Web Works</div><h2 data-i18n="webSectionTitle">Digital hospitality, built for real operations.</h2></div>
-        <p data-i18n="webSectionIntro">Tourism software and web experiences designed around guests, staff, conversion, and trust.</p>
+    <section class="product-section forge-section" id="forge">
+      <div class="section-shell">
+        <div class="product-intro reveal">
+          <div>
+            <p class="eyebrow" data-i18n="forgeEyebrow">Forge · Product beta · Pre-traction</p>
+            <h2 data-i18n="forgeTitle">A global network that turns the intention to move into real-world action.</h2>
+          </div>
+          <p data-i18n="forgeIntro">Forge connects health and fitness discovery with nearby people, public places, events, professionals and commerce. It is English-first and global by design.</p>
+        </div>
+
+        <div class="global-callout reveal">
+          <p class="eyebrow" data-i18n="forgeGlobalEyebrow">Built in Istanbul. Designed for the world.</p>
+          <h3 data-i18n="forgeGlobalTitle">Istanbul is our first density market—not our geographic limit.</h3>
+          <p data-i18n="forgeGlobalText">It is where I can manually observe supply, behavior and local activation. From day one of the partner launch, a verified business in Los Angeles, Munich or anywhere else will be able to join remotely and create its own Forge node.</p>
+        </div>
+
+        <div class="forge-showcase">
+          <div class="forge-copy reveal">
+            <p class="story-kicker" data-i18n="forgeLoopLabel">The core loop</p>
+            <div class="forge-loop">
+              <article><span>01</span><strong data-i18n="forgeLoopOneTitle">Discover</strong><p data-i18n="forgeLoopOneText">Credible ideas, people and places.</p></article>
+              <article><span>02</span><strong data-i18n="forgeLoopTwoTitle">Connect</strong><p data-i18n="forgeLoopTwoText">Find a partner, group or event.</p></article>
+              <article><span>03</span><strong data-i18n="forgeLoopThreeTitle">Act</strong><p data-i18n="forgeLoopThreeText">Train, join, check in and progress.</p></article>
+              <article><span>04</span><strong data-i18n="forgeLoopFourTitle">Transact</strong><p data-i18n="forgeLoopFourText">Book expertise or buy what helps.</p></article>
+            </div>
+          </div>
+          <div class="forge-screens reveal">
+            <figure><img src="assets/forge/35AAA5C6-10D5-45F9-B9A0-430ED640463E.png" alt="Forge map and action screen" loading="lazy" decoding="async"><figcaption data-i18n="forgeScreenMap">Action and local discovery</figcaption></figure>
+            <figure><img src="assets/forge/screenshot_navigation.png" alt="Forge community feed screen" loading="lazy" decoding="async"><figcaption data-i18n="forgeScreenMarket">Community, progress and action</figcaption></figure>
+          </div>
+        </div>
       </div>
-      <div class="subsection-label" data-i18n="erpSectionTitle">ERP</div>
-      <div class="project-grid project-grid-single" id="erpGrid"></div>
-      <div class="subsection-label" data-i18n="webDesignSectionTitle">Web Design</div>
-      <div class="project-grid" id="webDesignGrid"></div>
     </section>
 
-    <section class="section-block" id="apps">
-      <div class="section-heading">
-        <div><div class="section-kicker" data-i18n="appsSectionKicker">Apps</div><h2 data-i18n="appsSectionTitle">Products that turn a strong idea into a daily surface.</h2></div>
+    <section class="section-shell section-block" id="partners">
+      <div class="section-heading reveal">
+        <p class="eyebrow" data-i18n="partnerEyebrow">Partner-led global expansion</p>
+        <h2 data-i18n="partnerTitle">Every partner can become a local growth node.</h2>
+        <p data-i18n="partnerIntro">Forge does not need a physical sales team in every city. From launch, any verified sports, fitness or wellness business will be able to join remotely, fill its profile and storefront, then activate its existing community with a localized QR and social media kit.</p>
       </div>
-      <div class="project-grid" id="appsGrid"></div>
+
+      <div class="partner-flow reveal" aria-label="Forge partner growth loop">
+        <span data-i18n="partnerStepOne">Partner joins</span><i>→</i>
+        <span data-i18n="partnerStepTwo">Storefront goes live</span><i>→</i>
+        <span data-i18n="partnerStepThree">QR kit activates customers</span><i>→</i>
+        <span data-i18n="partnerStepFour">Local Forge node grows</span><i>→</i>
+        <span data-i18n="partnerStepFive">Discovery and sales compound</span>
+      </div>
+
+      <div class="economics-grid">
+        <article class="economics-card reveal">
+          <p data-i18n="economicsTrialLabel">Each verified partner</p>
+          <strong>90 <small data-i18n="economicsDays">days</small></strong>
+          <span data-i18n="economicsTrialText">No subscription fee. The 8% transaction commission applies from the first sale.</span>
+        </article>
+        <article class="economics-card featured reveal">
+          <p data-i18n="economicsSubscriptionLabel">After activation</p>
+          <strong>$15 <small data-i18n="economicsMonth">/ month</small></strong>
+          <span data-i18n="economicsSubscriptionText">Active business profile, map visibility, storefront, events, analytics and gamification.</span>
+        </article>
+        <article class="economics-card reveal">
+          <p data-i18n="economicsCommissionLabel">Marketplace</p>
+          <strong>8%</strong>
+          <span data-i18n="economicsCommissionText">A consistent commission on all transactions completed through Forge.</span>
+        </article>
+      </div>
+
+      <div class="map-model reveal">
+        <article>
+          <span class="map-icon public-icon">◎</span>
+          <div><strong data-i18n="publicMapTitle">The public movement map</strong><p data-i18n="publicMapText">Parks, routes, courts and public activity spaces rise organically through check-ins and gamification.</p></div>
+        </article>
+        <article>
+          <span class="map-icon business-icon">◆</span>
+          <div><strong data-i18n="businessMapTitle">The partner business layer</strong><p data-i18n="businessMapText">Commercial visibility and selling tools are active services. They pause when the trial ends without a paid subscription.</p></div>
+        </article>
+      </div>
     </section>
 
-    <section class="section-block" id="social">
-      <div class="section-heading">
-        <div><div class="section-kicker" data-i18n="socialSectionKicker">Social Media</div><h2 data-i18n="socialSectionTitle">Networks shaped by behavior, contribution, and culture.</h2></div>
+    <section class="revenue-section">
+      <div class="section-shell section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow" data-i18n="revenueEyebrow">Business model</p>
+          <h2 data-i18n="revenueTitle">Consumer engagement on one side. Recurring and transactional revenue on the other.</h2>
+        </div>
+        <div class="revenue-grid">
+          <article class="revenue-card vent-revenue reveal">
+            <div class="revenue-top"><span>VENT</span><strong data-i18n="ventRevenueModel">Freemium consumer network</strong></div>
+            <p data-i18n="ventRevenueText">Free access builds conversation liquidity. Premium unlocks more control and connection value; advertising supports the free layer.</p>
+            <div class="revenue-tags"><span data-i18n="revenuePremium">Premium</span><span data-i18n="revenueAds">Advertising</span></div>
+          </article>
+          <article class="revenue-card forge-revenue reveal">
+            <div class="revenue-top"><span>FORGE</span><strong data-i18n="forgeRevenueModel">B2B2C local commerce network</strong></div>
+            <p data-i18n="forgeRevenueText">Users create demand and activity. The model charges verified businesses for their active commercial layer, while transactions create scalable upside.</p>
+            <div class="revenue-tags"><span>$15 / mo</span><span>8% <b data-i18n="revenueTakeRate">take rate</b></span></div>
+          </article>
+        </div>
       </div>
-      <div class="project-grid" id="socialGrid"></div>
     </section>
 
-    <section class="section-block" id="future">
-      <div class="section-heading">
-        <div><div class="section-kicker" data-i18n="gameSectionKicker">Game Project</div><h2 data-i18n="gameSectionTitle">A large narrative system kept intentionally under wraps.</h2></div>
+    <section class="section-shell section-block round-section" id="round">
+      <div class="round-hero reveal">
+        <p class="eyebrow" data-i18n="roundEyebrow">The raise</p>
+        <div class="round-amount">$100K</div>
+        <h2 data-i18n="roundTitle">A 9–12 month pre-seed validation round.</h2>
+        <p data-i18n="roundIntro">This capital does not fund an idea from zero. It turns founder-built products into measurable, repeatable growth systems.</p>
       </div>
-      <div class="project-grid project-grid-single" id="gameGrid"></div>
-      <div class="future-heading">
-        <div><div class="section-kicker" data-i18n="upcomingSectionKicker">Upcoming Projects</div><h2 data-i18n="upcomingSectionTitle">The next layer is already being designed.</h2></div>
-        <p data-i18n="upcomingSectionIntro">A non-spoiler catalogue of future systems, platforms, and experiments from the wider portfolio.</p>
+
+      <div class="allocation-grid">
+        <article class="allocation-card allocation-growth reveal"><span>60%</span><strong data-i18n="allocationGrowth">Measured paid growth, partner acquisition and distribution</strong><small>$60K</small></article>
+        <article class="allocation-card reveal"><span>15%</span><strong data-i18n="allocationProduct">Product, technical operations and trust</strong><small>$15K</small></article>
+        <article class="allocation-card reveal"><span>10%</span><strong data-i18n="allocationPeople">Focused specialists and execution capacity</strong><small>$10K</small></article>
+        <article class="allocation-card reveal"><span>15%</span><strong data-i18n="allocationReserve">Reserve, legal and unexpected costs</strong><small>$15K</small></article>
       </div>
-      <div class="upcoming-grid" id="upcomingGrid"></div>
+
+      <div class="milestones reveal">
+        <div class="milestone-title"><p class="eyebrow" data-i18n="milestonesEyebrow">What the round must prove</p><h3 data-i18n="milestonesTitle">The next round should be raised on evidence, not potential alone.</h3></div>
+        <div class="milestone-list">
+          <article><span>VENT</span><p data-i18n="milestoneVent">Repeatable acquisition, cohort retention and the first scalable premium economics.</p></article>
+          <article><span>FORGE</span><p data-i18n="milestoneForge">A launched global partner program, Istanbul density and the first trial-to-paid business cohort.</p></article>
+          <article><span>AEON</span><p data-i18n="milestoneAeon">Weekly metrics, disciplined capital allocation and a clear basis for the next financing decision.</p></article>
+        </div>
+      </div>
     </section>
 
-    <section class="section-block" id="articles">
-      <div class="section-heading">
-        <div><div class="section-kicker" data-i18n="articlesSectionKicker">Articles</div><h2 data-i18n="articlesSectionTitle">Research, philosophy, and unfinished questions.</h2></div>
-        <p data-i18n="articlesSectionIntro">A growing archive of independent essays across physics, mathematics, consciousness, and systems thinking.</p>
+    <section class="founder-section">
+      <div class="section-shell founder-grid">
+        <div class="founder-image reveal"><img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" loading="lazy" decoding="async"><span>Founder / 01</span></div>
+        <div class="founder-copy reveal">
+          <p class="eyebrow" data-i18n="founderEyebrow">Capital efficiency before capital</p>
+          <h2 data-i18n="founderTitle">I have already shown how far I can build alone.</h2>
+          <p data-i18n="founderTextOne">I designed, built and operated Vent and Forge without a funded team. Vent reached real user activity. Forge reached a broad product beta. The bottleneck is no longer my ability to create—it is throughput, distribution and market activation.</p>
+          <p data-i18n="founderTextTwo">I welcome experience, difficult questions and better ideas. Product and operating responsibility remain with the founder; every useful perspective gets heard.</p>
+          <div class="founder-signature"><strong>Salih Burkay Bozyel</strong><span data-i18n="founderRole">Founder · AEON</span></div>
+        </div>
       </div>
-      <article class="research-shell" id="researchArticle"></article>
     </section>
 
-    <section class="contact-panel glass-panel" id="contact">
-      <div>
-        <div class="section-kicker" data-i18n="contactKicker">Meeting Page</div>
-        <h2 data-i18n="contactTitle">Built for one serious conversation.</h2>
-      </div>
-      <p data-i18n="contactText">The final page will be hosted through GitHub Pages under the sburkaybozyel GitHub identity.</p>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:burkaybozyel@gmail.com" data-i18n="contactButton">Email Burkay</a>
-        <a class="button secondary" href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noreferrer" data-i18n="contactLinkedIn">Open LinkedIn</a>
+    <section class="section-shell closing-section" id="contact">
+      <div class="closing-card reveal">
+        <p class="eyebrow" data-i18n="closingEyebrow">One serious conversation</p>
+        <h2 data-i18n="closingTitle">I am raising $100K to turn two capital-efficient products into global, measurable businesses.</h2>
+        <p data-i18n="closingText">The investment is at AEON level. Detailed terms, product evidence and the diligence package are available privately.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="mailto:burkaybozyel@gmail.com?subject=AEON%20Investor%20Brief" data-i18n="closingEmail">Start the conversation</a>
+          <a class="button button-ghost" href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noreferrer"><span data-i18n="closingLinkedIn">Open LinkedIn</span><span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="terms-note" data-i18n="closingTerms">Investment terms are discussed privately and are not offered through this public page.</p>
       </div>
     </section>
   </main>
 
-  <div class="article-modal" id="articleModal" hidden>
-    <div class="article-modal-backdrop" data-close-article></div>
-    <section class="article-modal-panel" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle">
-      <button class="article-modal-close" type="button" data-close-article aria-label="Close">&times;</button>
-      <div id="articleModalContent"></div>
-    </section>
-  </div>
-
-  <div class="image-lightbox" id="imageLightbox" hidden>
-    <div class="image-lightbox-backdrop" data-close-image></div>
-    <button class="image-lightbox-close" type="button" data-close-image aria-label="Close image">&times;</button>
-    <div class="image-lightbox-content">
-      <div class="image-lightbox-count" id="lightboxCount"></div>
-      <img id="lightboxImage" src="" alt="">
-      <div class="image-lightbox-controls">
-        <button type="button" id="lightboxPrevious" aria-label="Previous image">←</button>
-        <button type="button" id="lightboxNext" aria-label="Next image">→</button>
-      </div>
-    </div>
-  </div>
+  <footer class="site-footer section-shell">
+    <span>AEON · 2026</span>
+    <span data-i18n="footerText">Private investor brief · English-first · Global by design</span>
+  </footer>
 
   <script src="app.js"></script>
 </body>

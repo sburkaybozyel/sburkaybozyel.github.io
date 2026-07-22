@@ -1,33 +1,22 @@
-# Salih Burkay Bozyel proof page
+# AEON investor brief
 
-Static bilingual portfolio/proof page for GitHub Pages.
+Bilingual, English-first investor microsite for Vent and Forge. The site is static and designed to publish directly through GitHub Pages.
 
-## Asset folders
+## Local preview
 
-```text
-assets/
-  profile/
-  vent/
-  forge/
-  bob/
-  undrgrnd/
-  erp-aeon/
-  rayana/
-  bozburun-yacht-club/
-  science-articles/
-  social-media/
-  proof-metrics/
+```bash
+python3 -m http.server 8000
 ```
 
-## Current expected image names
+Open `http://localhost:8000`. English is the default language; the Turkish version can be opened with `?lang=tr`.
+
+## Structure
 
 ```text
-assets/vent/hero.png
-assets/forge/screenshot_explore.png
-assets/bob/bob_screenshot.png
-assets/undrgrnd/hero.png
-assets/erp-aeon/02_ceo_overview.png
-assets/bozburun-yacht-club/hero.png
+index.html   investor narrative and product evidence
+styles.css  responsive visual system
+app.js      EN/TR content, navigation and subtle motion
+assets/     product, founder and analytics imagery
 ```
 
-The page still works without these files, then becomes visual as the assets are added.
+The public page keeps investment structure and detailed diligence materials private. Those are shared directly with qualified investors.
