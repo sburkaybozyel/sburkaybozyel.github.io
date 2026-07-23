@@ -813,12 +813,17 @@ body.nav-open .menu-button span:last-child {
 }
 
 .round-amount {
+  display: inline-block;
+  max-width: 100%;
   margin-top: 14px;
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(6rem, 11vw, 9.8rem);
-  font-weight: 500;
-  letter-spacing: -0.08em;
-  line-height: 0.78;
+  padding-right: 0.04em;
+  font-family: "Manrope", system-ui, sans-serif;
+  font-size: clamp(5.5rem, 9.5vw, 8.4rem);
+  font-variant-numeric: lining-nums tabular-nums;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+  white-space: nowrap;
   background: linear-gradient(110deg, var(--paper) 15%, var(--vent) 55%, var(--forge));
   -webkit-background-clip: text;
   background-clip: text;
@@ -1224,6 +1229,12 @@ body.nav-open .menu-button span:last-child {
   gap: clamp(42px, 7vw, 86px);
 }
 
+.investment-grid > *,
+.round-intro,
+.deal-card {
+  min-width: 0;
+}
+
 .investment-grid .round-intro h2 {
   max-width: 12ch;
 }
@@ -1253,7 +1264,9 @@ body.nav-open .menu-button span:last-child {
   font-size: clamp(1.85rem, 3vw, 2.75rem);
   font-weight: 500;
   letter-spacing: -0.035em;
-  line-height: 1.08;
+  line-height: 1.12;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .deal-facts {
@@ -1721,7 +1734,8 @@ body.nav-open .menu-button span:last-child {
   }
 
   .round-amount {
-    font-size: clamp(5.8rem, 27vw, 8rem);
+    font-size: clamp(4.7rem, 23vw, 7rem);
+    letter-spacing: -0.025em;
   }
 
   .round-intro h2 {
