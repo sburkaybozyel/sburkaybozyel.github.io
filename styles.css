@@ -376,6 +376,12 @@ body.nav-open .menu-button span:last-child {
   font-weight: 500;
 }
 
+.proof-row div:nth-child(3) strong {
+  font-size: clamp(0.72rem, 1.15vw, 0.92rem);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
 .proof-row span {
   color: var(--muted);
   font-size: 8px;
@@ -754,6 +760,15 @@ body.nav-open .menu-button span:last-child {
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   background: var(--line);
+}
+
+.pricing-label {
+  margin-top: 19px;
+  color: var(--forge-gold);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .pricing-strip div {
