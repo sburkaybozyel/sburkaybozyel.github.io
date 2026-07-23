@@ -1005,6 +1005,376 @@ body.nav-open .menu-button span:last-child {
   text-transform: uppercase;
 }
 
+.aeon-model {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  max-width: 650px;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--line);
+}
+
+.aeon-model span {
+  display: grid;
+  min-height: 54px;
+  place-items: center start;
+  padding: 10px;
+  background: rgba(7, 9, 13, 0.88);
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.product-section,
+.plan-section,
+.investment-section {
+  border-top: 1px solid var(--line);
+}
+
+.product-section {
+  padding-block: clamp(58px, 7vw, 82px);
+}
+
+.vent-section {
+  background: radial-gradient(circle at 6% 50%, rgba(37, 204, 230, 0.07), transparent 30rem);
+}
+
+.forge-section {
+  background: radial-gradient(circle at 94% 48%, rgba(255, 90, 40, 0.07), transparent 30rem);
+}
+
+.product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+  align-items: center;
+  gap: clamp(36px, 7vw, 92px);
+}
+
+.product-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.product-identity img {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  object-fit: contain;
+}
+
+.vent-section .card-label {
+  color: var(--vent);
+}
+
+.forge-section .card-label {
+  color: var(--forge);
+}
+
+.product-overview h2 {
+  max-width: 13ch;
+  margin-top: 20px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: -0.047em;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.product-copy {
+  max-width: 650px;
+  margin-top: 19px;
+  color: var(--paper-soft);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.evidence-panel,
+.commercial-panel,
+.deal-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 3vw, 34px);
+  background: rgba(14, 19, 27, 0.82);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+.evidence-panel {
+  border-color: rgba(37, 204, 230, 0.19);
+}
+
+.commercial-panel {
+  border-color: rgba(255, 90, 40, 0.2);
+}
+
+.panel-label {
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.evidence-panel .mini-metrics,
+.commercial-panel .pricing-strip {
+  margin-top: 17px;
+}
+
+.partner-note {
+  margin-top: 15px;
+  color: var(--paper-soft);
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.plan-section {
+  padding-block: clamp(60px, 7vw, 86px);
+  background: var(--bg-deep);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: clamp(30px, 4vw, 42px);
+}
+
+.plan-phase {
+  min-height: 265px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: clamp(22px, 2.6vw, 30px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.012));
+}
+
+.phase-number {
+  color: var(--line-strong);
+  font-family: "DM Mono", monospace;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.phase-time {
+  margin-top: 28px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.plan-phase h3 {
+  margin-top: 12px;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.plan-phase > p:last-child {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.validation-strip {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 22px;
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+}
+
+.validation-strip span {
+  color: var(--paper);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.validation-strip p {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.investment-section {
+  padding-block: clamp(62px, 8vw, 92px);
+  background:
+    radial-gradient(circle at 4% 18%, rgba(37, 204, 230, 0.08), transparent 28rem),
+    radial-gradient(circle at 96% 6%, rgba(255, 90, 40, 0.08), transparent 28rem),
+    var(--bg);
+}
+
+.investment-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(42px, 7vw, 86px);
+}
+
+.investment-grid .round-intro h2 {
+  max-width: 12ch;
+}
+
+.deal-card {
+  padding: clamp(25px, 3.5vw, 38px);
+}
+
+.deal-head {
+  display: grid;
+  gap: 8px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+}
+
+.deal-head span,
+.deal-facts span {
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.deal-head strong {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.85rem, 3vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.deal-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.deal-facts article {
+  min-height: 105px;
+  border-bottom: 1px solid var(--line);
+  padding: 17px 15px 17px 0;
+}
+
+.deal-facts article:nth-child(2n) {
+  border-left: 1px solid var(--line);
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+.deal-facts p {
+  margin-top: 7px;
+  color: var(--paper-soft);
+  font-size: 10px;
+  line-height: 1.48;
+}
+
+.deal-note {
+  margin-top: 17px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 7px;
+  line-height: 1.55;
+}
+
+.funding-use {
+  margin-top: clamp(38px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+}
+
+.funding-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--line);
+}
+
+.funding-grid article {
+  display: grid;
+  min-height: 145px;
+  align-content: space-between;
+  gap: 18px;
+  padding: 20px;
+  background: var(--surface);
+}
+
+.funding-grid strong {
+  font-family: "DM Mono", monospace;
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.funding-grid span {
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.funding-grid p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.45;
+}
+
+.founder-strip {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 58px);
+  margin-top: clamp(38px, 5vw, 56px);
+  border-top: 1px solid var(--line);
+  padding-top: clamp(30px, 4vw, 42px);
+}
+
+.founder-strip .founder-image {
+  width: 150px;
+  border-radius: 22px;
+  aspect-ratio: 1;
+}
+
+.founder-strip .founder-image span {
+  right: 10px;
+  bottom: 9px;
+  font-size: 6px;
+}
+
+.founder-strip .founder-copy h2 {
+  max-width: 20ch;
+  font-size: clamp(2.25rem, 4vw, 3.55rem);
+}
+
+.founder-strip .founder-copy > p:not(.eyebrow) {
+  max-width: 760px;
+  margin-top: 13px;
+}
+
+.founder-strip .hero-actions {
+  margin-top: 18px;
+}
+
+.investment-terms {
+  margin-top: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  text-align: center;
+}
+
 .reveal {
   opacity: 1;
   transform: none;
@@ -1022,11 +1392,19 @@ body.nav-open .menu-button span:last-child {
 }
 
 @media (hover: hover) and (min-width: 981px) {
-  .product-brief {
+  .product-brief,
+  .plan-phase,
+  .evidence-panel,
+  .commercial-panel,
+  .deal-card {
     transition: transform 190ms ease, border-color 190ms ease;
   }
 
-  .product-brief:hover {
+  .product-brief:hover,
+  .plan-phase:hover,
+  .evidence-panel:hover,
+  .commercial-panel:hover,
+  .deal-card:hover {
     border-color: var(--line-strong);
     transform: translateY(-3px);
   }
@@ -1047,6 +1425,14 @@ body.nav-open .menu-button span:last-child {
 
   .brief-heading {
     grid-template-columns: 1fr minmax(240px, 0.45fr);
+  }
+
+  .product-layout {
+    gap: 42px;
+  }
+
+  .investment-grid {
+    gap: 48px;
   }
 
   .product-brief h3 {
@@ -1136,6 +1522,8 @@ body.nav-open .menu-button span:last-child {
   .brief-heading,
   .product-brief-grid,
   .round-grid,
+  .product-layout,
+  .investment-grid,
   .founder-close {
     grid-template-columns: 1fr;
   }
@@ -1159,6 +1547,33 @@ body.nav-open .menu-button span:last-child {
 
   .product-brief h3 {
     font-size: clamp(2.35rem, 8vw, 3.3rem);
+  }
+
+  .product-layout,
+  .investment-grid {
+    gap: 32px;
+  }
+
+  .product-overview h2 {
+    max-width: 14ch;
+  }
+
+  .evidence-panel,
+  .commercial-panel,
+  .deal-card {
+    max-width: 720px;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-phase {
+    min-height: auto;
+  }
+
+  .funding-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .round-grid {
@@ -1216,6 +1631,10 @@ body.nav-open .menu-button span:last-child {
     font-size: 0.94rem;
   }
 
+  .aeon-model {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-actions,
   .hero-actions .button {
     width: 100%;
@@ -1243,7 +1662,10 @@ body.nav-open .menu-button span:last-child {
 
   .brief-section,
   .round-section,
-  .founder-close {
+  .founder-close,
+  .product-section,
+  .plan-section,
+  .investment-section {
     padding-block: 58px;
   }
 
@@ -1267,6 +1689,18 @@ body.nav-open .menu-button span:last-child {
 
   .product-brief h3 {
     font-size: clamp(2.25rem, 11vw, 3rem);
+  }
+
+  .product-overview h2 {
+    font-size: clamp(2.55rem, 12vw, 3.45rem);
+  }
+
+  .product-identity {
+    align-items: flex-start;
+  }
+
+  .product-identity .card-label {
+    max-width: 220px;
   }
 
   .model-line {
@@ -1293,6 +1727,30 @@ body.nav-open .menu-button span:last-child {
   .round-intro h2 {
     margin-top: 23px;
     font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
+
+  .deal-facts,
+  .funding-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deal-facts article:nth-child(2n) {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .validation-strip {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .founder-strip {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .founder-strip .founder-image {
+    width: 126px;
   }
 
   .allocation-list article {
