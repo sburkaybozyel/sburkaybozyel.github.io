@@ -6,7 +6,7 @@ const sidebar=document.getElementById("sidebar");
 const toast=document.getElementById("toast");
 const toastText=document.getElementById("toastText");
 const modalBackdrop=document.getElementById("modalBackdrop");
-const routeMeta={overview:["Yönetim Kokpiti","İŞLETME KONTROL MERKEZİ"],orders:["Sipariş & Müşteri","CRM & SATIŞ"],production:["Üretim Planlama","MRP & ÜRETİM"],procurement:["Satın Alma","TEDARİK & MRP"],warehouse:["Depo & Lojistik","STOK & SEVKİYAT"],quality:["Kalite Yönetimi","KALİTE & İZLENEBİLİRLİK"],research:["Pazar Araştırması","AMAZON · TALEP & RAKİP"],products:["Ürün Merkezi","AMAZON · PIM & LİSTELEME"],account:["Hesap & Belgeler","AMAZON · HAZIRLIK & ONAY"],inventory:["FBA & Stok","AMAZON · ENVANTER"],marketing:["Marketing","AMAZON · REKLAM & BÜYÜME"],finance:["Finans & Matematik","ŞİRKET & KANAL KÂRLILIĞI"],tasks:["Görevler","İŞ AKIŞI & ONAY"],reports:["Raporlar","ŞEFFAF YÖNETİM"]};
+const routeMeta={overview:["Yönetim Kokpiti","İŞLETME KONTROL MERKEZİ"],orders:["Sipariş & Müşteri","CRM & SATIŞ"],production:["Üretim Planlama","MRP & ÜRETİM"],procurement:["Satın Alma","TEDARİK & MRP"],warehouse:["Depo & Lojistik","STOK & SEVKİYAT"],quality:["Kalite Yönetimi","KALİTE & İZLENEBİLİRLİK"],research:["Pazar Araştırması","AMAZON · TALEP & RAKİP"],products:["Ürün Merkezi","AMAZON · PIM & LİSTELEME"],account:["Hesap & Belgeler","AMAZON · HAZIRLIK & ONAY"],inventory:["FBA & Stok","AMAZON · ENVANTER"],marketing:["Marketing","AMAZON · REKLAM & BÜYÜME"],intelligence:["Algoritmalar & API","VERİ & KARAR MOTORU"],finance:["Finans & Matematik","ŞİRKET & KANAL KÂRLILIĞI"],tasks:["Görevler","İŞ AKIŞI & ONAY"],reports:["Raporlar","ŞEFFAF YÖNETİM"]};
 
 function setRoute(route){
   const safeRoute=routeMeta[route]?route:"overview";
@@ -40,6 +40,9 @@ const actionMessages={
   "approve-purchase":"1.800 kg iplik talebi tedarik onayına gönderildi.",
   "new-transfer":"Depolar arası transfer taslağı oluşturuldu.",
   "new-quality":"Yeni kalite kontrol kaydı lot numarasıyla açıldı.",
+  "approve-all-decisions":"%90 üzeri güven skoruna sahip 3 karar onay akışına gönderildi.",
+  "detail-approve":"Öneri onaylandı ve şeffaf işlem kaydına eklendi.",
+  "detail-task":"Kayıt sorumlu ve termin seçimi için görev taslağına dönüştürüldü.",
   "new-research":"Yeni araştırma dosyası taslak olarak açıldı.",
   "refresh-competitors":"24 rakip ASIN için fiyat yenileme kuyruğa alındı.",
   "add-product":"Yeni ürün kaydı taslak olarak oluşturuldu.",
@@ -118,4 +121,103 @@ document.querySelectorAll(".segmented button").forEach(button=>button.addEventLi
 }));
 
 document.getElementById("notificationButton").addEventListener("click",()=>showToast("3 karar bekliyor: stok, marka belgesi ve fiyat testi.","Bildirim merkezi"));
+
+const detailDrawer=document.getElementById("detailDrawer");
+const detailBackdrop=document.getElementById("detailBackdrop");
+let detailRecords={};
+
+function closeDetail(){detailDrawer.classList.remove("open");detailBackdrop.classList.remove("open");detailDrawer.setAttribute("aria-hidden","true");detailBackdrop.setAttribute("aria-hidden","true")}
+function openDetail(record){
+  document.getElementById("detailType").textContent=record.type||"OPERASYON KAYDI";
+  document.getElementById("detailTitle").textContent=record.title||"Kayıt detayı";
+  document.getElementById("detailStatus").textContent=record.status||"Aktif";
+  document.getElementById("detailSummary").textContent=record.summary||"Bu kayıt merkezi veri havuzundan getirilmiştir.";
+  document.getElementById("detailMetrics").innerHTML=(record.metrics||[]).map(metric=>`<article><small>${metric[0]}</small><b>${metric[1]}</b></article>`).join("");
+  document.getElementById("detailTimeline").innerHTML=(record.timeline||[]).map((item,index)=>`<article><i>${index+1}</i><span>${item}</span></article>`).join("");
+  document.getElementById("detailInsight").textContent=record.insight||"Kayıt için yeterli veri toplandığında algoritma önerisi burada gösterilir.";
+  const confidence=record.confidence||78;
+  document.getElementById("detailConfidenceBar").style.width=`${confidence}%`;
+  document.getElementById("detailConfidence").textContent=`%${confidence} model güven skoru`;
+  detailDrawer.classList.add("open");detailBackdrop.classList.add("open");detailDrawer.setAttribute("aria-hidden","false");detailBackdrop.setAttribute("aria-hidden","false");
+}
+
+function inferDetail(element){
+  const key=Object.keys(detailRecords).find(item=>element.textContent.includes(item));
+  if(key)return detailRecords[key];
+  const title=element.querySelector("b,h3,strong")?.textContent?.trim()||"Operasyon kaydı";
+  const values=[...element.querySelectorAll("span,small,strong")].map(item=>item.textContent.trim()).filter(Boolean).slice(0,4);
+  return {type:"CANLI KAYIT",title,status:"İnceleniyor",summary:`${title} kaydının şirket veri havuzundaki birleşik görünümü.`,metrics:values.map((value,index)=>[`Veri ${index+1}`,value]),timeline:["Kayıt API üzerinden alındı","İlgili modüllerle eşleştirildi","Son değişiklik işlem geçmişine yazıldı"],insight:"Benzer kayıtlar ve güncel operasyon yükü birlikte değerlendirildi. Detaylı model sonucu için yeterli veri mevcut.",confidence:84};
+}
+
+function bindDetailTargets(){
+  document.querySelectorAll(".table-row:not(.table-head),.product-card,.warehouse-map article,.capacity-board article,.research-summary article,.inventory-kpis article,.marketing-kpis article").forEach(element=>{
+    if(element.dataset.detailBound)return;
+    element.dataset.detailBound="true";
+    element.classList.add("detail-target");
+    element.setAttribute("tabindex","0");
+    element.setAttribute("role","button");
+    element.addEventListener("click",event=>{if(!event.target.closest("button"))openDetail(inferDetail(element))});
+    element.addEventListener("keydown",event=>{if(event.key==="Enter")openDetail(inferDetail(element))});
+  });
+}
+
+function serviceStatusLabel(status){return status==="healthy"?"Bağlı":status==="simulated"?"Demo API":"Kontrol"}
+function runDecisionEngines(data){
+  const demandHistory=[82,84,88,95,101,108,116];
+  const weights=[1,2,3,4,5,6,7];
+  const weightedDemand=demandHistory.reduce((total,value,index)=>total+value*weights[index],0)/weights.reduce((total,value)=>total+value,0);
+  const baseline=demandHistory.slice(0,3).reduce((total,value)=>total+value,0)/3;
+  const demandGrowth=Math.round((weightedDemand/baseline-1)*100);
+  const cuttingLoad=5420;
+  const cuttingCapacity=5000;
+  const capacityOverflow=cuttingLoad-cuttingCapacity;
+  const dailyYarnUse=210;
+  const supplierLeadDays=8;
+  const safetyStock=860;
+  const currentYarn=740;
+  const reorderQuantity=Math.max(0,dailyYarnUse*supplierLeadDays+safetyStock-currentYarn);
+  const priceIncrease=8;
+  const monthlyUnits=220;
+  const retainedMargin=.875;
+  const marginImpact=Math.round(priceIncrease*monthlyUnits*retainedMargin);
+  const wastedSearchSpend=[184,68,34].reduce((total,value)=>total+value,0);
+  data.algorithms[0].result=`White Sateen için 21 günde +%${demandGrowth} talep`;
+  data.algorithms[1].result=`Kesim hattında ${capacityOverflow} adet kapasite aşımı`;
+  data.algorithms[2].result=`60/1 iplik için ${reorderQuantity.toLocaleString("tr-TR")} kg satın alma`;
+  data.algorithms[3].result=`Stone Stripe fiyatında €${priceIncrease} artış, +€${marginImpact.toLocaleString("tr-TR")} katkı`;
+  data.algorithms[4].result=`3 negatif kelime, tahmini €${wastedSearchSpend} tasarruf`;
+  return data;
+}
+function renderSystem(data){
+  data=runDecisionEngines(data);
+  const average=Math.round(data.services.reduce((total,service)=>total+service.latency,0)/data.services.length);
+  document.getElementById("apiLatency").textContent=`${average} ms`;
+  document.getElementById("apiGeneratedAt").textContent=`Son senkronizasyon ${new Date(data.generatedAt).toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"})} · ${data.services.length} servis`;
+  document.getElementById("serviceGrid").innerHTML=data.services.map(service=>`<article><span class="service-icon">↯</span><div><b>${service.name}</b><small>${service.records.toLocaleString("tr-TR")} kayıt · ${service.latency} ms</small></div><i class="service-state ${service.status}">${serviceStatusLabel(service.status)}</i></article>`).join("");
+  document.getElementById("algorithmRunTime").textContent=`${data.algorithms.length} model çalıştı`;
+  document.getElementById("algorithmList").innerHTML=data.algorithms.map(algorithm=>`<button type="button" data-algorithm="${algorithm.id}"><span>✦</span><div><b>${algorithm.name}</b><small>${algorithm.version} · Son çalışma ${algorithm.lastRun}</small><p>${algorithm.result}</p></div><strong>%${algorithm.accuracy.toFixed(1)}</strong></button>`).join("");
+  document.getElementById("decisionTable").innerHTML=`<div class="decision-row decision-head"><span>Öncelik</span><span>Öneri</span><span>Beklenen etki</span><span>Güven</span><span>Sorumlu</span><span></span></div>${data.decisions.map((decision,index)=>`<div class="decision-row"><span><i class="decision-priority ${decision.priority}">${decision.priority==="critical"?"Kritik":decision.priority==="high"?"Yüksek":"Orta"}</i></span><span><b>${decision.title}</b></span><span>${decision.impact}</span><span><strong>%${decision.confidence}</strong></span><span>${decision.owner}</span><span><button type="button" data-decision="${index}">İncele →</button></span></div>`).join("")}`;
+  document.querySelectorAll("[data-algorithm]").forEach(button=>button.addEventListener("click",()=>openDetail({type:"ALGORİTMA ÇALIŞMASI",title:button.querySelector("b").textContent,status:"Model aktif",summary:button.querySelector("p").textContent,metrics:[["Güven",button.querySelector("strong").textContent],["Sürüm",button.querySelector("small").textContent.split(" · ")[0]],["Veri kaynağı","Merkezi veri havuzu"],["Çalışma","Otomatik"]],timeline:["Yeni veriler alındı","Özellikler hesaplandı","Model çalıştırıldı","Karar kuyruğu güncellendi"],insight:button.querySelector("p").textContent,confidence:Number(button.querySelector("strong").textContent.replace(/[^0-9.]/g,""))})));
+  document.querySelectorAll("[data-decision]").forEach(button=>button.addEventListener("click",()=>{const decision=data.decisions[Number(button.dataset.decision)];openDetail({type:"ALGORİTMA ÖNERİSİ",title:decision.title,status:"Onay bekliyor",summary:decision.impact,metrics:[["Model güveni",`%${decision.confidence}`],["Sorumlu",decision.owner],["Öncelik",decision.priority],["Kayıt zamanı","11:18"]],timeline:["Kaynak veriler birleştirildi","Risk ve etki hesaplandı","Öneri karar kuyruğuna eklendi"],insight:`${decision.impact}. Sistem önerisi yönetici onayı olmadan işleme alınmaz.`,confidence:decision.confidence})}));
+}
+
+async function loadDemoApi(){
+  try{
+    const [systemResponse,detailsResponse]=await Promise.all([fetch("api/system.json",{cache:"no-store"}),fetch("api/details.json",{cache:"no-store"})]);
+    if(!systemResponse.ok||!detailsResponse.ok)throw new Error("API response error");
+    const [systemData,detailsData]=await Promise.all([systemResponse.json(),detailsResponse.json()]);
+    detailRecords=detailsData;
+    renderSystem(systemData);
+    bindDetailTargets();
+  }catch(error){
+    document.getElementById("apiGeneratedAt").textContent="Demo API bağlantısı yeniden deneniyor";
+    document.getElementById("serviceGrid").innerHTML="<p class=\"api-error\">Veri katmanı şu anda yanıt vermiyor.</p>";
+  }
+}
+
+document.getElementById("detailClose").addEventListener("click",closeDetail);
+detailBackdrop.addEventListener("click",closeDetail);
+document.getElementById("runAlgorithms").addEventListener("click",async event=>{const button=event.currentTarget;button.disabled=true;button.textContent="Hesaplanıyor…";document.getElementById("algorithmList").classList.add("calculating");await new Promise(resolve=>setTimeout(resolve,900));await loadDemoApi();document.getElementById("algorithmList").classList.remove("calculating");button.disabled=false;button.textContent="Algoritmaları çalıştır";showToast("5 model yeniden çalıştı, 4 aksiyon karar kuyruğuna yazıldı.","Hesaplama tamamlandı")});
+document.addEventListener("keydown",event=>{if(event.key==="Escape")closeDetail()});
 setRoute(location.hash.replace("#","")||"overview");
+loadDemoApi();

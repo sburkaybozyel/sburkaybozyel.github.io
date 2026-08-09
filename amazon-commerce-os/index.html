@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260809-3">
+  <link rel="stylesheet" href="styles.css?v=20260809-4">
 </head>
 <body>
   <div class="demo-ribbon">TEMSİLİ DEMO VERİSİ · ERP, ÜRETİM VE PAZARYERİ ENTEGRASYONLARIYLA CANLI VERİYE DÖNÜŞÜR</div>
@@ -38,6 +38,7 @@
         <button class="nav-item" type="button" data-route="inventory"><span class="nav-icon">◫</span>FBA & Stok</button>
         <button class="nav-item" type="button" data-route="marketing"><span class="nav-icon">↗</span>Marketing</button>
         <span class="nav-section">YÖNETİM</span>
+        <button class="nav-item" type="button" data-route="intelligence"><span class="nav-icon">✦</span>Algoritmalar & API</button>
         <button class="nav-item" type="button" data-route="finance"><span class="nav-icon">€</span>Finans & Matematik</button>
         <button class="nav-item" type="button" data-route="tasks"><span class="nav-icon">☷</span>Görevler<span class="nav-count">6</span></button>
         <button class="nav-item" type="button" data-route="reports"><span class="nav-icon">▤</span>Raporlar</button>
@@ -188,6 +189,17 @@
           <div class="two-column"><article class="panel"><header><div><p class="panel-overline">ARAMA TERİMLERİ</p><h3>Bugünün kararları</h3></div></header><div class="search-term-list"><article><span><b>hotel quality duvet cover</b><small>12 sipariş · %18,2 ACoS</small></span><button type="button" data-action="increase-bid">Teklifi artır</button></article><article><span><b>premium percale bedding</b><small>8 sipariş · %22,7 ACoS</small></span><button type="button" data-action="move-exact">Exact’e taşı</button></article><article class="waste"><span><b>cheap duvet set</b><small>€184 harcama · 0 sipariş</small></span><button type="button" data-action="negative-keyword">Negatifle</button></article></div></article><article class="panel"><header><div><p class="panel-overline">SATIŞ KAYNAĞI</p><h3>Organik bağımsızlık</h3></div></header><div class="source-split"><div class="donut"><span><b>%56,8</b><small>Organik</small></span></div><div class="source-legend"><span><i class="organic"></i><b>Organik satış</b><strong>€24.344</strong></span><span><i class="paid"></i><b>Reklam satışı</b><strong>€18.516</strong></span><p>TACoS düşerken toplam satış büyüyor: sağlıklı organik ivme.</p></div></div></article></div>
         </section>
 
+        <section class="page" id="page-intelligence" data-page="intelligence">
+          <div class="page-intro"><div><p class="overline">VERİ & KARAR MOTORU</p><h2>Veriyi toplar, riski hesaplar, aksiyon önerir.</h2><p>ERP, üretim, finans, lojistik ve Amazon verileri tek API katmanında birleşir.</p></div><button class="primary-button" type="button" id="runAlgorithms">Algoritmaları çalıştır</button></div>
+          <div class="api-status-bar"><span class="api-pulse"></span><div><b>Demo API ağı aktif</b><small id="apiGeneratedAt">Servisler kontrol ediliyor</small></div><strong id="apiLatency">— ms</strong><em>Ortalama yanıt</em></div>
+          <div class="intelligence-layout">
+            <article class="panel"><header><div><p class="panel-overline">ENTEGRASYON KATMANI</p><h3>Servis sağlığı</h3></div><span class="live-badge"><i></i>API</span></header><div class="service-grid" id="serviceGrid"><div class="skeleton-row"></div><div class="skeleton-row"></div><div class="skeleton-row"></div></div></article>
+            <article class="panel algorithm-panel"><header><div><p class="panel-overline">ALGORİTMA MOTORLARI</p><h3>Son hesaplamalar</h3></div><span class="updated" id="algorithmRunTime">Hazırlanıyor</span></header><div class="algorithm-list" id="algorithmList"></div></article>
+          </div>
+          <article class="panel decision-panel"><header><div><p class="panel-overline">KARAR KUYRUĞU</p><h3>Sistem ne öneriyor?</h3></div><button class="secondary-button" type="button" data-action="approve-all-decisions">Yüksek güvenlileri onayla</button></header><div class="decision-table" id="decisionTable"></div></article>
+          <div class="model-flow"><article><span>01</span><b>Veri topla</b><small>ERP · Üretim · Amazon · Finans</small></article><i>→</i><article><span>02</span><b>Temizle & eşleştir</b><small>SKU · Sipariş · Lot · Maliyet</small></article><i>→</i><article><span>03</span><b>Hesapla</b><small>Tahmin · Risk · Marj · Kapasite</small></article><i>→</i><article><span>04</span><b>Aksiyon üret</b><small>Üret · Satın al · Sevk et · Optimize et</small></article></div>
+        </section>
+
         <section class="page" id="page-finance" data-page="finance">
           <div class="page-intro"><div><p class="overline">FİNANS & MATEMATİK</p><h2>Şirketten kanala, siparişten ürüne gerçek kârlılık.</h2><p>Üretim, satın alma, lojistik ve kanal giderleri aynı finansal modelde birleşir.</p></div><button class="primary-button" type="button" data-action="save-scenario">Senaryoyu kaydet</button></div>
           <div class="research-summary"><article><span>Aylık net satış</span><strong>₺18,4 Mn</strong><small>+%12,8 büyüme</small></article><article><span>Brüt katkı</span><strong>₺4,1 Mn</strong><small>%22,3 oran</small></article><article><span>Nakit dönüşüm</span><strong>47 gün</strong><small>−6 gün iyileşme</small></article><article><span>Vadesi geçen</span><strong>₺428 B</strong><small>2 müşteri</small></article></div>
@@ -215,6 +227,11 @@
   <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" type="button" aria-label="Pencereyi kapat">×</button><p class="overline">HAFTALIK YÖNETİM RAPORU</p><h2 id="modalTitle">04–10 Ağustos</h2><div class="modal-summary"><article><span>Net satış</span><b>€10.840</b><small>+%12,6</small></article><article><span>Katkı payı</span><b>€2.260</b><small>%20,8 oran</small></article><article><span>TACoS</span><b>%14,2</b><small>−1,8 puan</small></article></div><div class="report-actions"><h3>Bu haftanın yönetim kararları</h3><p>1. White Sateen için 240 adet üretim onayı</p><p>2. “cheap duvet set” arama teriminin negatiflenmesi</p><p>3. Stone Stripe için €8 fiyat testi</p></div><button class="primary-button" type="button" data-action="print-report">Yazdır / PDF</button></div>
   </div>
-  <script src="app.js?v=20260809-2"></script>
+  <div class="detail-backdrop" id="detailBackdrop" aria-hidden="true"></div>
+  <aside class="detail-drawer" id="detailDrawer" aria-hidden="true">
+    <header><div><p id="detailType">DETAY</p><h2 id="detailTitle">Kayıt detayı</h2></div><button id="detailClose" type="button" aria-label="Detayı kapat">×</button></header>
+    <div class="detail-body"><div class="detail-status"><span id="detailStatus">Aktif</span><small>Demo API üzerinden getirildi</small></div><p class="detail-summary" id="detailSummary"></p><div class="detail-metrics" id="detailMetrics"></div><section><h3>Operasyon zaman çizelgesi</h3><div class="detail-timeline" id="detailTimeline"></div></section><section class="algorithm-insight"><span>✦ ALGORİTMA İÇGÖRÜSÜ</span><p id="detailInsight"></p><div><i id="detailConfidenceBar"></i></div><small id="detailConfidence"></small></section><div class="detail-actions"><button class="primary-button" type="button" data-action="detail-approve">Aksiyonu onayla</button><button class="secondary-button" type="button" data-action="detail-task">Göreve dönüştür</button></div></div>
+  </aside>
+  <script src="app.js?v=20260809-5"></script>
 </body>
 </html>

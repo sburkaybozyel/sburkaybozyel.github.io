@@ -1,0 +1,24 @@
+{
+  "generatedAt": "2026-08-09T11:18:00+03:00",
+  "environment": "demo",
+  "services": [
+    {"name":"ERP Core API","status":"healthy","latency":42,"records":18426},
+    {"name":"Production Stream","status":"healthy","latency":68,"records":6240},
+    {"name":"Amazon SP-API","status":"simulated","latency":184,"records":1482},
+    {"name":"Finance Connector","status":"healthy","latency":51,"records":8934},
+    {"name":"Logistics Feed","status":"healthy","latency":76,"records":418}
+  ],
+  "algorithms": [
+    {"id":"demand-forecast","name":"Talep Tahmini","version":"v2.4","accuracy":91.8,"lastRun":"11:12","result":"White Sateen için 21 günde +%18 talep"},
+    {"id":"capacity-optimizer","name":"Kapasite Optimizasyonu","version":"v1.9","accuracy":94.2,"lastRun":"11:10","result":"Kesim hattında 420 adet kapasite aşımı"},
+    {"id":"reorder-engine","name":"Yeniden Sipariş Motoru","version":"v3.1","accuracy":96.4,"lastRun":"11:14","result":"60/1 iplik için 1.800 kg satın alma"},
+    {"id":"margin-guard","name":"Marj Koruma","version":"v1.6","accuracy":98.1,"lastRun":"11:16","result":"Stone Stripe fiyatında €8 artış fırsatı"},
+    {"id":"ad-optimizer","name":"Reklam Optimizasyonu","version":"v2.8","accuracy":89.7,"lastRun":"11:15","result":"3 negatif kelime, tahmini €286 tasarruf"}
+  ],
+  "decisions": [
+    {"priority":"critical","title":"Kesim kapasitesini yeniden planla","impact":"2 siparişin termin riski kalkar","confidence":94,"owner":"Üretim Planlama"},
+    {"priority":"high","title":"1.800 kg 60/1 iplik siparişi aç","impact":"WO-240819 malzeme açığı kapanır","confidence":96,"owner":"Satın Alma"},
+    {"priority":"high","title":"White Sateen üretimini 240 artır","impact":"Tahmini €4.800 katkı korunur","confidence":92,"owner":"Amazon Operasyonu"},
+    {"priority":"medium","title":"Stone Stripe fiyatını €8 test et","impact":"Aylık tahmini +€1.540 katkı","confidence":81,"owner":"Ticari Yönetim"}
+  ]
+}
