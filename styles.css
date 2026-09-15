@@ -704,66 +704,46 @@ h1 span, h2 span, h3 span, h4 span {
   font-size: 14px;
 }
 
-/* 3. Skills Matrix */
-.skills-matrix-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.skill-category-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  transition: all 0.2s ease;
-}
-
-.skill-category-card:hover {
-  border-color: var(--gold-glow);
-  transform: translateY(-3px);
-}
-
-.cat-header {
+/* 3. Skills List */
+.skills-list {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
+  flex-direction: column;
+  gap: 0;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding: 28px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.cat-icon {
-  font-size: 20px;
+.skill-row:last-child {
+  border-bottom: none;
 }
 
-.cat-header h3 {
-  font-size: 15.5px;
+.skill-row-label h3 {
+  font-size: 15px;
   font-weight: 700;
   color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
-.skill-tags {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
+.skill-row-label p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  line-height: 1.55;
 }
 
-.skill-tags li {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 5px 11px;
-  background: var(--surface-raised);
-  border: 1px solid var(--line);
-  border-radius: 6px;
+.skill-row-items {
+  font-size: 13px;
   color: var(--paper-soft);
-  transition: all 0.15s ease;
-}
-
-.skill-tags li:hover {
-  color: #fff;
-  border-color: var(--line-strong);
+  line-height: 1.9;
+  padding-top: 2px;
+  letter-spacing: 0.01em;
 }
 
 /* 4 & 5 & 6. Showcase Grid (ERP, AI, Mobile) */
@@ -1379,8 +1359,9 @@ footer.site-footer {
     gap: 36px;
   }
 
-  .skills-matrix-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .showcase-grid {
@@ -1411,9 +1392,6 @@ footer.site-footer {
     gap: 12px;
   }
 
-  .skills-matrix-grid {
-    grid-template-columns: 1fr;
-  }
 
   .intro-title {
     font-size: 32px;
@@ -1800,39 +1778,28 @@ footer.site-footer {
     color: #64748b !important;
   }
 
-  /* 4. Skills Matrix in Print */
-  .skills-matrix-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
+  /* 4. Skills List in Print */
+  .skill-row {
+    grid-template-columns: 180px 1fr !important;
+    gap: 16px !important;
+    padding: 10px 0 !important;
   }
 
-  .skill-category-card {
-    background: #ffffff !important;
-    border: 1px solid #e2e8f0 !important;
-    border-radius: 6px !important;
-    padding: 8px 10px !important;
-    page-break-inside: avoid;
-    break-inside: avoid;
-  }
-
-  .cat-header h3 {
+  .skill-row-label h3 {
     color: #0f172a !important;
     font-size: 9pt !important;
     font-weight: 700 !important;
-    margin-bottom: 5px !important;
   }
 
-  .skill-tags {
-    gap: 3px !important;
-  }
-
-  .skill-tags li {
-    background: #f1f5f9 !important;
-    border: 1px solid #e2e8f0 !important;
-    color: #334155 !important;
+  .skill-row-label p {
+    color: #64748b !important;
     font-size: 7.5pt !important;
-    padding: 1px 5px !important;
-    border-radius: 3px !important;
+  }
+
+  .skill-row-items {
+    color: #334155 !important;
+    font-size: 8pt !important;
+    line-height: 1.7 !important;
   }
 
   /* 5. Showcase Cards in Print */
