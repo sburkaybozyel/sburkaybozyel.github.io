@@ -1505,95 +1505,322 @@ footer.site-footer {
   }
 
   .page-container {
-    padding: 80px 16px 60px;
+    padding: 70px 14px 40px;
   }
 
   .section-block {
-    padding: 48px 0;
+    padding: 28px 0;
+  }
+
+  .section-header {
+    margin-bottom: 20px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .section-subtitle {
+    font-size: 13px;
+    line-height: 1.5;
   }
 
   .hero-clean {
-    padding: 16px 0 10px;
+    padding: 10px 0 6px;
+  }
+
+  .hero-avatar {
+    width: 60px;
+    height: 60px;
   }
 
   .hero-name {
-    font-size: 28px;
+    font-size: 24px;
     word-break: break-word;
+    margin-bottom: 2px;
   }
 
   .hero-role {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
   .hero-desc {
-    font-size: 14.5px;
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+
+  .intro-actions {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+
+  .bio-card {
+    padding: 16px 14px;
+    margin-bottom: 16px;
+  }
+
+  .bio-header {
+    margin-bottom: 10px;
+  }
+
+  .bio-name {
+    font-size: 17px;
+  }
+
+  .bio-text {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .bio-traits-grid {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .trait-item {
+    padding: 10px 12px;
+  }
+
+  .trait-label {
+    font-size: 12.5px;
+    margin-bottom: 2px;
+  }
+
+  .trait-desc {
+    font-size: 11.5px;
+    line-height: 1.45;
+  }
+
+  .timeline-cv {
+    gap: 14px;
   }
 
   .cv-item {
     grid-template-columns: 1fr;
-    gap: 12px;
-    padding: 18px;
+    gap: 8px;
+    padding: 14px 14px;
   }
 
-  .intro-title {
-    font-size: 28px;
+  .cv-role {
+    font-size: 16px;
+    margin-bottom: 2px;
   }
 
-  .section-title {
-    font-size: 24px;
+  .cv-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+  }
+
+  .cv-bullets {
+    gap: 5px;
+  }
+
+  .cv-bullets li {
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  .skill-row {
+    padding: 16px 0;
+    gap: 6px;
+  }
+
+  .skill-row-label h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+  }
+
+  .skill-row-items {
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+
+  .showcase-grid {
+    gap: 16px;
+  }
+
+  .card-media {
+    height: 140px;
+  }
+
+  .card-body {
+    padding: 14px 14px;
+  }
+
+  .card-heading {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .card-summary {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .card-tech-chips {
+    margin-bottom: 12px;
   }
 
   .card-metrics-row {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 8px;
+    padding-top: 10px;
   }
 
-  .bio-card {
-    padding: 20px 16px;
+  .m-val {
+    font-size: 12.5px;
   }
 
-  .card-body {
+  .m-lbl {
+    font-size: 10.5px;
+  }
+
+  .card-head {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .card-logo, .card-mono {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .card-monetization {
+    margin-top: 10px;
+    padding: 8px 10px;
+    font-size: 11.5px;
+  }
+
+  .offerings-grid {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .offer-card {
     padding: 18px 16px;
   }
 
-  .card-media {
-    height: 180px;
+  .offer-number {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .offer-title {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .offer-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .offer-features {
+    gap: 6px;
+    padding-top: 12px;
+    font-size: 12.5px;
   }
 
   .extras-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .extra-article-box {
-    padding: 20px 16px;
+    padding: 16px 14px;
+  }
+
+  .article-box-header {
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+  }
+
+  .article-box-header h3 {
+    font-size: 17px;
+  }
+
+  .article-list {
+    gap: 12px;
+  }
+
+  .art-item {
+    padding: 12px 14px;
+  }
+
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .art-excerpt {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .article-action-grid {
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .article-btn {
+    padding: 9px 12px;
+    font-size: 12px;
   }
 
   .contact-box {
-    padding: 28px 18px;
+    padding: 22px 16px;
+  }
+
+  .contact-lead-text h3 {
+    font-size: 19px;
+  }
+
+  .contact-lead-text p {
+    font-size: 13.5px;
   }
 
   .contact-action-group {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .contact-action-group a,
   .contact-action-group button {
     width: 100%;
     justify-content: center;
+    padding: 10px 16px;
   }
 
   .footer-container {
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
     align-items: flex-start;
-    padding: 0 16px;
+    padding: 0 14px;
   }
 
   .tech-modal-backdrop,
   .article-modal-backdrop,
   .lightbox-backdrop {
-    padding: 8px;
+    padding: 6px;
   }
 
   .tech-modal-dialog,
@@ -1604,15 +1831,15 @@ footer.site-footer {
 
   .tech-modal-header,
   .article-modal-header {
-    padding: 14px 16px;
+    padding: 12px 14px;
   }
 
   .tech-modal-tabs {
-    padding: 0 16px;
+    padding: 0 14px;
   }
 
   .tech-modal-body {
-    padding: 18px 16px;
+    padding: 14px 14px;
   }
 
   .spec-grid {
@@ -1629,8 +1856,8 @@ footer.site-footer {
 @media (max-width: 480px) {
 
   .btn-cta {
-    padding: 6px 10px;
-    font-size: 11.5px;
+    padding: 5px 9px;
+    font-size: 11px;
   }
 
   .brand-text p {
@@ -1638,13 +1865,13 @@ footer.site-footer {
   }
 
   .hero-header-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 12px;
   }
 
   .hero-name {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .intro-actions {
