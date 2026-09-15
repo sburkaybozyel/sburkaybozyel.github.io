@@ -1,232 +1,992 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07090d">
-  <title>AEON | Investor Overview</title>
-  <meta name="description" content="AEON is a Delaware LLC building original digital products and a connected, long-term portfolio.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="AEON | Vent + Forge | Investor Brief">
-  <meta property="og:description" content="Original products. One connected ecosystem.">
-  <meta property="og:image" content="https://sburkaybozyel.github.io/assets/aeon-investor-preview.png">
-  <meta property="og:image:width" content="1731">
-  <meta property="og:image:height" content="909">
-  <meta property="og:image:alt" content="AEON investor overview for Vent and Forge.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://sburkaybozyel.github.io/assets/aeon-investor-preview.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salih Burkay Bozyel | ESOGÜ Endüstri Mühendisliği & Yazılım</title>
+  <meta name="description" content="Salih Burkay Bozyel — Yazılım Geliştirici, Mobil & B2B SaaS, AI Sistemleri. Kapsamlı ürün portföyü ve profesyonel CV.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260723-2">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
-  <header class="site-header" id="top">
-    <a class="brand" href="#aeon" aria-label="AEON home">
-      <span class="brand-mark">A</span>
-      <span>AEON <em>Investor Brief</em></span>
-    </a>
-    <nav class="nav" id="siteNav" aria-label="Primary navigation">
-      <a href="#aeon" data-i18n="navAeon">AEON</a>
-      <a href="#vent" data-i18n="navVent">Vent</a>
-      <a href="#forge" data-i18n="navForge">Forge</a>
-      <a href="#plan" data-i18n="navPlan">Business plan</a>
-      <a href="#investment" data-i18n="navInvestment">Investment</a>
-    </nav>
-    <div class="header-actions">
-      <div class="language-switch" aria-label="Language selection">
-        <button class="active" type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+
+  <!-- Ambient Background Glows -->
+  <div class="ambient-top" aria-hidden="true"></div>
+  <div class="ambient-mid" aria-hidden="true"></div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#intro" class="brand-wrapper">
+        <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" class="brand-avatar" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>Salih Burkay Bozyel</h1>
+          <p>Yazılım & Endüstri Müh.</p>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#intro" data-i18n="navIntro">Tanıtım</a>
+        <a href="#experience" data-i18n="navExp">Geçmiş</a>
+        <a href="#skills" data-i18n="navSkills">Yetkinlikler</a>
+        <a href="#erp-crm-web" data-i18n="navErpWeb">ERP & Web</a>
+        <a href="#edge-ai" data-i18n="navEdgeAi">Edge AI & Görü</a>
+        <a href="#mobile-apps" data-i18n="navMobile">Mobil</a>
+        <a href="#extras" data-i18n="navExtras">Ekstralar</a>
+        <a href="#offerings" data-i18n="navOfferings">İş Modelleri</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-action print-btn" onclick="window.print()" title="CV Olarak Yazdır / PDF İndir">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          <span class="btn-text" data-i18n="btnPrintCv">CV Yazdır</span>
+        </button>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="tr" onclick="setLanguage('tr')">TR</button>
+          <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+        </div>
+        <a href="#offerings" class="btn-cta" data-i18n="navContact">İletişim</a>
       </div>
-      <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation">
-        <span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <main>
-    <section class="hero section-shell" id="aeon">
-      <div class="hero-copy reveal">
-        <p class="eyebrow" data-i18n="heroEyebrow">AEON LLC · DELAWARE, UNITED STATES</p>
-        <h1 data-i18n="heroTitle">Original products. One connected ecosystem.</h1>
-        <p class="hero-lede" data-i18n="heroLede">AEON is a Delaware LLC established to create and scale original digital products around underserved human needs. Vent and Forge form its initial portfolio and the foundation of a broader, long-term product ecosystem.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#vent" data-i18n="heroPrimary">Review the portfolio</a>
-          <a class="button button-ghost" href="#investment"><span data-i18n="heroSecondary">View the investment structure</span><span aria-hidden="true">↘</span></a>
-        </div>
-        <div class="proof-row" aria-label="Company profile">
-          <div><strong>DELAWARE</strong><span data-i18n="proofEntity">LLC structure</span></div>
-          <div><strong>2</strong><span data-i18n="proofPortfolio">portfolio products</span></div>
-          <div><strong>BOOTSTRAPPED</strong><span data-i18n="proofCapital">to date</span></div>
-        </div>
-        <div class="aeon-model" aria-label="AEON company model">
-          <span data-i18n="modelBuild">Build original products</span>
-          <span data-i18n="modelValidate">Validate independently</span>
-          <span data-i18n="modelScale">Scale repeatable models</span>
-          <span data-i18n="modelConnect">Compound portfolio capability</span>
-        </div>
-      </div>
-      <div class="hero-visual reveal" aria-label="Vent and Forge product previews">
-        <div class="orb orb-one"></div>
-        <div class="orb orb-two"></div>
-        <article class="product-phone vent-phone">
-          <div class="phone-topline"><span>VENT</span><span data-i18n="heroConnection">Human connection</span></div>
-          <div class="phone-frame"><img src="assets/vent/E5D25810-6887-4CD4-8B16-0FC8B03FF755_4_5005_c.jpeg" alt="Vent conversation intent screen"></div>
-        </article>
-        <article class="product-phone forge-phone">
-          <div class="phone-topline"><span>FORGE</span><span data-i18n="heroAction">Real-world action</span></div>
-          <div class="phone-frame"><img src="assets/forge/35AAA5C6-10D5-45F9-B9A0-430ED640463E.png" alt="Forge action map screen"></div>
-        </article>
-        <div class="global-stamp"><span class="pulse-dot"></span><span data-i18n="globalStamp">Global by design</span></div>
-      </div>
-    </section>
+  <main class="page-container">
 
-    <section class="product-section vent-section" id="vent">
-      <div class="section-shell product-layout">
-        <div class="product-overview reveal">
-          <div class="product-identity">
-            <img src="assets/vent/vent-logo.png" alt="Vent logo" loading="lazy" decoding="async">
-            <p class="card-label" data-i18n="ventEyebrow">VENT · LIVE PRODUCT · EARLY ENGAGEMENT EVIDENCE</p>
-          </div>
-          <h2 data-i18n="ventTitle">Intentional connection beyond the endless feed.</h2>
-          <p class="product-copy" data-i18n="ventIntro">Most social products optimize broad networks and passive consumption. Vent creates a private conversation with a defined context, mutual consent and a clear endpoint.</p>
-          <p class="positioning-line" data-i18n="ventPositioning">Topic-first discovery · Mutual consent · 24-hour conversations</p>
-          <div class="model-line"><span data-i18n="businessModelLabel">Planned monetization</span><strong data-i18n="ventRevenueLine">Premium subscriptions + advertising</strong></div>
-        </div>
-        <div class="evidence-panel reveal">
-          <p class="panel-label" data-i18n="ventEvidenceLabel">Early product evidence</p>
-          <div class="mini-metrics">
-            <div><strong>860</strong><span data-i18n="metricMau">30-day active users</span></div>
-            <div><strong>46.1%</strong><span data-i18n="metricAcceptance">invite acceptance</span></div>
-            <div><strong>88.7%</strong><span data-i18n="metricMatch">matched within 24 hours</span></div>
-            <div><strong>19:23</strong><span data-i18n="metricEngagement">average engagement time per active user</span></div>
-          </div>
-          <p class="evidence-note" data-i18n="metricsNote">July 2026 analytics snapshot. Definitions and source exports are available during diligence.</p>
-        </div>
-      </div>
-    </section>
+    <!-- 1. BENİ TANITSIN (Giriş & Executive Profil) -->
+    <section class="section-block" id="intro">
+      <div class="intro-grid">
+        <div class="intro-main">
+          <h1 class="intro-title" data-i18n="introHeading">
+            Fikirden Canlı Sisteme:<br>
+            <span class="text-gradient">Yüksek Kaldıraçlı</span> Dijital Yazılım ve Sistemler
+          </h1>
+          <p class="intro-desc" data-i18n="introBio">
+            Eskişehir Osmangazi Üniversitesi Endüstri Mühendisliği öğrencisi olarak; süreç optimizasyonu, yöneylem araştırması ve operasyonel verimlilik ilkelerini modern yazılım mimarisiyle birleştiriyorum. Lüks butik otel ERP omurgalarından uçta çalışan bilgisayarlı görü ve kaçak önleme sistemlerine, mağazada canlı mobil uygulamalardan programatik medya motorlarına kadar tüm sistemleri problem çözme ve katma değer odaklı inşa ediyorum.
+          </p>
 
-    <section class="product-section forge-section" id="forge">
-      <div class="section-shell product-layout">
-        <div class="product-overview reveal">
-          <div class="product-identity">
-            <img src="assets/forge/forge-logo.png" alt="Forge logo" loading="lazy" decoding="async">
-            <p class="card-label" data-i18n="forgeEyebrow">FORGE · BETA · PRE-LAUNCH COMMERCIAL VALIDATION</p>
+          <div class="intro-actions no-print">
+            <a href="#erp-crm-web" class="btn-primary" data-i18n="btnExplore">Projeleri İnceleyin</a>
+            <a href="#experience" class="btn-secondary" data-i18n="btnViewCv">Özgeçmiş & Kariyer</a>
+            <button class="btn-secondary" onclick="window.print()" data-i18n="btnPdfCv">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              PDF Olarak Kaydet
+            </button>
           </div>
-          <h2 data-i18n="forgeTitle">A discovery and commerce layer for physical activity.</h2>
-          <p class="product-copy" data-i18n="forgeIntro">Physical activity is fragmented across directories, communities, direct messages and disconnected storefronts. Forge unifies people, places, events, professionals and products in one discovery-to-transaction journey.</p>
-          <div class="forge-chain" data-i18n="forgeLoopLine">Discover → Connect → Act → Transact</div>
-          <p class="go-to-market" data-i18n="forgeGlobalText">Istanbul is the initial density and operating-validation market. Verified businesses can join remotely from international markets from day one.</p>
-        </div>
-        <div class="commercial-panel reveal">
-          <p class="panel-label" data-i18n="forgePricingLabel">Planned partner economics at launch</p>
-          <div class="pricing-strip">
-            <div><strong>90</strong><span data-i18n="economicsDaysShort">days subscription-free</span></div>
-            <div><strong>$15</strong><span data-i18n="economicsMonthShort">per month after</span></div>
-            <div><strong>8%</strong><span data-i18n="economicsCommissionShort">of every transaction</span></div>
-          </div>
-          <p class="partner-note" data-i18n="forgePartnerNote">The trial removes adoption friction; transaction commission applies from the first sale.</p>
-          <p class="map-rule" data-i18n="forgeMapRule">Commercial profiles, discovery and marketplace tools require an active subscription after the trial. Public activity locations remain community-driven.</p>
-        </div>
-      </div>
-    </section>
 
-    <section class="plan-section" id="plan">
-      <div class="section-shell">
-        <div class="brief-heading reveal">
-          <div>
-            <p class="eyebrow" data-i18n="planEyebrow">BUSINESS PLAN · 9–12 MONTHS</p>
-            <h2 data-i18n="planTitle">Build, validate, scale.</h2>
-          </div>
-          <p data-i18n="planIntro">A staged operating plan converts founder-built products into measurable, repeatable growth systems.</p>
-        </div>
-        <div class="plan-grid">
-          <article class="plan-phase reveal">
-            <span class="phase-number">01</span>
-            <p class="phase-time" data-i18n="phaseOneTime">0–3 months · Readiness</p>
-            <h3 data-i18n="phaseOneTitle">Instrument the baseline.</h3>
-            <p data-i18n="phaseOneText">Establish Vent acquisition and retention benchmarks. Complete Forge launch readiness and partner onboarding.</p>
-          </article>
-          <article class="plan-phase reveal">
-            <span class="phase-number">02</span>
-            <p class="phase-time" data-i18n="phaseTwoTime">4–6 months · Activation</p>
-            <h3 data-i18n="phaseTwoTitle">Create market density.</h3>
-            <p data-i18n="phaseTwoText">Run controlled Vent growth and monetization tests. Build Forge density in Istanbul and international partner supply remotely.</p>
-          </article>
-          <article class="plan-phase reveal">
-            <span class="phase-number">03</span>
-            <p class="phase-time" data-i18n="phaseThreeTime">7–12 months · Repeatability</p>
-            <h3 data-i18n="phaseThreeTitle">Prove the growth model.</h3>
-            <p data-i18n="phaseThreeText">Validate Vent D30 retention and premium conversion; Forge partner activation, transaction volume and trial-to-paid conversion.</p>
-          </article>
-        </div>
-        <div class="validation-strip reveal">
-          <span data-i18n="validationLabel">Capital discipline</span>
-          <p data-i18n="validationText">Deployment is governed by acquisition, retention, activation, transaction and paid-conversion evidence.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="investment-section" id="investment">
-      <div class="section-shell">
-        <div class="investment-grid">
-          <div class="round-intro reveal">
-            <p class="eyebrow" data-i18n="investmentEyebrow">INDICATIVE INVESTMENT FRAMEWORK</p>
-            <div class="round-amount">$100K</div>
-            <h2 data-i18n="investmentTitle">Company-level participation in AEON.</h2>
-            <p data-i18n="investmentIntro">The proposed investment funds both products through AEON while preserving a founder-led operating model.</p>
-          </div>
-          <div class="deal-card reveal">
-            <div class="deal-head">
-              <span data-i18n="considerationLabel">Indicative consideration</span>
-              <strong data-i18n="considerationValue">5% membership interest in AEON LLC</strong>
+          <div class="contact-strip">
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="contactRoleLbl">Rol & Konum:</span>
+              <span class="contact-val" data-i18n="contactRole">Endüstri Mühendisliği & Yazılım · Eskişehir</span>
             </div>
-            <div class="deal-facts">
-              <article><span data-i18n="scopeLabel">Portfolio scope</span><p data-i18n="scopeValue">Vent, Forge and future AEON products</p></article>
-              <article><span data-i18n="structureLabel">Economic structure</span><p data-i18n="structureValue">Company equity; no perpetual revenue share</p></article>
-              <article><span data-i18n="governanceLabel">Governance</span><p data-i18n="governanceValue">Founder-led; no board seat, veto rights or operational control</p></article>
-              <article><span data-i18n="rightsLabel">Standard rights</span><p data-i18n="rightsValue">Information and pro-rata participation rights may be documented</p></article>
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="mailLbl">E-posta:</span>
+              <a href="mailto:sburkaybozyel@gmail.com" class="contact-link">sburkaybozyel@gmail.com</a>
             </div>
-            <p class="deal-note" data-i18n="dealNote">Indicative and non-binding. Subject to mutual diligence, verification of corporate and intellectual-property ownership, legal counsel and definitive documentation.</p>
-          </div>
-        </div>
-
-        <div class="funding-use reveal">
-          <p class="panel-label" data-i18n="fundingUseLabel">Use of funds</p>
-          <div class="funding-grid">
-            <article><strong>60%</strong><div><span data-i18n="allocationGrowth">Growth and distribution</span><p data-i18n="allocationGrowthText">Vent acquisition and Forge partner activation.</p></div></article>
-            <article><strong>15%</strong><div><span data-i18n="allocationProduct">Product and operations</span><p data-i18n="allocationProductText">Launch readiness, trust and infrastructure.</p></div></article>
-            <article><strong>10%</strong><div><span data-i18n="allocationPeople">Specialist capacity</span><p data-i18n="allocationPeopleText">Targeted support at validated bottlenecks.</p></div></article>
-            <article><strong>15%</strong><div><span data-i18n="allocationReserve">Working capital and contingency</span><p data-i18n="allocationReserveText">Operating reserve, legal and unexpected costs.</p></div></article>
-          </div>
-        </div>
-
-        <div class="founder-strip reveal" id="contact">
-          <div class="founder-image">
-            <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" loading="lazy" decoding="async">
-            <span>FOUNDER · PRODUCT &amp; OPERATIONS</span>
-          </div>
-          <div class="founder-copy">
-            <p class="eyebrow" data-i18n="founderEyebrow">FOUNDER EXECUTION</p>
-            <h2 data-i18n="founderTitle">Built before institutional capital.</h2>
-            <p data-i18n="founderTextOne">Salih Burkay Bozyel designed, built and operated both products without institutional financing. The round adds focused capacity across growth, product operations and partner acquisition.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="mailto:burkaybozyel@gmail.com?subject=AEON%20Investor%20Brief" data-i18n="closingEmail">Request investor materials</a>
-              <a class="button button-ghost" href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noreferrer"><span data-i18n="closingLinkedIn">Founder profile</span><span aria-hidden="true">↗</span></a>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/salih-burkay-b</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub:</span>
+              <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
             </div>
           </div>
         </div>
-        <p class="terms-note investment-terms" data-i18n="closingTerms">For informational purposes only. This page does not constitute an offer or solicitation; any investment is subject to private diligence and definitive documentation.</p>
+
+        <div class="intro-card-side">
+          <div class="profile-card">
+            <div class="profile-img-wrap">
+              <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" class="profile-photo" onerror="this.style.display='none'">
+            </div>
+            <div class="profile-meta">
+              <h3 class="profile-name">Salih Burkay Bozyel</h3>
+              <p class="profile-role" data-i18n="profileRole">ESOGÜ Endüstri Müh. · Founder, AEON LLC</p>
+            </div>
+            <div class="profile-principles">
+              <div class="principle-row">
+                <span class="pr-icon">—</span>
+                <span data-i18n="pPrinciple1"><strong>Sıfır Koordinasyon Sürtünmesi:</strong> Tasarım, veritabanı, mobil ve bulut tek elden.</span>
+              </div>
+              <div class="principle-row">
+                <span class="pr-icon">—</span>
+                <span data-i18n="pPrinciple2"><strong>Çalışan MVP Hızı:</strong> 2-4 haftada sahada test edilmiş canlı teslimat.</span>
+              </div>
+              <div class="principle-row">
+                <span class="pr-icon">—</span>
+                <span data-i18n="pPrinciple3"><strong>Sermaye Kaldıracı:</strong> Yüksek ajans yakım maliyetlerini sıfırlayan doğrudan üretim.</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- 2. GEÇMİŞ (CV Formatında Kronolojik Deneyim & Eğitim) -->
+    <section class="section-block" id="experience">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="expEyebrow">Profesyonel Kronoloji</div>
+        <h2 class="section-title" data-i18n="expTitle">Kariyer & <span>Çalışma Geçmişi</span></h2>
+        <p class="section-subtitle" data-i18n="expSubtitle">
+          Geliştirilen işletme sistemleri, bağımsız girişimler ve uçtan uca mühendislik sorumlulukları.
+        </p>
+      </div>
+
+      <div class="timeline-cv">
+        <!-- Pozisyon 1 -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeNow">2024 — Günümüz</span>
+            <span class="cv-loc" data-i18n="cvLocAeon">Delaware, ABD & Türkiye</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Yazılım Geliştirici & Kurucu</h3>
+              <span class="cv-company">AEON LLC</span>
+            </div>
+            <p class="cv-desc" data-i18n="expAeonDesc">
+              Butik otel ve restoranlar için modüler AEON Hospitality ERP'sinin mimarisini sıfırdan kurdu. Perakende ve sanayi sahaları için Nvidia Jetson tabanlı RetailPulse AI / SanayiPulse bilgisayarlı görü motorunu geliştirdi. Global mobil ekosistemde Vent (v3.0.5/3.0.6) ve Forge ürünlerinin teknik omurgasını yönetti.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="expAeonBullet1">Node.js 20, Express, AlaSQL/SQLite ve Cloudflare D1 üzerinde çok kiracılı (multi-tenant) veri izolasyonu mimarisi kuruldu.</li>
+              <li data-i18n="expAeonBullet2">HotelRunner API ile Booking.com ve Airbnb için çift yönlü gerçek zamanlı kanal senkronizasyonu entegre edildi.</li>
+              <li data-i18n="expAeonBullet3">YOLOv8 + ByteTrack ile %100 yerel (on-prem) kamera analitiği ve 1.5m temas süresi korelasyon pipeline'ı kodlandı.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Pozisyon 2: Bağımsız Ürün Geliştirici -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge">2022 — 2024</span>
+            <span class="cv-loc" data-i18n="cvLocRemote">Türkiye / Uzaktan</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleIndie">Bağımsız Yazılım Mühendisi & Mobil Sistem Geliştiricisi</h3>
+              <span class="cv-company" data-i18n="cvCompIndie">Bağımsız Ar-Ge & Ürün Geliştirme</span>
+            </div>
+            <p class="cv-desc" data-i18n="expIndieDesc">
+              Çapraz platform mobil uygulamalar (Flutter), dağıtık veri tabanları ve gerçek zamanlı sistemler üzerine yoğunlaştı. Vent uygulamasının çekirdek mimarisini, çok dilli yerelleştirme sistemini ve konu odaklı eşleşme protokolünü sıfırdan tasarlayıp App Store ve Google Play üzerinde yayınladı.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="expIndieBullet1">Flutter ve Firebase Firestore ile sıfır kesintiyle çalışan küresel eşleşme ve sohbet motoru geliştirildi.</li>
+              <li data-i18n="expIndieBullet2">Uygulama içi satın alma (IAP) ve abonelik akışları RevenueCat ve mağaza köprüleriyle canlıya alındı.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Eğitim: ESOGÜ -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeEdu">Lisans Eğitimi</span>
+            <span class="cv-loc">Eskişehir</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleEsogu">Eskişehir Osmangazi Üniversitesi (ESOGÜ)</h3>
+              <span class="cv-company" data-i18n="cvCompEsogu">Endüstri Mühendisliği Bölümü (Lisans Öğrencisi)</span>
+            </div>
+            <p class="cv-desc" data-i18n="expEsoguDesc">
+              Üretim ve hizmet süreçlerinin optimizasyonu, yöneylem araştırması, darboğaz analizi, istatistiksel kalite kontrol ve sistem dinamiği temellerini; dağıtık yazılım mimarisi, yapay zekâ destekli otomasyon ve mobil ürün tasarımıyla birleştiren mühendislik yaklaşımı.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="cvEsoguB1">Sistem analizi ve süreç iyileştirme prensiplerinin dijital ERP/SaaS platformlarına uyarlanması.</li>
+              <li data-i18n="cvEsoguB2">Saha bilgisayarlı görü ve veri akışlarında operasyonel verimlilik ve kayıp/kaçak önleme modellemeleri.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Eğitim: Lise -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeHs">Lise Eğitimi</span>
+            <span class="cv-loc">Denizli</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role">Mustafa Kaynak Anadolu Lisesi</h3>
+              <span class="cv-company" data-i18n="cvCompHs">Sayısal Bölüm Mezuniyeti (2017)</span>
+            </div>
+            <p class="cv-desc" data-i18n="expEduDesc">
+              2017 yılı Mustafa Kaynak Anadolu Lisesi mezuniyeti sonrası; bilgisayarlı görü (Computer Vision), dağıtık sistem mimarileri, çapraz platform mobil yazılım ve modern yapay zekâ orkestrasyonu alanlarında yoğun uygulamalı Ar-Ge ve bağımsız ürün geliştirme çalışmaları yürütmüştür.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BİLGİ VE YETERLİLİKLER (Net Yetkinlik Matrisi) -->
+    <section class="section-block" id="skills">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="skillsEyebrow">Teknik Matris</div>
+        <h2 class="section-title" data-i18n="skillsTitle">Bilgi & <span>Yeterlilikler</span></h2>
+        <p class="section-subtitle" data-i18n="skillsSubtitle">
+          Üretim kalitesinde kullanılan diller, çerçeveler, mimari desenler ve altyapı yetkinlikleri.
+        </p>
+      </div>
+
+      <div class="skills-matrix-grid">
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skMob">Mobil Uygulama</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Flutter 3.24+</li>
+            <li>Dart</li>
+            <li>In-App Purchase (IAP)</li>
+            <li>RevenueCat</li>
+            <li>Firebase Auth & Messaging</li>
+            <li>Offline-First Sync</li>
+            <li data-i18n="skLoc">Yerelleştirme (37 Dil)</li>
+            <li data-i18n="skStore">App Store / Play Store Dağıtım</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skBe">Sunucu & Veri Tabanı</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Node.js 20 (ESM)</li>
+            <li>Express.js</li>
+            <li>Python (FastAPI / Server)</li>
+            <li>Cloudflare Workers & D1</li>
+            <li>Server-Sent Events (SSE)</li>
+            <li>WebPush API</li>
+            <li>RESTful API Mimarisi</li>
+            <li>Multi-Tenant Mimari</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skAi">Yapay Görü (Edge AI)</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>OpenCV</li>
+            <li>YOLOv8 & ByteTrack</li>
+            <li>PyTorch</li>
+            <li>Nvidia Jetson & Mini PC</li>
+            <li>Homografi & Zemin Projeksiyonu</li>
+            <li data-i18n="skRtsp">RTSP Akış İşleme</li>
+            <li data-i18n="skWhisper">Whisper AI Altyazı</li>
+            <li>Edge-TTS Ses Sentezi</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skDb">Veri & Güvenlik</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>PostgreSQL & Supabase RLS</li>
+            <li>SQLite & AlaSQL</li>
+            <li>Firebase Firestore</li>
+            <li data-i18n="skMtls">mTLS Güvenli İletişim</li>
+            <li data-i18n="skOnprem">%100 Yerel Veri İşleme</li>
+            <li data-i18n="skKvkkMin">KVKK / GDPR Veri Minimizasyonu</li>
+            <li data-i18n="skRbac">Rol Tabanlı Erişim (RBAC)</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skFe">Web & Medya</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>Next.js / React</li>
+            <li>Modern CSS & Design Tokens</li>
+            <li>Remotion Video Motoru</li>
+            <li>Figma UI/UX Prototipleme</li>
+            <li>Responsive / Mobile-First</li>
+            <li data-i18n="skSem">Semantik Web Standartları</li>
+          </ul>
+        </div>
+
+        <div class="skill-category-card">
+          <div class="cat-header">
+            <h3 data-i18n="skInteg">Entegrasyonlar & Yapay Zekâ</h3>
+          </div>
+          <ul class="skill-tags">
+            <li>HotelRunner OTA API</li>
+            <li>Booking.com / Airbnb Sync</li>
+            <li>Anthropic MCP (Model Context)</li>
+            <li data-i18n="skDeep">DeepSeek & Claude Entegrasyonları</li>
+            <li>Git & GitHub CI/CD</li>
+            <li data-i18n="skDocker">Docker & Edge Dağıtımı</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- 4. ERP, CRM & WEB İŞLERİ -->
+    <section class="section-block" id="erp-crm-web">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="erpEyebrow">Operasyon & B2B SaaS</div>
+        <h2 class="section-title" data-i18n="erpTitle">ERP, CRM & <span>Web Sistemleri</span></h2>
+        <p class="section-subtitle" data-i18n="erpSubtitle">
+          Butik oteller, restoranlar ve marinalar için geliştirilen uçtan uca dijital omurga ve lüks web vitrinleri.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- 4.1 AEON Hospitality Core ERP -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('aeonCore')">
+            <img class="card-logo" src="assets/erp-aeon/aeon-logo.jpg" alt="AEON" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="aeonCat">Aeon Core Platform · CANLI MİMARİ</div>
+              <h3 class="card-heading">AEON Hospitality Core ERP & POS</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="aeonSum">Lüks butik oteller ve restoranlar için rezervasyon, oda folyoları, plaj/şezlong QR menü siparişleri ve mutfak şef ekranını (KDS) tek merkezde birleştiren işletim sistemi. Departmanlar arası koordinasyon kopukluğunu bitirir; masadan verilen siparişlerin kaybolmasını ve tahsil edilmeyen servis kaçaklarını sıfırlar.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">Multi-Tenant</span>
+                <span class="m-lbl" data-i18n="mIsoDb">İzole Veritabanı</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">&lt;50ms</span>
+                <span class="m-lbl" data-i18n="mEdgeResp">Edge Yanıt Hızı</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">%100</span>
+                <span class="m-lbl" data-i18n="mLeakLog">Kaçak Önleme Logu</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('aeonCore')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.2 HotelRunner Küresel Kanal Senkronizasyonu -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('hotelRunner')">
+            <span class="card-mono">HR</span>
+            <div class="card-head-text">
+              <div class="card-category">Global OTA Senkronizasyonu · API ENTEGRASYONU</div>
+              <h3 class="card-heading" data-i18n="hrHead">HotelRunner Çift Yönlü Kanal Entegrasyonu</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="hrSum">Otelin yerel oda yönetim sistemi ile Booking.com, Airbnb ve Expedia arasında anlık çift yönlü veri köprüsü kurar. Misafiri kapıda bırakan çifte rezervasyon (overbooking) riskini, acente ceza puanlarını ve personelin saatler süren manuel veri giriş yükünü ortadan kaldırır.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mTwoWay">2-Yönlü</span>
+                <span class="m-lbl">Kanal Senkronizasyonu</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">0</span>
+                <span class="m-lbl" data-i18n="mNoManual">Manuel Veri Girişi</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mLive">Anlık</span>
+                <span class="m-lbl" data-i18n="mLoyalty">Misafir Sadakat Kaydı</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('hotelRunner')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.3 Butik İşletme CRM & Satış Paneli -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('crm')">
+            <span class="card-mono">CRM</span>
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="crmCat">Misafir & Satış Yönetimi · CRM & PIPELINE</div>
+              <h3 class="card-heading" data-i18n="crmHead">Butik İşletme CRM & Satış Paneli</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="crmSum">WhatsApp, telefon ve DM üzerinden gelen tüm konaklama ve özel etkinlik taleplerini aşamalı bir satış hunisinde (pipeline) toplayan müşteri ilişkileri platformu. Personelin yoğunlukta unuttuğu yüksek değerli misafir taleplerini ve fiyat tutarsızlıklarını önleyerek doğrudan satış kapanış oranını artırır.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">360°</span>
+                <span class="m-lbl" data-i18n="mGuestView">Misafir Görünümü</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mQuote">Özel Teklif</span>
+                <span class="m-lbl" data-i18n="mPdf">Tek Tıkla PDF Üretimi</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('crm')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4.4 Lüks Butik Otel & Marina Web Portalları -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('hotelWeb')">
+            <img class="card-logo" src="assets/bozburun-yacht-club/byc-logo.png" alt="BYC" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="webCat">Lüks Web & Doğrudan Satış · PRESTİJ VİTRİNİ</div>
+              <h3 class="card-heading" data-i18n="webHead">Lüks Butik Otel & Marina Web Portalları</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="webSum">Seçkin kıyı otelleri ve marinalar için tasarlanan yüksek hızlı editoryal vitrin ve doğrudan rezervasyon motoru. Acentelere ödenen %15-%25 komisyon kesintilerini ortadan kaldırır ve üst segment misafire hitap eden prestijli marka kimliğini tesis eder.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">V1 / V2</span>
+                <span class="m-lbl" data-i18n="mEditTpl">Editoryal Şablon Mimarisi</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">%0 Komisyon</span>
+                <span class="m-lbl" data-i18n="mDirect">Doğrudan Rezervasyon</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('hotelWeb')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EDGE AI KAMERA TAKİP & GÖRÜ ANALİTİĞİ -->
+    <section class="section-block" id="edge-ai">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="aiEyebrow">Bilgisayarlı Görü & Edge Donanım</div>
+        <h2 class="section-title" data-i18n="aiTitle">Edge AI & <span>Kamera Analitiği</span></h2>
+        <p class="section-subtitle" data-i18n="aiSubtitle">
+          Mevcut güvenlik kameralarını buluta bağımlı kalmadan; perakende dönüşüm, fabrika lojistiği ve eğlence parkı analitik merkezine dönüştüren yapay zekâ hattı.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- 5.1 RetailPulse AI -->
+        <div class="showcase-card highlight-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('funnivarium')">
+            <span class="card-mono">RP</span>
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="retCat">Mağaza İçi Müşteri Zekâsı · BİLGİSAYARLI GÖRÜ</div>
+              <h3 class="card-heading" data-i18n="retHead">RetailPulse AI: Perakende Davranış Analitiği</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="retSum">Mağazadaki mevcut tavan kameralarından müşteri trafiğini ve reyon önü bekleme sürelerini ölçen, POS kasa fişleriyle eşleştirerek gerçek satışa dönüşüm oranını (% Conversion) hesaplayan yerel bilgisayarlı görü motoru. Görüntüleri buluta aktarmadan RAM üzerinde işleyip silerek %100 KVKK güvencesi sağlar.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">1.5 Metre</span>
+                <span class="m-lbl" data-i18n="mContact">Personel Temas Kuralı</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mPos">POS Eşleşmesi</span>
+                <span class="m-lbl" data-i18n="mConv">Kasa Satışa Dönüşüm</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">%100 Yerel</span>
+                <span class="m-lbl" data-i18n="mRam">RAM'de İşleme & Silme</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive highlight-btn" onclick="openTechModal('funnivarium')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.2 SanayiPulse -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('sanayiPulse')">
+            <span class="card-mono">SP</span>
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="sanCat">Fabrika & Depo Rampa Zekâsı · ENDÜSTRİYEL LOJİSTİK</div>
+              <h3 class="card-heading" data-i18n="sanHead">SanayiPulse: Fabrika & Rampa Lojistiği</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="sanSum">Ağır sanayi tesisleri ve yükleme rampalarında TIR giriş-çıkış sürelerini, rampa doluluklarını ve İSG güvenlik koridorlarını 7/24 izleyen endüstriyel görü sistemi. TIR bekleme sürelerinden doğan lojistik gecikme (demurrage) cezalarını ve fabrika içi forklift kazalarını önler.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mRamp">Rampa Süresi</span>
+                <span class="m-lbl" data-i18n="mNeck">Darboğaz Tespiti</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">Demurrage</span>
+                <span class="m-lbl" data-i18n="mDemur">Ceza Risk Azaltımı</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('sanayiPulse')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.3 Funnivarium OS -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('retailPulse')">
+            <span class="card-mono">FN</span>
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="funCat">Kaçak Biniş & Kuyruk Zekâsı · EĞLENCE & ULAŞIM</div>
+              <h3 class="card-heading" data-i18n="funHead">Funnivarium OS: Turnike & Kaçak Biniş Denetimi</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="funSum">Eğlence ve ulaşım tesislerinde turnikeden okutulan bilet sayısı ile kameranın tespit ettiği gerçek biniş sayısını anlık olarak karşılaştıran denetim paneli. Bilet basmadan turnikeden atlayan veya usulsüz geçen binişleri anında yakalayarak her gün uğranılan ciddi bilet geliri sızıntısını durdurur.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mLeak">+82 Kaçak</span>
+                <span class="m-lbl" data-i18n="mBoard">Canlı Biniş Tespiti</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mLive">Anlık</span>
+                <span class="m-lbl" data-i18n="mQueue">Kuyruk Yoğunluğu</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('retailPulse')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5.4 Edge Donanım & KVKK Güvencesi -->
+        <div class="showcase-card info-box-card">
+          <div class="card-body">
+            <div class="card-category" data-i18n="edgeCat">KVKK / GDPR Mimari Uyum · DONANIM & GÜVENLİK</div>
+            <h3 class="card-heading" data-i18n="edgeHead">Uçta Donanım Mimarisi & %100 KVKK Güvencesi</h3>
+            <p class="card-summary" data-i18n="edgeHwSummary">
+              Video akışları internete veya üçüncü taraf bulut sağlayıcılarına asla iletilmez. Tüm tespitler yerel Nvidia Jetson Orin veya endüstriyel Mini PC ünitelerinde RAM üzerinde işlenir ve ham kareler analiz bittiği milisaniyede silinir. Merkeze yalnızca anonim JSON telemetri verisi akar.
+            </p>
+            <div class="architecture-feature-list">
+              <div class="af-item">
+                <span class="af-bullet">▸</span>
+                <span data-i18n="afZero"><strong>Sıfır Bulut Bant Genişliği:</strong> Gbps'lik video yayını yerine bayt düzeyinde mTLS telemetri.</span>
+              </div>
+              <div class="af-item">
+                <span class="af-bullet">▸</span>
+                <span data-i18n="afKvkk"><strong>KVKK & GDPR Uyumu:</strong> Kişisel yüz veya biyometrik veri saklanmaz; sadece anonim koordinat takibi yapılır.</span>
+              </div>
+              <div class="af-item">
+                <span class="af-bullet">▸</span>
+                <span data-i18n="afFran"><strong>Franchise Tak-Çalıştır:</strong> Mevcut ONVIF/RTSP kameralarla modüler donanım entegrasyonu.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 6. MOBİL UYGULAMALAR (Yapılanlar ve Geliştirilenler) -->
+    <section class="section-block" id="mobile-apps">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="mobileEyebrow">Mobil Ekosistem</div>
+        <h2 class="section-title" data-i18n="mobileTitle">Mobil Uygulamalar <span>(Canlı & Geliştirilenler)</span></h2>
+        <p class="section-subtitle" data-i18n="mobileSubtitle">
+          App Store ve Google Play'de küresel kullanıcıya ulaşan canlı ürünler ve yayına hazırlanan mobil topluluklar.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- 6.1 CANLI ÜRÜN: Vent App -->
+        <div class="showcase-card highlight-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('vent')">
+            <img class="card-logo" src="assets/vent/vent-logo.png" alt="Vent" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="ventCat">Flutter & Firebase · MAĞAZADA CANLI (v3.0.6)</div>
+              <h3 class="card-heading" data-i18n="ventHead">Vent: Duygusal Destek & Anonim İletişim Ağı</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="ventSum">İnsanları profil fotoğrafları veya takipçi sayıları yerine konuşmak istedikleri spesifik duygu ve 222 konu başlığı üzerinden 1-e-1 anonim dertleşme odalarında buluşturan mobil uygulama. Sosyal medyanın dayattığı dış görünüş ve beğeni baskısını kaldırır; çift taraflı rıza ve otomatik sızıntı filtresiyle güvenli iletişim sağlar.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">37 Dil</span>
+                <span class="m-lbl" data-i18n="mAutoTr">Otomatik Çeviri & Eşleşme</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">222 Konu</span>
+                <span class="m-lbl" data-i18n="mTopics">Duygu & Yaşam Başlığı</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mConsent">Rızalı Sohbet</span>
+                <span class="m-lbl" data-i18n="mSafe">Konu Onaylı Güvenlik</span>
+              </div>
+            </div>
+            <div class="store-links-row no-print">
+              <a href="https://apps.apple.com/us/app/vent-truly-heard/id6757230709" target="_blank" rel="noopener" class="btn-store apple">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.05-1.81.93-2.87-.91.04-2.01.61-2.65 1.37-.57.66-1.07 1.74-.94 2.77.01 0 .03 0 .05.01 1.02-.01 1.99-.52 2.61-1.28z"/></svg>
+                <span data-i18n="storeApple">App Store'da Canlı</span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.burkaybozyel.ventapp" target="_blank" rel="noopener" class="btn-store google">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.122 2.122 0 01-.61-.926V2.74c.164-.354.382-.676.61-.926zm11.24 11.24l2.585-2.585-11.41-6.53 8.825 9.115zm0 1.892l-8.826 9.116 11.41-6.531-2.584-2.585zm1.488-1.488l3.197 1.83a1.44 1.44 0 000-2.493l-3.197-1.83.69 1.246-.69 1.247z"/></svg>
+                <span data-i18n="storeGoogle">Google Play'de Canlı</span>
+              </a>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive highlight-btn" onclick="openTechModal('vent')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6.2 GELİŞTİRİLEN: Forge -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('forge')">
+            <img class="card-logo" src="assets/forge/forge-logo.png" alt="Forge" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="forgeCat">Flutter + Supabase + Next.js · GELİŞTİRİLME AŞAMASINDA</div>
+              <h3 class="card-heading" data-i18n="forgeHead">Forge: Sporcu Topluluğu & Antrenman Ağı</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="forgeSum">Sporcuların antrenman rekorlarını (PR), programlarını ve videolarını paylaştığı; harita üzerinden yakınındaki spor salonlarını ve seviyesine uygun antrenman partnerlerini bulduğu dikey sosyal ağ. Yalnız antrenman yapmaktan kaynaklanan motivasyon kaybını ve salonda partner bulma zorluğunu çözer.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">Harita</span>
+                <span class="m-lbl" data-i18n="mDiscover">Yer & Grup Keşfi</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">Hibrit</span>
+                <span class="m-lbl">Mobil + Web Ekosistemi</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('forge')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6.3 GELİŞTİRİLEN: BOB (Sarkastik AI Alarm) -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('bob')">
+            <img class="card-logo" src="assets/bob/bob-sarcastic.png" alt="BOB" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="bobCat">Edge-TTS & Gemini AI · GELİŞTİRİLME AŞAMASINDA</div>
+              <h3 class="card-heading" data-i18n="bobHead">BOB: Erteleme Karşıtı Alaycı Akıllı Alarm</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="bobSum">Sabah alarmını sürekli erteleyen kullanıcıları; standart melodiler yerine yapay zekâ destekli alaycı, sert sesli uyarılar ve zorunlu mantık görevleriyle yataktan kaldıran disiplin motorudur. Erteleme refleksini ve güne geç başlama döngüsünü bilişsel görevlerle kırar.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val">0 Snooze</span>
+                <span class="m-lbl" data-i18n="mWake">Zorunlu Uyanma Görevi</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mNeural">Nöral Ses</span>
+                <span class="m-lbl" data-i18n="mVoice">Dinamik AI Seslendirme</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('bob')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6.4 GELİŞTİRİLEN: UNDRGRND -->
+        <div class="showcase-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('undrgrnd')">
+            <img class="card-logo" src="assets/undrgrnd/undrgrnd-logo.png" alt="UNDRGRND" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="undCat">Kültür & Müzik Topluluğu · GELİŞTİRİLME AŞAMASINDA</div>
+              <h3 class="card-heading" data-i18n="undHead">UNDRGRND: Bağımsız Hip-Hop & Cypher Odaları</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="undSum">Beatmaker'lar ile rap sanatçılarının canlı beat odalarında sırayla ses kaydedip parçalar ürettiği dijital sokak müzik platformu. Bağımsız müzisyenlerin stüdyo kiralama masrafı olmadan cep telefonu üzerinden serbest stil ve verse kaydetmesini sağlar.</p>
+            <div class="card-metrics-row">
+              <div class="m-metric">
+                <span class="m-val" data-i18n="mCypher">Canlı Cypher</span>
+                <span class="m-lbl" data-i18n="mVerse">Sıralı Verse Kaydı</span>
+              </div>
+              <div class="m-metric">
+                <span class="m-val">0 Masraf</span>
+                <span class="m-lbl" data-i18n="mPocket">Cep Stüdyosu</span>
+              </div>
+            </div>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive" onclick="openTechModal('undrgrnd')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. EKSTRALAR (Makaleler, Yazılar, Araştırmalar & İleri Teknoloji) -->
+    <section class="section-block" id="extras">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="extrasEyebrow">Araştırma, Medya & İleri Teknoloji</div>
+        <h2 class="section-title" data-i18n="extrasTitle">Ekstralar: <span>Makaleler, Yazılar & Ar-Ge</span></h2>
+        <p class="section-subtitle" data-i18n="extrasSubtitle">
+          Mimari araştırma raporları, kod tabanlı video otomasyonu ve animasyon dizisi senaryo tasarımı.
+        </p>
+      </div>
+
+      <div class="extras-grid">
+        <!-- 7.1 Bilimsel Makaleler & Araştırma Yayınları -->
+        <div class="extra-article-box">
+          <div class="article-box-header">
+            <span class="art-icon"></span>
+            <div>
+              <h3 data-i18n="articlesHeader">Bilimsel Makaleler & Akademik Araştırmalar</h3>
+              <p style="font-size: 13px; color: var(--muted); margin-top: 4px;" data-i18n="articlesSubheader">Bağımsız araştırmalar, bilimsel yayınlar ve teknik tez çalışmaları.</p>
+            </div>
+          </div>
+          <div class="article-list" id="scienceArticlesList">
+            <!-- Bilimsel Makale 1 -->
+            <div class="art-item">
+              <div class="art-meta">
+                <span class="art-category" data-i18n="paper1Category">BİLİMSEL YAYIN & AR-GE</span>
+                <span class="art-date" data-i18n="artDate">PDF / Tam Metin</span>
+              </div>
+              <h4 class="art-title" data-i18n="paper1Title">Karmaşık Sistemler ve Bilişsel Modeller Üzerine Araştırmalar</h4>
+              <p class="art-excerpt" data-i18n="paper1Excerpt">
+                Sistem dinamiği, bilgi teorisi, hesaplamalı modeller ve çok boyutlu karar mekanizmaları üzerine teorik ve uygulamalı araştırma çalışması.
+              </p>
+              <div style="margin-top: 14px;">
+                <a href="assets/science-articles/ctec.html" target="_blank" class="btn-store" style="display: inline-flex; font-size: 11.5px; padding: 5px 12px;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  <span data-i18n="readBtn">Makaleyi Oku</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bilimsel Makale 2 -->
+            <div class="art-item">
+              <div class="art-meta">
+                <span class="art-category" data-i18n="paper2Category">YAPAY ZEKA & ALGORİTMA</span>
+                <span class="art-date" data-i18n="artDate">PDF / Tam Metin</span>
+              </div>
+              <h4 class="art-title" data-i18n="paper2Title">Uçta Hesaplama ve Deterministik Optimizasyon Mimarileri</h4>
+              <p class="art-excerpt" data-i18n="paper2Excerpt">
+                Düşük gecikmeli donanım kısıtlarında yapay zekâ çıkarımı, veri minimizasyonu ve gerçek zamanlı sinyal işleme algoritmaları üzerine analiz.
+              </p>
+              <div style="margin-top: 14px;">
+                <a href="assets/science-articles/loop.html" target="_blank" class="btn-store" style="display: inline-flex; font-size: 11.5px; padding: 5px 12px;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  <span data-i18n="readBtn">Makaleyi Oku</span>
+                </a>
+              </div>
+            </div>
+            <!-- Bilimsel Makale 3 -->
+            <div class="art-item">
+              <div class="art-meta">
+                <span class="art-category" data-i18n="paper3Category">KUANTUM FELSEFESİ · YORUM DENEMESİ</span>
+                <span class="art-date" data-i18n="artDate">TR + EN Tam Metin</span>
+              </div>
+              <h4 class="art-title" data-i18n="paper3Title">100 Yıllık Sapma: Kopenhag Yorumu Kuantum Fiziğini Nasıl Durdurdu</h4>
+              <p class="art-excerpt" data-i18n="paper3Excerpt">
+                Kopenhag yorumunun kozmolojik ölçüm sorununu ve gözlemcisiz bir kuantum evren anlatısının imkânını tartışan yorum denemesi.
+              </p>
+              <div style="margin-top: 14px;">
+                <a href="assets/science-articles/copenhagen.html" target="_blank" class="btn-store" style="display: inline-flex; font-size: 11.5px; padding: 5px 12px;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  <span data-i18n="readBtn">Makaleyi Oku</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Bilimsel Makale 4 -->
+            <div class="art-item">
+              <div class="art-meta">
+                <span class="art-category" data-i18n="paper4Category">MATEMATİK FELSEFESİ · YORUM DENEMESİ</span>
+                <span class="art-date" data-i18n="artDate">TR + EN Tam Metin</span>
+              </div>
+              <h4 class="art-title" data-i18n="paper4Title">Matematiğin Sessiz Krizi</h4>
+              <p class="art-excerpt" data-i18n="paper4Excerpt">
+                Gödel'den kuantum fotosenteze: çalışan ama gerçekliği eksik sayan matematik dilinin sınırlarını ve frekans-temelli bir genişleme önerisini tartışan deneme.
+              </p>
+              <div style="margin-top: 14px;">
+                <a href="assets/science-articles/math.html" target="_blank" class="btn-store" style="display: inline-flex; font-size: 11.5px; padding: 5px 12px;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  <span data-i18n="readBtn">Makaleyi Oku</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7.2 Remotion + Python Otomatik Reklam Stüdyosu -->
+        <div class="extra-card">
+          <div class="card-body"><div class="card-head clickable" onclick="openTechModal('studio')">
+            <img class="card-logo" src="assets/studyo/rayana_logo.png" alt="Rayana" loading="lazy" onerror="this.style.display='none'">
+            <div class="card-head-text">
+              <div class="card-category">Remotion & Whisper AI · MEDYA OTOMASYONU</div>
+              <h3 class="card-heading" data-i18n="stuHead">Kod Tabanlı Otomatik Video & Reklam Stüdyosu</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="stuSum">Video kurgu programı açmadan React bileşenleri ve Python betikleriyle dinamik fiyatlı kampanya videolarını ve hikayeleri saniyeler içinde render eden otomasyon motoru. Tasarımcılara ödenen yüksek ajans maliyetlerini ve saatler süren manuel montaj yükünü sıfırlar.</p>
+            <div class="card-action-bar no-print" style="padding-top: 14px;">
+              <button class="btn-deep-dive" onclick="openTechModal('studio')">
+                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7.4 Özel MCP Sunucuları & Otonom Ajanlar -->
+        <div class="extra-card">
+          <div class="card-body"><div class="card-head">
+            <span class="card-mono">MCP</span>
+            <div class="card-head-text">
+              <div class="card-category" data-i18n="mcpCat">Anthropic Model Context Protocol · İLERİ PROTOKOL</div>
+              <h3 class="card-heading" data-i18n="mcpHead">Özel MCP Sunucuları & Otonom Ajan Hattı</h3>
+            </div>
+          </div>
+            <p class="card-summary" data-i18n="mcpSummary">
+              Claude ve DeepSeek büyük dil modellerini güvenli yerel köprülerle şirket içi veritabanlarına bağlayan Model Context Protocol (MCP) sunucuları. Ajanların kod tabanlarını bağımsız denetlemesini ve iş akışlarını yürütmesini sağlayan protokol mimarisi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 8. OLASI İŞ POTANSİYELLERİ & TEKLİFLER -->
+    <section class="section-block" id="offerings">
+      <div class="section-header">
+        <div class="eyebrow" data-i18n="offersEyebrow">İş Birlikleri & Teklifler</div>
+        <h2 class="section-title" data-i18n="offersTitle">Birlikte Nasıl <span>Değer Yaratabiliriz?</span></h2>
+        <p class="section-subtitle" data-i18n="offersSubtitle">
+          Masaya yalnızca kod yazan bir yazılımcı olarak değil; sermayeyi yüksek kaldıraçla çarpan teknik kurucu ortak olarak oturuyorum.
+        </p>
+      </div>
+
+      <div class="offerings-grid">
+        <!-- Model 1 -->
+        <div class="offer-card">
+          <div class="offer-number">01</div>
+          <h3 class="offer-title" data-i18n="offer1Title">Venture Studio & Yeni Girişim Ortaklığı</h3>
+          <p class="offer-lead" data-i18n="offer1Lead">Hızlı MVP ve Pazar Validasyonu</p>
+          <p class="offer-desc" data-i18n="offer1Desc">
+            Sermayeniz ve sektör tecrübenizle benim yüksek hızlı full-cycle ürün mimarlığımı birleştirelim. Kârlı bir sektör problemini 2-4 hafta içinde çalışan, test edilmiş bir ürüne çevirip pazara sürelim.
+          </p>
+          <ul class="offer-features">
+            <li data-i18n="offer1F1">Aylık yüksek ajans yakım maliyetleri olmadan doğrudan teknik ortaklık.</li>
+            <li data-i18n="offer1F2">Tasarım, backend, mobil ve bulut altyapısının tek elden sıfır gecikmeyle teslimi.</li>
+            <li data-i18n="offer1F3">Gelir üreten ve nakit akışına odaklanan iş modeli mimarisi.</li>
+          </ul>
+        </div>
+
+        <!-- Model 2 -->
+        <div class="offer-card">
+          <div class="offer-number">02</div>
+          <h3 class="offer-title" data-i18n="offer2Title">Kurumsal Modernizasyon & Entegrasyon</h3>
+          <p class="offer-lead" data-i18n="offer2Lead">Mevcut Şirketleriniz İçin ERP ve AI Zekâsı</p>
+          <p class="offer-desc" data-i18n="offer2Desc">
+            Portföyünüzdeki otel, restoran, perakende mağaza zinciri veya sanayi şirketlerine Aeon ERP ve RetailPulse AI sistemlerimi entegre edelim. Operasyonel kaçakları durdurup iş gücü verimini maksimize edelim.
+          </p>
+          <ul class="offer-features">
+            <li data-i18n="offer2F1">Otel ve restoranlarda siparişten mutfağa ve kanal senkronizasyonuna tam dijitalleşme.</li>
+            <li data-i18n="offer2F2">Mağaza ve fabrikalarda mevcut kameralardan yerel, KVKK uyumlu yapay zekâ analitiği.</li>
+            <li data-i18n="offer2F3">Ağır lisans bedelleri yerine işletmeye özel, hafif ve kalıcı mimari.</li>
+          </ul>
+        </div>
+
+        <!-- Model 3 -->
+        <div class="offer-card">
+          <div class="offer-number">03</div>
+          <h3 class="offer-title" data-i18n="offer3Title">Stratejik Hisse & Ürün Yatırımı</h3>
+          <p class="offer-lead" data-i18n="offer3Lead">Vent & Forge Büyüme Ortaklığı</p>
+          <p class="offer-desc" data-i18n="offer3Desc">
+            Halihazırda mağazalarda olan (Vent App - 37 dil, küresel pazar) ve lansman hazırlığındaki mobil ürünlerimin (Forge) küresel büyümesine, pazarlamasına ve kullanıcı kazanımına stratejik hisse ortağı olun.
+          </p>
+          <ul class="offer-features">
+            <li data-i18n="offer3F1">Doğrulanmış ve yayında olan ürün mimarisi üzerinden sıfır teknik geliştirme riski.</li>
+            <li data-i18n="offer3F2">Yüksek büyüme potansiyeline sahip B2C abonelik ve topluluk gelir modelleri.</li>
+            <li data-i18n="offer3F3">Şeffaf metrikler, net yol haritası ve küresel ölçeklenme potansiyeli.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- İletişim & CV İndirme Kartı -->
+      <div class="contact-box-card">
+        <div class="contact-box-content">
+          <div class="contact-lead-text">
+            <h3 data-i18n="contactCardTitle">Canlı Demo ve Ortaklık Görüşmesi İçin İletişime Geçin</h3>
+            <p data-i18n="contactCardDesc">
+              Görüşmede doğrudan canlı projeler (Vent App, AEON ERP, RetailPulse AI) üzerinden sistem mimarilerini canlı demo yapmaya hazırım.
+            </p>
+          </div>
+          <div class="contact-action-group">
+            <a href="mailto:sburkaybozyel@gmail.com" class="btn-primary" data-i18n="btnDirectEmail">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              E-posta Gönder
+            </a>
+            <button class="btn-secondary" onclick="window.print()" data-i18n="btnPrintCvBottom">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+              CV Olarak Yazdır / PDF İndir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer section-shell">
-    <span>AEON LLC · DELAWARE · 2026</span>
-    <span data-i18n="footerText">Investor overview · July 2026 · For discussion purposes only</span>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-copy">© 2026 Salih Burkay Bozyel · Endüstri Müh. & Yazılım · Founder, AEON LLC</p>
+        <p class="footer-sub" data-i18n="footLoc">Eskişehir · Delaware</p>
+      </div>
+      <div class="footer-right">
+        <a href="#intro" class="footer-link" data-i18n="footTop">Yukarı Dön ↑</a>
+        <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+        <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <a href="mailto:sburkaybozyel@gmail.com" class="footer-link" data-i18n="footMail">E-posta</a>
+      </div>
+    </div>
   </footer>
 
-  <script src="app.js?v=20260723-2"></script>
-</body>
-</html>
+  <!-- Deep-Dive Technical Modal -->
+  <div class="tech-modal-backdrop" id="techModalBackdrop" onclick="closeTechModal(event)">
+    <div class="tech-modal-dialog" onclick="event.stopPropagation()">
+      <div class="tech-modal-header">
+        <div class="tech-header-info">
+          <div class="modal-category" id="modalCategory" data-i18n="mDefCat">SİSTEM MİMARİSİ</div>
+          <h2 class="tech-modal-title" id="modalTitle" data-i18n="mDefTitle">Proje Detayları</h2>
+          <p class="tech-modal-subtitle" id="modalSubtitle" data-i18n="mDefSub">Sistem Mimarisi, Operasyonel Değer & Saha Çıkarımları</p>
+        </div>
+        <button class="tech-modal-close" onclick="closeTechModal()">&times;</button>
+      </div>
+
+                  <div class="tech-modal-tabs" id="modalTabs">
+        <button class="t-tab-btn active" data-tab="overview" onclick="switchTechTab('overview')" data-i18n="tabOverview">Genel Bakış</button>
+        <button class="t-tab-btn" data-tab="problems" onclick="switchTechTab('problems')" data-i18n="tabProblems">Çözülen Problemler</button>
+        <button class="t-tab-btn" data-tab="technical" onclick="switchTechTab('technical')" data-i18n="tabTechnical">Teknik Bilgiler</button>
+        <button class="t-tab-btn" data-tab="visual" onclick="switchTechTab('visual')" data-i18n="tabVisual">Saha & Ekran Analizi</button>
+      </div>
+
+      <div class="tech-modal-body" id="modalBody">
+        <!-- Dynamic content filled by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-backdrop" id="lightboxBackdrop" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+      <img src="" alt="" id="lightboxImg" class="lightbox-img">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
