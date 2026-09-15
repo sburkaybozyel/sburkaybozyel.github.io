@@ -33,9 +33,9 @@ const i18n = {
     "expIndieBullet1": "Flutter ve Firebase Firestore ile sıfır kesintiyle çalışan küresel eşleşme ve sohbet motoru geliştirildi.",
     "expIndieBullet2": "Uygulama içi satın alma (IAP) ve abonelik akışları RevenueCat ve mağaza köprüleriyle canlıya alındı.",
     "expEduDesc": "2017 yılı Mustafa Kaynak Anadolu Lisesi mezuniyeti sonrası; bilgisayarlı görü (Computer Vision), dağıtık sistem mimarileri, çapraz platform mobil yazılım ve modern yapay zekâ orkestrasyonu alanlarında yoğun uygulamalı Ar-Ge ve bağımsız ürün geliştirme çalışmaları yürütmüştür.",
-    "skillsEyebrow": "Çalışma Biçimim",
-    "skillsTitle": "Kullandığım Yöntemler & <span>Araçlar</span>",
-    "skillsSubtitle": "Bunların her birinde derin uzmanlık iddiası yok; yapay zekâ destekli araştırma–prototip–entegrasyon döngüsüyle üretimde kullandığım yöntem ve araçlar.",
+    "skillsEyebrow": "Teknik Matris",
+    "skillsTitle": "Bilgi & <span>Yeterlilikler</span>",
+    "skillsSubtitle": "Üretim kalitesinde kullanılan modern diller, framework'ler, mimari desenler ve altyapı yetkinlikleri.",
     "erpEyebrow": "Operasyon & B2B SaaS",
     "erpTitle": "ERP, CRM & <span>Web Sistemleri</span>",
     "erpSubtitle": "Butik oteller, restoranlar ve marinalar için geliştirilen uçtan uca dijital omurga ve lüks web vitrinleri.",
@@ -63,7 +63,7 @@ const i18n = {
     "articlesHeader": "Bilimsel Makaleler & Akademik Araştırmalar",
     "articlesSubheader": "Bağımsız araştırmalar, bilimsel yayınlar ve teknik tez çalışmaları.",
     "paper1Category": "KUANTUM KURAMI · SPEKÜLATİF HİPOTEZ",
-    "paper1Title": "Correlation-Tagged Entanglement Communication (CTEC)",
+    "paper1Title": "Korelasyon Etiketli Dolaşıklık İletişimi (CTEC)",
     "paper1Excerpt": "Paylaşılan dolaşık ölçüm olaylarının seçici işaretlenmesiyle klasik kanal olmadan mesaj kurmayı deneyen spekülatif bir kuantum-ötesi iletişim hipotezi.",
     "paper2Category": "KOZMOLOJİ · YORUM DENEMESİ",
     "paper2Title": "Döngü Hiçbir Zaman Seçenek Değildi",
@@ -103,9 +103,9 @@ const i18n = {
     "contactRole": "Endüstri Mühendisliği & Yazılım · Eskişehir",
     "cvTimeNow": "2024 — Günümüz",
     "cvLocAeon": "Delaware, ABD & Türkiye",
-    "cvRoleAeon": "Kurucu & Yazılım Geliştirici & Kurucu",
+    "cvRoleAeon": "Kurucu & Yazılım Geliştirici",
     "cvLocRemote": "Türkiye / Uzaktan",
-    "cvRoleIndie": "Bağımsız Yazılım Mühendisi & Mobil Sistem Geliştiricisi",
+    "cvRoleIndie": "Bağımsız Yazılım Geliştirici & Mobil Sistem Geliştiricisi",
     "cvCompIndie": "Bağımsız Ar-Ge & Ürün Geliştirme",
     "cvTimeEdu": "Lisans Eğitimi",
     "cvRoleEsogu": "Eskişehir Osmangazi Üniversitesi (ESOGÜ)",
@@ -231,6 +231,24 @@ const i18n = {
     "paper4Title": "Matematiğin Sessiz Krizi",
     "paper4Excerpt": "Gödel'den kuantum fotosenteze: çalışan ama gerçekliği eksik sayan matematik dilinin sınırlarını ve frekans-temelli bir genişleme önerisini tartışan deneme.",
     "readBtn": "Makaleyi Oku",
+    "brandRole": "Yazılım & Endüstri Müh.",
+    "artHubCat": "Yayımlanan Felsefi & Bilimsel İncelemeler · TEORİK AR-GE",
+    "artHubHead": "Bilimsel Makaleler & Felsefi İncelemeler",
+    "artHubDesc": "Matematik felsefesi, kuantum ölçüm problemi, görelilik ve zamanın döngüselliği üzerine kaleme alınmış kapsamlı araştırma metinleri.",
+    "artBtnMath": "Matematik Felsefesi & Kriz",
+    "artBtnCopen": "Kopenhag & Kuantum",
+    "artBtnLoop": "Döngüsel Evren & Zaman",
+    "artBtnCtec": "CTEC & Görelilik",
+    "artModalCat": "BİLİMSEL YAYIN & MAKALE",
+    "abySum": "+24 yetişkin psikolojik bilimkurgu ve distopya evreninde geçen, 5 sezon ve 40 bölümden oluşan kapsamlı senaryo mimarisi ve prodüksiyon üretim incilidir (Series Bible). Kurgusal dünya kuralları, karakter ilişkileri ve dramatik çatışma matrislerini eksiksiz belgeler.",
+    "rayCat": "React Remotion + Python · MEDYA OTOMASYONU",
+    "rayHead": "By Rayana: React Tabanlı Otomatize Video Motoru",
+    "raySum": "Video kurgu programı açmadan React bileşenleri ve Python betikleriyle dinamik fiyatlı kampanya videolarını ve hikayeleri saniyeler içinde render eden otomasyon motoru. Tasarımcılara ödenen yüksek ajans maliyetlerini ve saatler süren manuel montaj yükünü sıfırlar.",
+    "zoomBadge": "Görseli İncele",
+    "ventMonetization": "Vent Plus premium abonelik (öncelikli eşleşme & derin filtreler), dinleyici jeton (IAP token) mikro-ödemeleri ve şirketler için B2B kurumsal esenlik (wellness) paketleri.",
+    "forgeMonetization": "Forge Pro aboneliği (ayrıntılı PR analizleri & video form denetimi), spor salonu/PT partner pazar yeri komisyonları (%15) ve sporcu markaları için sponsorlu meydan okumalar.",
+    "bobMonetization": "BOB Savage aboneliği (sınırsız alaycı yapay zekâ sesleri & zorlu bilişsel görevler), özel ses/karakter paketleri (IAP) ve sınav/odaklanma kurumsal disiplin lisansları.",
+    "undrgrndMonetization": "Beatmaker pazar yeri satış/kiralama komisyonu (%15-20), canlı cypher stüdyo kayıt token'ları ve sanatçı profil/parça öne çıkarma vitrin modelleri.",
     "pageTitle": "Salih Burkay Bozyel | ESOGÜ Endüstri Mühendisliği & Yazılım",
 },
   en: {
@@ -265,9 +283,9 @@ const i18n = {
     "expIndieBullet1": "Engineered zero-downtime global matching and real-time chat with Flutter and Firebase Firestore.",
     "expIndieBullet2": "Implemented in-app purchases and subscriptions with RevenueCat and native store bridges.",
     "expEduDesc": "Graduated from Mustafa Kaynak Anatolian High School in 2017; followed by rigorous applied R&D and independent engineering specializing in Computer Vision, distributed systems, cross-platform mobile engineering, and AI orchestration.",
-    "skillsEyebrow": "How I Work",
-    "skillsTitle": "Methods & <span>Tools I Use</span>",
-    "skillsSubtitle": "No claim of deep expertise in each — the methods and tools I ship with, through an AI-assisted research–prototype–integrate loop.",
+    "skillsEyebrow": "Technical Matrix",
+    "skillsTitle": "Skills & <span>Expertise</span>",
+    "skillsSubtitle": "Production-grade languages, modern frameworks, architectural patterns, and infrastructure capabilities.",
     "erpEyebrow": "Operations & B2B SaaS",
     "erpTitle": "ERP, CRM & <span>Web Systems</span>",
     "erpSubtitle": "End-to-end digital operations backbone and luxury showcases for boutique hotels, restaurants, and marinas.",
@@ -332,12 +350,12 @@ const i18n = {
     "chipInd": "Industrial Engineering",
     "chipProc": "Process Optimization",
     "mailLbl": "E-mail:",
-    "contactRole": "Endüstri Mühendisliği & Yazılım · Eskişehir",
+    "contactRole": "Industrial Engineering & Software · Eskisehir, TR",
     "cvTimeNow": "2024 — Present",
     "cvLocAeon": "Delaware, USA & Türkiye",
     "cvRoleAeon": "Founder & Software Developer",
     "cvLocRemote": "Türkiye / Remote",
-    "cvRoleIndie": "Independent Software Engineer & Mobile Systems Developer",
+    "cvRoleIndie": "Independent Software Developer & Mobile Systems Builder",
     "cvCompIndie": "Independent R&D & Product Development",
     "cvTimeEdu": "Bachelor's Degree",
     "cvRoleEsogu": "Eskişehir Osmangazi University (ESOGU)",
@@ -463,6 +481,24 @@ const i18n = {
     "paper4Title": "The Silent Crisis of Mathematics",
     "paper4Excerpt": "From Gödel to quantum photosynthesis: an essay on the limits of a mathematics that works but undercounts reality — and a frequency-based extension proposal.",
     "readBtn": "Read Paper",
+    "brandRole": "Software & Industrial Eng.",
+    "artHubCat": "Published Philosophical & Scientific Papers · THEORETICAL R&D",
+    "artHubHead": "Scientific Papers & Philosophical Essays",
+    "artHubDesc": "In-depth research papers examining the philosophy of mathematics, quantum measurement problem, relativity, and the cyclical nature of time.",
+    "artBtnMath": "Philosophy of Math & Crisis",
+    "artBtnCopen": "Copenhagen & Quantum",
+    "artBtnLoop": "Loop Universe & Time",
+    "artBtnCtec": "CTEC & Relativity",
+    "artModalCat": "SCIENTIFIC PUBLICATION & RESEARCH",
+    "abySum": "Mature (+24) psychological sci-fi & dystopian universe designed across 5 seasons and 40 episodes (Series Bible). Documents complete world canon, character arcs, and dramatic conflict matrices.",
+    "rayCat": "React Remotion + Python · MEDIA AUTOMATION",
+    "rayHead": "By Rayana: React-Based Programmatic Video Engine",
+    "raySum": "Programmatic video engine rendering dynamic campaign videos and social stories in seconds via React components and Python scripts, eliminating high agency costs and manual video editing.",
+    "zoomBadge": "Inspect Image",
+    "ventMonetization": "Vent Plus premium subscriptions (priority matching & deeper filters), listener token micropayments (IAP), and B2B corporate wellness tiers.",
+    "forgeMonetization": "Forge Pro subscription (detailed PR analytics & video form audits), gym/trainer marketplace commissions (15%), and brand-sponsored challenges.",
+    "bobMonetization": "BOB Savage subscription (unlimited sarcastic AI personas & cognitive tasks), custom voice packs (IAP), and enterprise focus licenses.",
+    "undrgrndMonetization": "Beatmaker marketplace sales/licensing commissions (15-20%), live cypher studio tokens, and featured artist spotlight tiers.",
     "pageTitle": "Salih Burkay Bozyel | Industrial Engineering & Software Developer",
 }
 };
@@ -3604,13 +3640,40 @@ window.addEventListener('keydown', (e) => {
 // ==========================================================================
 // In-Page Article Modal Reader
 // ==========================================================================
-function openArticleModal(url, title) {
+const articlesData = {
+  math: {
+    url: "assets/science-articles/math.html",
+    tr: "Matematiğin Sessiz Krizi: Çalışan Ama Gerçekliği Eksik Sayan Bir Dil",
+    en: "The Silent Crisis of Mathematics: A Language That Works But Falls Short"
+  },
+  copenhagen: {
+    url: "assets/science-articles/copenhagen.html",
+    tr: "Kopenhag Tavanı: 1927 Kuantum Fiziğini Nasıl Durdurdu?",
+    en: "The Copenhagen Ceiling: Why 1927 Still Holds Quantum Physics in Check"
+  },
+  loop: {
+    url: "assets/science-articles/loop.html",
+    tr: "Döngüsel Evren: Bir Koordinat Değil Dinamik Operatör Olarak Zaman",
+    en: "The Loop Universe: Time as a Dynamic Operator Rather Than a Coordinate"
+  },
+  ctec: {
+    url: "assets/science-articles/ctec.html",
+    tr: "Korelasyon Etiketli Dolaşıklık İletişimi (CTEC): Işık-Hızı-Ötesi Çerçeve",
+    en: "Correlation-Tagged Entanglement Communication (CTEC): FTL Framework"
+  }
+};
+
+function openArticleModal(keyOrUrl, fallbackTitle) {
   const modal = document.getElementById("articleModalBackdrop");
   const frame = document.getElementById("articleFrame");
   const titleEl = document.getElementById("articleModalTitle");
   if (!modal || !frame) return;
 
-  if (titleEl) titleEl.textContent = title || "Bilimsel Makale";
+  const item = articlesData[keyOrUrl];
+  const url = item ? item.url : keyOrUrl;
+  const title = item ? (currentLang === 'tr' ? item.tr : item.en) : fallbackTitle;
+
+  if (titleEl) titleEl.textContent = title || (currentLang === 'tr' ? "Bilimsel Makale" : "Scientific Paper");
   frame.src = url;
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
