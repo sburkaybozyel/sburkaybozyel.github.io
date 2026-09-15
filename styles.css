@@ -3,28 +3,28 @@
    ========================================================================== */
 
 :root {
-  color-scheme: dark;
-  --bg: #07090e;
-  --bg-deep: #040608;
-  --surface: #0e121a;
-  --surface-raised: #141a24;
-  --surface-hover: #1b2330;
-  --paper: #f8fafc;
-  --paper-soft: #cbd5e1;
-  --muted: #8492a6;
-  --line: rgba(255, 255, 255, 0.08);
-  --line-strong: rgba(255, 255, 255, 0.16);
-  --gold: #dfb15b;
-  --gold-light: #f3cf7a;
-  --gold-glow: rgba(223, 177, 91, 0.18);
-  --accent-blue: #38bdf8;
-  --accent-emerald: #10b981;
-  --accent-violet: #818cf8;
+  color-scheme: light;
+  --bg: #ffffff;
+  --bg-deep: #f8fafc;
+  --surface: #ffffff;
+  --surface-raised: #f8f9fc;
+  --surface-hover: #f1f5f9;
+  --paper: #0f172a;
+  --paper-soft: #334155;
+  --muted: #64748b;
+  --line: rgba(0, 0, 0, 0.08);
+  --line-strong: rgba(0, 0, 0, 0.14);
+  --gold: #b4832c;
+  --gold-light: #94681e;
+  --gold-glow: rgba(180, 131, 44, 0.15);
+  --accent-blue: #0284c7;
+  --accent-emerald: #059669;
+  --accent-violet: #6366f1;
   --max-width: 1200px;
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
-  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-glow: 0 0 30px var(--gold-glow);
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-serif: 'Playfair Display', Georgia, serif;
@@ -59,7 +59,7 @@ body {
   left: 20%;
   width: 60vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(180, 131, 44, 0.06) 0%, transparent 70%);
   filter: blur(120px);
   pointer-events: none;
   z-index: 0;
@@ -76,7 +76,7 @@ header.site-header {
   left: 0;
   right: 0;
   height: 72px;
-  background: rgba(7, 9, 14, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--line);
@@ -115,7 +115,7 @@ header.site-header {
 .brand-text h1 {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   letter-spacing: 0.2px;
 }
 
@@ -144,7 +144,7 @@ nav.main-nav a {
 
 nav.main-nav a:hover,
 nav.main-nav a.active {
-  color: var(--gold-light);
+  color: var(--gold);
 }
 
 .header-actions {
@@ -162,7 +162,7 @@ nav.main-nav a.active {
   background: var(--surface-raised);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
-  color: var(--paper-soft);
+  color: var(--paper);
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
@@ -171,7 +171,7 @@ nav.main-nav a.active {
 
 .btn-action.print-btn:hover {
   background: var(--surface-hover);
-  color: #fff;
+  color: var(--gold);
   border-color: var(--gold);
 }
 
@@ -197,7 +197,7 @@ nav.main-nav a.active {
 
 .lang-btn.active {
   background: var(--gold);
-  color: #000;
+  color: var(--paper);
 }
 
 .btn-cta {
@@ -205,8 +205,8 @@ nav.main-nav a.active {
   align-items: center;
   justify-content: center;
   padding: 8px 18px;
-  background: var(--gold);
-  color: #000;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
@@ -214,11 +214,13 @@ nav.main-nav a.active {
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 4px 14px rgba(180, 131, 44, 0.25);
 }
 
 .btn-cta:hover {
-  background: var(--gold-light);
+  background: var(--gold);
   transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(180, 131, 44, 0.35);
 }
 
 /* Page Layout */
@@ -257,7 +259,7 @@ nav.main-nav a.active {
 .section-title {
   font-size: 32px;
   font-weight: 800;
-  color: #fff;
+  color: var(--paper);
   letter-spacing: -0.5px;
   line-height: 1.25;
   margin-bottom: 12px;
@@ -292,8 +294,8 @@ h1 span, h2 span, h3 span, h4 span {
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(223, 177, 91, 0.08);
-  border: 1px solid rgba(223, 177, 91, 0.25);
+  background: rgba(180, 131, 44, 0.08);
+  border: 1px solid rgba(180, 131, 44, 0.25);
   border-radius: 30px;
   font-size: 12px;
   font-weight: 600;
@@ -315,7 +317,7 @@ h1 span, h2 span, h3 span, h4 span {
   font-weight: 800;
   line-height: 1.18;
   letter-spacing: -1px;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 20px;
 }
 
@@ -347,8 +349,8 @@ h1 span, h2 span, h3 span, h4 span {
   height: 76px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 2.5px solid var(--gold);
+  box-shadow: 0 4px 20px rgba(180, 131, 44, 0.2);
 }
 
 .hero-title-group {
@@ -359,7 +361,7 @@ h1 span, h2 span, h3 span, h4 span {
 .hero-name {
   font-size: 38px;
   font-weight: 800;
-  color: #fff;
+  color: var(--paper);
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin: 0 0 4px;
@@ -368,7 +370,7 @@ h1 span, h2 span, h3 span, h4 span {
 .hero-role {
   font-size: 15px;
   font-weight: 600;
-  color: var(--gold-light);
+  color: var(--gold);
   margin: 0;
   letter-spacing: -0.01em;
 }
@@ -413,8 +415,8 @@ h1 span, h2 span, h3 span, h4 span {
   align-items: center;
   gap: 8px;
   padding: 12px 26px;
-  background: var(--gold);
-  color: #000;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #ffffff;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
@@ -422,12 +424,13 @@ h1 span, h2 span, h3 span, h4 span {
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  box-shadow: 0 6px 20px rgba(180, 131, 44, 0.25);
 }
 
 .btn-primary:hover {
-  background: var(--gold-light);
+  background: var(--gold);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(223, 177, 91, 0.3);
+  box-shadow: 0 8px 24px rgba(180, 131, 44, 0.35);
 }
 
 .btn-secondary {
@@ -435,7 +438,7 @@ h1 span, h2 span, h3 span, h4 span {
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
-  background: var(--surface-raised);
+  background: var(--surface);
   color: var(--paper);
   font-size: 14px;
   font-weight: 600;
@@ -444,12 +447,13 @@ h1 span, h2 span, h3 span, h4 span {
   border: 1px solid var(--line-strong);
   transition: all 0.2s ease;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .btn-secondary:hover {
   background: var(--surface-hover);
   border-color: var(--gold);
-  color: #fff;
+  color: var(--gold);
 }
 
 .contact-strip {
@@ -526,7 +530,7 @@ h1 span, h2 span, h3 span, h4 span {
 .profile-name {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 4px;
 }
 
@@ -568,15 +572,15 @@ h1 span, h2 span, h3 span, h4 span {
   font-size: 13px;
   color: var(--paper-soft);
   line-height: 1.55;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 10px 12px;
   transition: all 0.2s ease;
 }
 
 .principle-row:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   border-color: var(--line-strong);
 }
 
@@ -622,7 +626,7 @@ h1 span, h2 span, h3 span, h4 span {
 .bio-name {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-top: 2px;
 }
 
@@ -630,7 +634,7 @@ h1 span, h2 span, h3 span, h4 span {
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--paper-soft);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid var(--line);
@@ -657,8 +661,8 @@ h1 span, h2 span, h3 span, h4 span {
 }
 
 .trait-item {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 14px 16px;
   transition: all 0.2s ease;
@@ -666,13 +670,13 @@ h1 span, h2 span, h3 span, h4 span {
 
 .trait-item:hover {
   border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .trait-label {
   font-size: 13.5px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 5px;
 }
 
@@ -731,7 +735,7 @@ h1 span, h2 span, h3 span, h4 span {
 .cv-role {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 4px;
 }
 
@@ -794,7 +798,7 @@ h1 span, h2 span, h3 span, h4 span {
 .skill-row-label h3 {
   font-size: 15px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 6px;
   letter-spacing: -0.01em;
 }
@@ -844,7 +848,7 @@ h1 span, h2 span, h3 span, h4 span {
   position: relative;
   width: 100%;
   height: 220px;
-  background: #0d1016;
+  background: #f8fafc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -889,7 +893,7 @@ h1 span, h2 span, h3 span, h4 span {
   letter-spacing: 0.8px;
   padding: 3px 8px;
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.05);
   color: var(--paper-soft);
 }
 
@@ -950,7 +954,7 @@ h1 span, h2 span, h3 span, h4 span {
   min-width: 78px;
   border-radius: 18px;
   object-fit: cover;
-  background: #0f131a;
+  background: #f8fafc;
   border: 1.5px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
   flex-shrink: 0;
@@ -981,7 +985,7 @@ h1 span, h2 span, h3 span, h4 span {
 .card-heading {
   font-size: 19px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   line-height: 1.35;
   margin-bottom: 10px;
 }
@@ -1054,7 +1058,7 @@ h1 span, h2 span, h3 span, h4 span {
   background: var(--surface-raised);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
-  color: #fff;
+  color: var(--paper);
   font-size: 12px;
   font-weight: 600;
   text-decoration: none;
@@ -1122,7 +1126,7 @@ h1 span, h2 span, h3 span, h4 span {
 .article-box-header h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
 }
 
 .article-list {
@@ -1167,7 +1171,7 @@ h1 span, h2 span, h3 span, h4 span {
 .art-title {
   font-size: 15.5px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   line-height: 1.4;
   margin-bottom: 8px;
 }
@@ -1223,7 +1227,7 @@ h1 span, h2 span, h3 span, h4 span {
 .offer-title {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   line-height: 1.35;
   margin-bottom: 6px;
 }
@@ -1287,7 +1291,7 @@ h1 span, h2 span, h3 span, h4 span {
 .contact-lead-text h3 {
   font-size: 24px;
   font-weight: 800;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 8px;
 }
 
@@ -1382,7 +1386,7 @@ footer.site-footer {
   right: 18px;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid var(--line);
-  color: #fff;
+  color: var(--paper);
   font-size: 24px;
   width: 36px;
   height: 36px;
@@ -2238,7 +2242,7 @@ footer.site-footer {
   align-items: center;
   justify-content: space-between;
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-sm);
   color: var(--paper-soft);
@@ -2252,7 +2256,7 @@ footer.site-footer {
 .btn-deep-dive:hover {
   background: var(--surface-hover);
   border-color: var(--gold);
-  color: #fff;
+  color: var(--paper);
   transform: translateY(-1px);
 }
 
@@ -2265,7 +2269,7 @@ footer.site-footer {
 .btn-deep-dive.highlight-btn:hover {
   background: rgba(223, 177, 91, 0.16);
   border-color: var(--gold);
-  color: #fff;
+  color: var(--paper);
 }
 
 /* Modal Dialog */
@@ -2275,7 +2279,7 @@ footer.site-footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 6, 8, 0.88);
+  background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2100;
@@ -2333,7 +2337,7 @@ footer.site-footer {
 .tech-modal-title {
   font-size: 24px;
   font-weight: 800;
-  color: #fff;
+  color: var(--paper);
   line-height: 1.3;
 }
 
@@ -2344,7 +2348,7 @@ footer.site-footer {
 }
 
 .tech-modal-close {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.05);
   border: 1px solid var(--line);
   color: var(--paper-soft);
   font-size: 24px;
@@ -2360,7 +2364,7 @@ footer.site-footer {
 
 .tech-modal-close:hover {
   background: var(--surface-hover);
-  color: #fff;
+  color: var(--paper);
   border-color: var(--gold);
 }
 
@@ -2417,7 +2421,7 @@ footer.site-footer {
 .deep-h3 {
   font-size: 18px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -2432,7 +2436,7 @@ footer.site-footer {
 }
 
 .diagram-box {
-  background: #040608;
+  background: #f8fafc;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 20px;
@@ -2446,7 +2450,7 @@ footer.site-footer {
 }
 
 .code-box {
-  background: #040608;
+  background: #f8fafc;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
   padding: 18px;
@@ -2501,12 +2505,12 @@ footer.site-footer {
 
 .inventory-table th {
   background: var(--surface-raised);
-  color: #fff;
+  color: var(--paper);
   font-weight: 600;
 }
 
 .inventory-table td {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   color: var(--paper-soft);
 }
 
@@ -2534,7 +2538,7 @@ footer.site-footer {
 .deep-card h4 {
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 8px;
 }
 
@@ -2589,7 +2593,7 @@ footer.site-footer {
 .visual-deduction-title {
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: var(--paper);
   margin-bottom: 12px;
 }
 
@@ -2698,7 +2702,7 @@ body.has-reveal .rv.in {
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid var(--line);
-  color: #fff;
+  color: var(--paper);
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
@@ -2730,7 +2734,7 @@ body.has-reveal .rv.in {
   background: rgba(0, 0, 0, 0.7);
   padding: 3px 10px;
   border-radius: 12px;
-  color: #fff;
+  color: var(--paper);
 }
 
 .m-cap {
@@ -2835,7 +2839,7 @@ body.has-reveal .rv.in {
 .card-monetization {
   margin-top: 14px;
   padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(0, 0, 0, 0.02);
   border-left: 2px solid var(--gold);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   font-size: 12.5px;
@@ -2892,7 +2896,7 @@ body.has-reveal .rv.in {
 .article-btn:hover {
   border-color: var(--gold);
   background: rgba(223, 177, 91, 0.08);
-  color: #fff;
+  color: var(--paper);
   transform: translateY(-1px);
 }
 
@@ -2912,7 +2916,7 @@ body.has-reveal .rv.in {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(4, 6, 8, 0.9);
+  background: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 2200;
@@ -2953,7 +2957,7 @@ body.has-reveal .rv.in {
 .article-modal-title {
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
+  color: var(--paper);
   line-height: 1.3;
 }
 
