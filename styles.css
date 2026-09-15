@@ -381,7 +381,7 @@ h1 span, h2 span, h3 span, h4 span {
 }
 
 .contact-strip-print {
-  display: none;
+  display: none !important;
 }
 
 .contact-strip-bottom {
