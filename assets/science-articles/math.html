@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Silent Crisis of Mathematics · Salih Burkay Bozyel</title>
+<title>Matematiğin Sessiz Krizi: Çalışan Ama Yetmeyen Dil · Salih Burkay Bozyel</title>
 <style>
   body { font-family: Georgia, 'Times New Roman', serif; line-height: 1.8; color: #1a1a1a; background: #faf9f6; margin: 0; padding: 0; }
   .paper { max-width: 700px; margin: 0 auto; padding: 40px 22px 80px; }
@@ -19,46 +19,54 @@
   .ednote { font-family: -apple-system, sans-serif; font-size: 12.5px; color: #777; border-top: 1px solid #ddd; margin-top: 40px; padding-top: 14px; }
   hr.sep { border: none; border-top: 2px solid #ccc; margin: 60px 0 40px; }
 </style>
+<style>
+  .back { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e2e8f0; padding-bottom: 12px; }
+  .back a { color: #8a6d2f; text-decoration: none; font-weight: 500; }
+  .back a:hover { text-decoration: underline; }
+  .lang-toggle { display: inline-flex; gap: 8px; font-weight: 600; }
+  .lang-btn { padding: 3px 8px; border-radius: 4px; border: 1px solid #cbd5e1; background: #fff; cursor: pointer; color: #475569; font-size: 12px; text-decoration: none; }
+  .lang-btn.active { background: #1e3a8a; color: #fff; border-color: #1e3a8a; }
+  hr.sep { display: none !important; }
+</style>
+<script>
+  function setLanguage(lang) {
+    var isEn = (lang === "en");
+    var enArt = document.getElementById("en");
+    var trArt = document.getElementById("tr");
+    if (enArt) enArt.style.display = isEn ? "block" : "none";
+    if (trArt) trArt.style.display = isEn ? "none" : "block";
+    document.documentElement.lang = isEn ? "en" : "tr";
+    document.title = (isEn ? "The Silent Crisis of Mathematics: A Language That Works But Falls Short" : "Matematiğin Sessiz Krizi: Çalışan Ama Yetmeyen Dil") + " · Salih Burkay Bozyel";
+    var btnTr = document.getElementById("btn-tr");
+    var btnEn = document.getElementById("btn-en");
+    if (btnTr) btnTr.className = isEn ? "lang-btn" : "lang-btn active";
+    if (btnEn) btnEn.className = isEn ? "lang-btn active" : "lang-btn";
+    var backLink = document.getElementById("back-link");
+    if (backLink) backLink.textContent = isEn ? "← Back to portfolio" : "← Portföye Dön";
+  }
+  function syncFromHash() {
+    var hash = (window.location.hash || "").toLowerCase();
+    var search = new URLSearchParams(window.location.search);
+    var langParam = search.get("lang");
+    if (hash === "#en" || langParam === "en") {
+      setLanguage("en");
+    } else {
+      setLanguage("tr");
+    }
+  }
+  window.addEventListener("hashchange", syncFromHash);
+  document.addEventListener("DOMContentLoaded", syncFromHash);
+</script>
 </head>
 <body>
 <div class="paper">
-  <p class="back"><a href="../../index.html#extras">← Back to portfolio</a> · <a href="#en">English</a> · <a href="#tr">Türkçe</a></p>
-
-<article lang="en" id="en">
-  <h1>The Silent Crisis of Mathematics: A Language That Works But Falls Short</h1>
-  <p class="byline">Salih Burkay Bozyel · Independent researcher; Founder of Vent</p>
-  <p class="date">May 31, 2026 (revised edition)</p>
-
-  <div class="status"><strong>Status:</strong> Interpretive essay with a constructive proposal. Not peer-reviewed. Philosophical claims below are the author's; cited experimental results are standard literature.</div>
-
-  <p>A system's validity is typically judged by a single criterion: if it works, it is correct. GPS satellites hold their orbits, transistors function, bridges stand. Mathematics is correct. The debate is closed.</p>
-
-  <p>This reasoning should feel familiar. It is precisely the logic that cornered quantum physics in Copenhagen in 1927. Bohr and Heisenberg declared: do not attempt to understand the physical reality behind the wave function; look at the mathematical formalism, and if the predictions hold, that is sufficient. Shut up and calculate. Since that day, no <em>consensus</em> has emerged on what the wave function physically is — though the century was not idle: decoherence theory, Everett's formulation, QBism, and results like Pusey–Barrett–Rudolph (2012), which constrains purely epistemic readings of the quantum state, all moved the debate. One hundred years passed. The question stayed open.</p>
-
-  <p>It may be time to ask the same question of mathematics.</p>
-
-  <p>In 1931, Gödel demonstrated that any consistent, sufficiently powerful axiomatic system contains propositions that can neither be proved nor disproved from within that system. This result is typically presented as a boundary condition and quickly moved past. But it points to something deeper. The axioms of ZFC, the foundational framework of modern mathematics, were not derived from first principles. They were accepted — and the foundations debate never actually closed: category-theoretic foundations, homotopy type theory, and other programs actively contest what mathematics should stand on. Beneath that acceptance lies a gap that has never been closed.</p>
-
-  <p>The infinity problem runs deeper still. In current mathematics, infinity is a limit, a behavioral description, never a destination. A structure with no end is treated as though it has one. An alternative, offered here as a proposal rather than a result: infinity is not a large number but a cyclical structure. 1, 2, 3, 1. A thing that does not move cannot enter a cycle. This definition aligns far more naturally with what we actually observe, from orbital mechanics to quantum oscillations.</p>
-
-  <p>The equals sign carries a similar hidden assumption. It states that left and right are identical always, under all conditions, within every observational frame. This is a deterministic claim about the universe. Yet at the quantum scale a particle exists in superposition until measured. At the macroscopic scale, chaotic systems demonstrate that infinitesimal differences in initial conditions produce unpredictable outcomes. A careful reader will object that mathematical identity is stipulative — defined inside formal systems, not discovered in nature. Granted. The proposal here concerns <em>applied</em> mathematics: every physical law we build rests on equalities treated as unconditional, and the idea that equality itself might need contextual, conditional forms has barely been explored.</p>
-
-  <p>In current mathematics, one apple is one unit. Its biochemical composition, vibrational frequency, ripeness, and environmental interactions have no mathematical existence. In 2007, Engel and colleagues in the Fleming group reported long-lived quantum coherence driving energy transfer in photosynthesis at near-unit efficiency — something classical rate-equation models struggle to capture. Evolution built a computational strategy that our standard mathematical language cannot fully describe. You cannot optimize what you cannot model.</p>
-
-  <p>String theory remains experimentally unverified. The Planck scale sits at roughly 10<sup>−35</sup> meters. Our best instruments reach approximately 10<sup>−19</sup>. The gap makes direct access currently impossible. But the mathematical framework string theory provides is a foundation worth building on. Every object is a frequency profile. Strings vibrate; interactions between vibrations define transformation. Addition becomes superposition. The derivative becomes the rate of change of a frequency profile over time. Counting remains the same, but the object being counted is no longer an abstract unit. It carries its physical reality within it.</p>
-
-  <p>Under this framework, infinity is entering a cycle, not surpassing a limit. 1, 2, 3, 1. Each turn carries the trace of past interactions. The 1 observed on the first turn is not identical to the 1 observed on the second. Equality becomes conditional and contextual. This is not the abandonment of mathematics. It is its extension into a more physically honest form.</p>
-
-  <p>Mathematics is not wrong. But it is static, deterministic, and informationally impoverished. The Copenhagen interpretation froze the language of physics for one hundred years. A mathematical framework built on unexamined axioms may be quietly drawing the boundary of how far science can go.</p>
-
-  <p>Einstein wrote his equations before gravitational waves were observed. The waves were detected one hundred years later. It is possible to build the language before the system can be seen. And perhaps it is necessary.</p>
-
-  <div class="refs">
-  <p><strong>References &amp; pointers:</strong> K. Gödel, Monatsh. Math. Phys. 38, 173 (1931); G. S. Engel et al. (Fleming group), Nature 446, 782 (2007) — quantum coherence in photosynthesis; W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003) — decoherence; M. Pusey, J. Barrett &amp; T. Rudolph, Nature Phys. 8, 475 (2012) — PBR theorem.</p>
+    <div class="back">
+    <a href="../../index.html#extras" id="back-link">← Portföye Dön</a>
+    <div class="lang-toggle">
+      <a href="#tr" id="btn-tr" class="lang-btn active" onclick="setLanguage('tr'); return false;">Türkçe</a>
+      <a href="#en" id="btn-en" class="lang-btn" onclick="setLanguage('en'); return false;">English</a>
+    </div>
   </div>
-</article>
-
-<hr class="sep">
 
 <article lang="tr" id="tr">
   <h1>Matematiğin Sessiz Krizi: Çalışan Ama Yetmeyen Dil</h1>
@@ -91,6 +99,40 @@
 
   <div class="refs">
   <p><strong>Kaynaklar ve işaretler:</strong> K. Gödel, Monatsh. Math. Phys. 38, 173 (1931); G. S. Engel vd. (Fleming grubu), Nature 446, 782 (2007) — fotosentezde kuantum eşevresizliği; W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003) — eşevresizlik; M. Pusey, J. Barrett ve T. Rudolph, Nature Phys. 8, 475 (2012) — PBR teoremi.</p>
+  </div>
+</article>
+
+<article lang="en" id="en" style="display:none;">
+  <h1>The Silent Crisis of Mathematics: A Language That Works But Falls Short</h1>
+  <p class="byline">Salih Burkay Bozyel · Independent researcher; Founder of Vent</p>
+  <p class="date">May 31, 2026 (revised edition)</p>
+
+  <div class="status"><strong>Status:</strong> Interpretive essay with a constructive proposal. Not peer-reviewed. Philosophical claims below are the author's; cited experimental results are standard literature.</div>
+
+  <p>A system's validity is typically judged by a single criterion: if it works, it is correct. GPS satellites hold their orbits, transistors function, bridges stand. Mathematics is correct. The debate is closed.</p>
+
+  <p>This reasoning should feel familiar. It is precisely the logic that cornered quantum physics in Copenhagen in 1927. Bohr and Heisenberg declared: do not attempt to understand the physical reality behind the wave function; look at the mathematical formalism, and if the predictions hold, that is sufficient. Shut up and calculate. Since that day, no <em>consensus</em> has emerged on what the wave function physically is — though the century was not idle: decoherence theory, Everett's formulation, QBism, and results like Pusey–Barrett–Rudolph (2012), which constrains purely epistemic readings of the quantum state, all moved the debate. One hundred years passed. The question stayed open.</p>
+
+  <p>It may be time to ask the same question of mathematics.</p>
+
+  <p>In 1931, Gödel demonstrated that any consistent, sufficiently powerful axiomatic system contains propositions that can neither be proved nor disproved from within that system. This result is typically presented as a boundary condition and quickly moved past. But it points to something deeper. The axioms of ZFC, the foundational framework of modern mathematics, were not derived from first principles. They were accepted — and the foundations debate never actually closed: category-theoretic foundations, homotopy type theory, and other programs actively contest what mathematics should stand on. Beneath that acceptance lies a gap that has never been closed.</p>
+
+  <p>The infinity problem runs deeper still. In current mathematics, infinity is a limit, a behavioral description, never a destination. A structure with no end is treated as though it has one. An alternative, offered here as a proposal rather than a result: infinity is not a large number but a cyclical structure. 1, 2, 3, 1. A thing that does not move cannot enter a cycle. This definition aligns far more naturally with what we actually observe, from orbital mechanics to quantum oscillations.</p>
+
+  <p>The equals sign carries a similar hidden assumption. It states that left and right are identical always, under all conditions, within every observational frame. This is a deterministic claim about the universe. Yet at the quantum scale a particle exists in superposition until measured. At the macroscopic scale, chaotic systems demonstrate that infinitesimal differences in initial conditions produce unpredictable outcomes. A careful reader will object that mathematical identity is stipulative — defined inside formal systems, not discovered in nature. Granted. The proposal here concerns <em>applied</em> mathematics: every physical law we build rests on equalities treated as unconditional, and the idea that equality itself might need contextual, conditional forms has barely been explored.</p>
+
+  <p>In current mathematics, one apple is one unit. Its biochemical composition, vibrational frequency, ripeness, and environmental interactions have no mathematical existence. In 2007, Engel and colleagues in the Fleming group reported long-lived quantum coherence driving energy transfer in photosynthesis at near-unit efficiency — something classical rate-equation models struggle to capture. Evolution built a computational strategy that our standard mathematical language cannot fully describe. You cannot optimize what you cannot model.</p>
+
+  <p>String theory remains experimentally unverified. The Planck scale sits at roughly 10<sup>−35</sup> meters. Our best instruments reach approximately 10<sup>−19</sup>. The gap makes direct access currently impossible. But the mathematical framework string theory provides is a foundation worth building on. Every object is a frequency profile. Strings vibrate; interactions between vibrations define transformation. Addition becomes superposition. The derivative becomes the rate of change of a frequency profile over time. Counting remains the same, but the object being counted is no longer an abstract unit. It carries its physical reality within it.</p>
+
+  <p>Under this framework, infinity is entering a cycle, not surpassing a limit. 1, 2, 3, 1. Each turn carries the trace of past interactions. The 1 observed on the first turn is not identical to the 1 observed on the second. Equality becomes conditional and contextual. This is not the abandonment of mathematics. It is its extension into a more physically honest form.</p>
+
+  <p>Mathematics is not wrong. But it is static, deterministic, and informationally impoverished. The Copenhagen interpretation froze the language of physics for one hundred years. A mathematical framework built on unexamined axioms may be quietly drawing the boundary of how far science can go.</p>
+
+  <p>Einstein wrote his equations before gravitational waves were observed. The waves were detected one hundred years later. It is possible to build the language before the system can be seen. And perhaps it is necessary.</p>
+
+  <div class="refs">
+  <p><strong>References &amp; pointers:</strong> K. Gödel, Monatsh. Math. Phys. 38, 173 (1931); G. S. Engel et al. (Fleming group), Nature 446, 782 (2007) — quantum coherence in photosynthesis; W. H. Zurek, Rev. Mod. Phys. 75, 715 (2003) — decoherence; M. Pusey, J. Barrett &amp; T. Rudolph, Nature Phys. 8, 475 (2012) — PBR theorem.</p>
   </div>
 </article>
 

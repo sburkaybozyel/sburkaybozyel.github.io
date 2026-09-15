@@ -3733,10 +3733,12 @@ function openArticleModal(keyOrUrl, fallbackTitle) {
   if (!modal || !frame) return;
 
   const item = articlesData[keyOrUrl];
-  const url = item ? item.url : keyOrUrl;
-  const title = item ? (currentLang === 'tr' ? item.tr : item.en) : fallbackTitle;
+  const baseUrl = item ? item.url : keyOrUrl;
+  const lang = (typeof currentLang !== 'undefined' && currentLang === 'en') ? 'en' : 'tr';
+  const url = baseUrl + '#' + lang;
+  const title = item ? (lang === 'tr' ? item.tr : item.en) : fallbackTitle;
 
-  if (titleEl) titleEl.textContent = title || (currentLang === 'tr' ? "Bilimsel Makale" : "Scientific Paper");
+  if (titleEl) titleEl.textContent = title || (lang === 'tr' ? "Bilimsel Makale" : "Scientific Paper");
   frame.src = url;
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
