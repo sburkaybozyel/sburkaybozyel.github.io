@@ -952,16 +952,16 @@ const techData = {
 `,
     visual: `
 <div class="deep-section-block">
-  <h3 class="deep-h3">Yetkili Terminal & Kanal Senkronizasyon Ekranı</h3>
-  <p class="deep-lead">Kanal bağlantılarının canlı durumunun ve gelen rezervasyon akışının izlendiği arayüz.</p>
+  <h3 class="deep-h3">Dolphin PMS · HotelRunner Kanal Yönetimi Ekranı</h3>
+  <p class="deep-lead">Rezervasyon alımı, müsaitlik aktarımı, fiyat eşitleme ve tam mutabakat süreçlerinin yönetildiği operasyonel kanal paneli.</p>
 
   <div class="visual-deduction-box">
     <div class="visual-deduction-media">
-      <img src="assets/erp-aeon/Ekran Resmi 2026-07-12 16.13.56.png" alt="Yetkili Terminal ve Kanal Entegrasyonu">
+      <img src="assets/erp-aeon/hotelrunner-channel.png" alt="Dolphin PMS HotelRunner Kanal Yönetimi Paneli">
     </div>
     <div class="visual-deduction-body">
-      <h4>Ekran Çıkarımı: PIN ile Yetkilendirilmiş Operasyon Konsolu</h4>
-      <p>Ekran görüntüsünde resepsiyon amirinin PIN ile giriş yaptığı yetkili terminal arayüzü görülmektedir. HotelRunner API bağlantı durumu yeşil canlı bayrakla doğrulanmakta, son senkronize edilen rezervasyonların OTA referans numaraları, giriş-çıkış tarihleri ve tahsilat durumları listelenmektedir.</p>
+      <h4>Ekran Çıkarımı: Canlı OTA Senkronizasyon & Durum İzleme Merkezi</h4>
+      <p>Görselde Dolphin PMS bünyesindeki HotelRunner Kanal Yönetim Paneli görülmektedir. Rezervasyonları Al, Müsaitliği Gönder, Fiyatları Eşitle ve Tam Mutabakat modülleri üzerinden aktif OTA kanalları, işlem bekleyen rezervasyonlar, oda/fiyat eşleştirmeleri ve bağlantı sağlığı anlık olarak denetlenmektedir.</p>
     </div>
   </div>
 </div>
@@ -1162,8 +1162,8 @@ const techData = {
 `
   },
   retailPulse: {
-    category: "Bilgisayarlı Görü & Analitik · Yerel Uç Yapay Zeka",
-    title: "Kamera Tabanlı Ziyaretçi & Masa Doluluk Analitiği",
+    category: "Mağaza İçi Müşteri Zekâsı · BİLGİSAYARLI GÖRÜ",
+    title: "RetailPulse AI: Perakende Davranış Analitiği",
     subtitle: "Mevcut Güvenlik Kameralarından Müşteri Trafiği, Reyon Bekleme Süresi ve Dönüşüm Ölçümü",
     overview: `
 <div class="deep-section-block">
@@ -1261,16 +1261,16 @@ const techData = {
 `,
     visual: `
 <div class="deep-section-block">
-  <h3 class="deep-h3">Turnike & Biniş Denetim Paneli</h3>
-  <p class="deep-lead">Bilet satışları ile kamera tespitli biniş sayılarının karşılaştırıldığı operasyon paneli.</p>
+  <h3 class="deep-h3">Mağaza Yoğunluk & Isı Haritası Ekranı</h3>
+  <p class="deep-lead">Ziyaretçi hareketinin ve reyon ilgisinin izlendiği analitik konsolu.</p>
 
   <div class="visual-deduction-box">
     <div class="visual-deduction-media">
-      <img src="assets/vip/funnivarium.png" alt="Funnivarium OS Biniş Denetim Paneli">
+      <img src="assets/retail-analytics/desktop-hero.png" alt="RetailPulse AI Mağaza Analitik Paneli">
     </div>
     <div class="visual-deduction-body">
-      <h4>Ekran Çıkarımı: Bilet-Biniş Farkı ve Kuyruk Yoğunluğu</h4>
-      <p>Panelde turnike okutma sayıları ile kameranın saydığı gerçek binişler yan yana izlenir; fark oluşan üniteler denetim kuyruğuna düşer. Kuyruk bekleme süreleri ve ünite dolulukları aynı ekrandan takip edilir.</p>
+      <h4>Ekran Çıkarımı: Yoğunluk, Bekleme ve Dönüşüm Göstergeleri</h4>
+      <p>Konsolda mağaza krokisi üzerinde anlık yoğunluk, reyon önü bekleme süreleri ve kasa dönüşüm göstergesi bir arada sunulur. Kamera analiz görüntüsünde tespit kutuları ve iz çizgileriyle takip doğrulanır.</p>
     </div>
   </div>
 </div>
@@ -1278,30 +1278,30 @@ const techData = {
   },
 
   funnivarium: {
-    category: "Mağaza İçi Müşteri Zekâsı · BİLGİSAYARLI GÖRÜ",
-    title: "RetailPulse AI: Perakende Davranış Analitiği",
-    subtitle: "Tavan Kameralarından Ziyaretçi Trafiği, Reyon Bekleme Süresi ve Satışa Dönüşüm Ölçümü",
+    category: "Turnike & Kaçak Biniş Denetimi · EĞLENCE & ULAŞIM",
+    title: "PassAudit OS: Turnike & Kaçak Biniş Denetimi",
+    subtitle: "Turnike Bilet Sayımları ile Kamera Biniş Tespitini Karşılaştıran Bilet Kaçağı Önleme Sistemi",
     overview: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Genel Bakış & Çalışma Prensibi</h3>
-  <p class="deep-lead">Mağazadaki mevcut tavan kameralarından müşteri trafiğini ve reyon önü bekleme sürelerini ölçen, POS kasa fişleriyle eşleştirerek gerçek satışa dönüşüm oranını hesaplayan yerel bilgisayarlı görü motorudur. Görüntüler buluta aktarılmadan RAM üzerinde işlenip silinir.</p>
+  <p class="deep-lead">Eğlence merkezleri, tematik parklar ve ulaşım terminallerinde turnikeden okutulan bilet sayısı ile kameranın tespit ettiği gerçek biniş sayısını anlık olarak karşılaştıran denetim paneli. Bilet basmadan turnikeden atlayan veya usulsüz geçen binişleri anında yakalayarak her gün uğranılan ciddi bilet geliri sızıntısını durdurur.</p>
 
   <div class="spec-grid">
     <div class="spec-card">
-      <h4>1.5 Metre Personel Temas Kuralı</h4>
-      <p>Müşteriye 1.5 metre yakınlıkta duran personel etkileşimi zaman damgasıyla kaydedilir ve satış korelasyonuna bağlanır.</p>
+      <h4>Turnike & Tripwire Audit</h4>
+      <p>Fiziki turnike tetikleme sinyali ile kamera tripwire sanal çizgi geçişi milisaniyeler içinde eşleştirilir.</p>
     </div>
     <div class="spec-card">
-      <h4>Reyon Dwell-Time Haritaları</h4>
-      <p>Hangi reyonun kaç saniye ilgi gördüğü ısı haritasına dökülür; ölü alanlar ve yıldız ürünler netleşir.</p>
+      <h4>Kaçak Biniş Alarmı</h4>
+      <p>Biletsiz geçiş, turnike üstünden atlama veya çift geçiş yapıldığında görsel kanıtla anında uyarı üretir.</p>
     </div>
     <div class="spec-card">
-      <h4>POS Eşleşmeli Dönüşüm</h4>
-      <p>Giren ziyaretçi sayısı kasa fişleriyle oranlanarak mağazanın gerçek satışa dönüşüm performansı çıkarılır.</p>
+      <h4>Kayıp Ciro Hesabı</h4>
+      <p>Kaçak biniş adedi bilet birim fiyatıyla çarpılarak gün içi gerçek gelir kaybı anlık olarak hesaplanır.</p>
     </div>
     <div class="spec-card">
-      <h4>%100 Yerel İşleme</h4>
-      <p>Ham kareler diske yazılmadan RAM'de analiz edilir; merkeze yalnızca anonim telemetri akar.</p>
+      <h4>Kuyruk ve Ünite Doluluğu</h4>
+      <p>Kuyrukta bekleyen kişi sayısı ve ünite doluluk oranları eşzamanlı izlenerek seans süreleri optimize edilir.</p>
     </div>
   </div>
 </div>
@@ -1312,21 +1312,21 @@ const techData = {
 
   <div class="deep-card-grid">
     <div class="deep-card">
-      <h4>Kör Mağazacılık ve Ölçülemeyen Personel Performansı</h4>
-      <p>Mağaza müdürleri yoğun saatleri ve personel ilgisinin satışa etkisini tahminle yönetir. Sistem temas süresi ve dönüşüm verisini aynı grafikte buluşturur.</p>
+      <h4>Görünmez Bilet Sızıntısı & Personel Suistimali</h4>
+      <p>Turnikelerin manuel açılması, tanıdık geçirme veya turnike üstünden atlamalar her gün ciddi ciro kaybına yol açar. Sistem kamera tespitini turnike veritabanıyla otomatik mutabakata sokarak suistimali sıfıra indirir.</p>
     </div>
 
     <div class="deep-card">
-      <h4>Bulut Kameraların Bant ve Gizlilik Maliyeti</h4>
-      <p>Görüntüyü buluta taşıyan sistemler hem Gbps bant tüketir hem kişisel veri riski doğurur. Uçta işleme iki sorunu da ortadan kaldırır.</p>
+      <h4>Kuyruk Darboğazları & Güvenlik İhlalleri</h4>
+      <p>Ünitelerdeki yığılma ve bariyer ihlalleri manuel fark edilemez. PassAudit OS gerçek zamanlı yoğunluk ve jeo-çit (geofence) takibiyle hem güvenliği hem operasyon akışını denetler.</p>
     </div>
   </div>
 </div>
 `,
     technical: `
 <div class="deep-section-block">
-  <h3 class="deep-h3">Teknoloji Yığını & Analitik Hattı</h3>
-  <p class="deep-lead">Tavan ve balıkgözü kameralarla uyumlu kuşbakışı takip mimarisi.</p>
+  <h3 class="deep-h3">Teknoloji Yığını & Denetim Hattı</h3>
+  <p class="deep-lead">Mevcut IP kameralar ve turnike PLC/kart okuyucularıyla entegre çalışan uç denetim mimarisi.</p>
 
   <div class="tech-stack-table-wrap">
     <table class="inventory-table">
@@ -1339,24 +1339,24 @@ const techData = {
       </thead>
       <tbody>
         <tr>
-          <td><strong>Tespit & Takip</strong></td>
-          <td><code>YOLOv8s + ByteTrack</code></td>
-          <td>Kuşbakışı kişi tespiti ve mağaza içi kesintisiz iz sürme</td>
+          <td><strong>Görü & Takip</strong></td>
+          <td><code>YOLOv8 + Tripwire Çizgi Analizi</code></td>
+          <td>Turnike geçiş çizgisi ve ünite biniş koltuklarının gerçek zamanlı sayımı</td>
         </tr>
         <tr>
-          <td><strong>Projeksiyon</strong></td>
-          <td><code>2D Zemin Homografisi</code></td>
-          <td>Balıkgözü bozulmasının düzeltilip metre birimine indirgenmesi</td>
+          <td><strong>Turnike Entegrasyonu</strong></td>
+          <td><code>TCP/IP Socket & PLC Entegratörü</code></td>
+          <td>Kart/barkod okuma zaman damgalarının milisaniye hassasiyetinde çekilmesi</td>
         </tr>
         <tr>
-          <td><strong>Korelasyon</strong></td>
-          <td><code>POS Eşleştirme Servisi</code></td>
-          <td>Fiş zaman damgalarıyla ziyaretçi dalgalarının çakıştırılması</td>
+          <td><strong>Mutabakat Motoru</strong></td>
+          <td><code>Audit Engine (Python)</code></td>
+          <td>Turnike sinyali ile görsel biniş sayısının anlık delta mutabakatı</td>
         </tr>
         <tr>
-          <td><strong>Donanım</strong></td>
-          <td><code>Jetson / Endüstriyel Mini PC</code></td>
-          <td>Mevcut ONVIF/RTSP kameralara tak-çalıştır bağlanan ünite</td>
+          <td><strong>Uç Donanım</strong></td>
+          <td><code>Nvidia Jetson / Endüstriyel Mini PC</code></td>
+          <td>Saha kabininde çalışan 7/24 kesintisiz yerel çıkarım sunucusu</td>
         </tr>
       </tbody>
     </table>
@@ -1365,16 +1365,16 @@ const techData = {
 `,
     visual: `
 <div class="deep-section-block">
-  <h3 class="deep-h3">Mağaza Yoğunluk & Isı Haritası Ekranı</h3>
-  <p class="deep-lead">Ziyaretçi hareketinin ve reyon ilgisinin izlendiği analitik konsolu.</p>
+  <h3 class="deep-h3">Turnike & Biniş Denetim Paneli</h3>
+  <p class="deep-lead">Bilet satışları ile kamera tespitli biniş sayılarının karşılaştırıldığı operasyon paneli.</p>
 
   <div class="visual-deduction-box">
     <div class="visual-deduction-media">
-      <img src="assets/retail-analytics/desktop-hero.png" alt="RetailPulse AI Mağaza Analitik Paneli">
+      <img src="assets/vip/funnivarium.png" alt="PassAudit OS Biniş Denetim Paneli">
     </div>
     <div class="visual-deduction-body">
-      <h4>Ekran Çıkarımı: Yoğunluk, Bekleme ve Dönüşüm Göstergeleri</h4>
-      <p>Konsolda mağaza krokisi üzerinde anlık yoğunluk, reyon önü bekleme süreleri ve kasa dönüşüm göstergesi bir arada sunulur. Kamera analiz görüntüsünde tespit kutuları ve iz çizgileriyle takip doğrulanır.</p>
+      <h4>Ekran Çıkarımı: Bilet-Biniş Farkı ve Kuyruk Yoğunluğu</h4>
+      <p>Panelde turnike okutma sayıları ile kameranın saydığı gerçek binişler yan yana izlenir; fark oluşan üniteler denetim kuyruğuna düşer. Kuyruk bekleme süreleri ve ünite dolulukları aynı ekrandan takip edilir.</p>
     </div>
   </div>
 </div>
@@ -2331,16 +2331,16 @@ const techDataEn = {
 `,
     visual: `
 <div class="deep-section-block">
-  <h3 class="deep-h3">Authorized Terminal & Channel Sync Screen</h3>
-  <p class="deep-lead">The interface where channel connection health and the incoming booking stream are watched.</p>
+  <h3 class="deep-h3">Dolphin PMS · HotelRunner Channel Management Dashboard</h3>
+  <p class="deep-lead">Operational channel panel managing reservation ingestion, inventory sync, price matching and reconciliation.</p>
 
   <div class="visual-deduction-box">
     <div class="visual-deduction-media">
-      <img src="assets/erp-aeon/Ekran Resmi 2026-07-12 16.13.56.png" alt="Authorized Terminal and Channel Integration">
+      <img src="assets/erp-aeon/hotelrunner-channel.png" alt="Dolphin PMS HotelRunner Channel Management Panel">
     </div>
     <div class="visual-deduction-body">
-      <h4>Screen Reading: PIN-Authorized Operations Console</h4>
-      <p>The screenshot shows the authorized terminal where the front-office manager logs in with a PIN. The HotelRunner API link status verifies with a green live flag, while recently synced bookings list OTA reference numbers, arrival–departure dates and collection states.</p>
+      <h4>Screen Reading: Live OTA Synchronization & Monitoring Center</h4>
+      <p>The screen shows the HotelRunner Channel Management Panel within Dolphin PMS. Modules for Fetch Reservations, Push Availability, Match Rates and Full Reconciliation monitor connected OTA channels, pending reservations, room/rate mappings and connection health in real time.</p>
     </div>
   </div>
 </div>
@@ -2541,129 +2541,13 @@ const techDataEn = {
 `
   },
   retailPulse: {
-    category: "Computer Vision & Analytics · Local Edge AI",
-    title: "Camera-Based Visitor & Table Occupancy Analytics",
+    category: "In-Store Customer Intelligence · COMPUTER VISION",
+    title: "RetailPulse AI: Retail Behavior Analytics",
     subtitle: "Visitor Traffic, Aisle Dwell Time and Conversion Measurement from Existing Security Cameras",
     overview: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Overview & Working Principle</h3>
   <p class="deep-lead">A local computer-vision engine measuring customer traffic and aisle dwell times from in-store ceiling cameras, matched against POS receipts to compute true sales conversion (%).</p>
-
-  <div class="spec-grid">
-    <div class="spec-card">
-      <h4>100% KVKK & Zero Disk Writes</h4>
-      <p>Frames never upload to the cloud; they analyze in the local device's RAM and delete permanently within milliseconds.</p>
-    </div>
-    <div class="spec-card">
-      <h4>Floor Homography & Dwell Time</h4>
-      <p>Camera perspective distortion corrects so aisle dwell time measures to the second.</p>
-    </div>
-    <div class="spec-card">
-      <h4>POS Correlation</h4>
-      <p>Dividing entering headcount by receipt count reveals the display's — or the staff's — true sales performance.</p>
-    </div>
-  </div>
-</div>
-`,
-    problems: `
-<div class="deep-section-block">
-  <h3 class="deep-h3">Industry Problems & Solutions</h3>
-
-  <div class="deep-card-grid">
-    <div class="deep-card">
-      <h4>Blind Sales Decisions & Guesswork Retailing</h4>
-      <p>Retailers don't know how many people enter, which aisles attract and which products get skipped. The system turns that blindness into concrete analytic data.</p>
-    </div>
-
-    <div class="deep-card">
-      <h4>KVKK Fines and Shopper Privacy Concerns</h4>
-      <p>Systems doing face recognition or cloud video transfer face heavy legal penalties. RetailPulse does no face recognition; it only counts skeleton coordinates.</p>
-    </div>
-  </div>
-</div>
-`,
-    technical: `
-<div class="deep-section-block">
-  <h3 class="deep-h3">Technology Stack & Vision Pipeline</h3>
-  <p class="deep-lead">Real-time inference engine running on edge AI hardware.</p>
-
-  <div class="tech-stack-table-wrap">
-    <table class="inventory-table">
-      <thead>
-        <tr>
-          <th>Layer</th>
-          <th>Technology & Library</th>
-          <th>Architectural Role</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Vision Engine</strong></td>
-          <td><code>YOLOv8s + ByteTrack</code></td>
-          <td>25–30 FPS real-time person detection with identity-stable track following</td>
-        </tr>
-        <tr>
-          <td><strong>Floor Projection</strong></td>
-          <td><code>Homography Matrix (OpenCV)</code></td>
-          <td>Converting camera perspective to top-down 2D floor coordinates</td>
-        </tr>
-        <tr>
-          <td><strong>Conversion Engine</strong></td>
-          <td><code>ConversionEngine (Python)</code></td>
-          <td>Computing conversion rate from corrected visitor counts vs. receipt counts</td>
-        </tr>
-        <tr>
-          <td><strong>Edge Hardware</strong></td>
-          <td><code>Nvidia Jetson Orin / Mini PC</code></td>
-          <td>Plug-and-play inference unit running inside the store cabinet</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h3 class="deep-h3" style="margin-top: 28px;">Vision Pipeline Diagram</h3>
-  <div class="diagram-box">
-[Ceiling IP Camera (RTSP)]
-             │
-             ▼ (Frame Capture / 25 FPS)
-   [YOLOv8s Person Detection]
-             │
-             ▼ (ByteTrack Identity Tracking)
-   [Homography Floor Projection]
-             │
-   ┌─────────┴─────────────────────────┐
-   ▼                                   ▼
-[Dwell-Time & Heatmap]         [POS Receipt Correlation]
-(Processed in RAM, Frame Gone)  (Conversion % Indicator)
-  </div>
-</div>
-`,
-    visual: `
-<div class="deep-section-block">
-  <h3 class="deep-h3">Turnstile & Boarding Audit Panel</h3>
-  <p class="deep-lead">Operations panel comparing ticket sales against camera-detected boardings.</p>
-
-  <div class="visual-deduction-box">
-    <div class="visual-deduction-media">
-      <img src="assets/vip/funnivarium.png" alt="Funnivarium OS Boarding Audit Panel">
-    </div>
-    <div class="visual-deduction-body">
-      <h4>Screen Reading: Ticket-Boarding Gap and Queue Density</h4>
-      <p>The panel watches turnstile scan counts beside the camera's real boarding counts; units with gaps fall into the audit queue. Queue wait times and unit occupancy track from the same screen.</p>
-    </div>
-  </div>
-</div>
-`
-  },
-
-  funnivarium: {
-    category: "In-Store Customer Intelligence · COMPUTER VISION",
-    title: "RetailPulse AI: Retail Behavior Analytics",
-    subtitle: "Visitor Traffic, Aisle Dwell Time and Sales Conversion from Ceiling Cameras",
-    overview: `
-<div class="deep-section-block">
-  <h3 class="deep-h3">Overview & Working Principle</h3>
-  <p class="deep-lead">A local computer-vision engine measuring customer traffic and aisle dwell times from existing ceiling cameras and computing true sales conversion against POS receipts. Frames process in RAM with no cloud upload, then delete.</p>
 
   <div class="spec-grid">
     <div class="spec-card">
@@ -2754,6 +2638,110 @@ const techDataEn = {
     <div class="visual-deduction-body">
       <h4>Screen Reading: Density, Dwell and Conversion Indicators</h4>
       <p>The console serves live density on the store plan, aisle dwell times and the register conversion indicator together. Detection boxes and track lines on the camera view verify tracking.</p>
+    </div>
+  </div>
+</div>
+`
+  },
+
+  funnivarium: {
+    category: "Turnstile & Queue Intelligence · ENTERTAINMENT & TRANSIT",
+    title: "PassAudit OS: Turnstile & Boarding Audit",
+    subtitle: "Boarding Fraud Prevention Reconciling Turnstile Scans against Camera Detections",
+    overview: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Overview & Working Principle</h3>
+  <p class="deep-lead">An edge computer vision audit engine deployed in entertainment centers, theme parks and transit hubs, cross-referencing turnstile scan counts with camera-detected boardings in real time to prevent unauthorized entries and ticket leakage.</p>
+
+  <div class="spec-grid">
+    <div class="spec-card">
+      <h4>Turnstile & Tripwire Audit</h4>
+      <p>Physical turnstile trigger signals correlate with camera tripwire line-crossings in milliseconds.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Fraud Entry Alert</h4>
+      <p>Instant visual proof alerts fire on ticketless passes, turnstile vaulting, or tailgating.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Lost Revenue Metric</h4>
+      <p>Unregistered boardings multiplied by ticket face value continuously compute daily revenue leakage.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Queue & Unit Occupancy</h4>
+      <p>Simultaneous queue headcount and ride occupancy tracking allow real-time dispatch optimization.</p>
+    </div>
+  </div>
+</div>
+`,
+    problems: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Industry Problems & Solutions</h3>
+
+  <div class="deep-card-grid">
+    <div class="deep-card">
+      <h4>Invisible Ticket Leakage & Staff Tampering</h4>
+      <p>Manual turnstile overrides, unauthorized entries, and jumping barriers cost thousands daily. PassAudit OS reconciles camera feeds against ticketing databases to eliminate leakage.</p>
+    </div>
+
+    <div class="deep-card">
+      <h4>Queue Bottlenecks & Perimeter Violations</h4>
+      <p>Overcrowded waiting zones and barrier breaches go unnoticed. Real-time geofencing and queue tracking protect both customer safety and operational flow.</p>
+    </div>
+  </div>
+</div>
+`,
+    technical: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Technology Stack & Audit Pipeline</h3>
+  <p class="deep-lead">Edge audit architecture integrating with existing IP cameras and turnstile PLC/badge readers.</p>
+
+  <div class="tech-stack-table-wrap">
+    <table class="inventory-table">
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>Technology & Library</th>
+          <th>Architectural Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vision & Tracking</strong></td>
+          <td><code>YOLOv8 + Tripwire Analysis</code></td>
+          <td>Real-time counting of turnstile line-crossings and attraction seat occupancy</td>
+        </tr>
+        <tr>
+          <td><strong>Turnstile Link</strong></td>
+          <td><code>TCP/IP Socket & PLC Connector</code></td>
+          <td>Sub-millisecond retrieval of badge and barcode scan event timestamps</td>
+        </tr>
+        <tr>
+          <td><strong>Reconciliation Engine</strong></td>
+          <td><code>Audit Engine (Python)</code></td>
+          <td>Real-time delta reconciliation between turnstile pulses and visual passes</td>
+        </tr>
+        <tr>
+          <td><strong>Edge Hardware</strong></td>
+          <td><code>Nvidia Jetson / Industrial Mini PC</code></td>
+          <td>24/7 on-premise edge appliance mounted in local control cabinets</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`,
+    visual: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Turnstile & Boarding Audit Panel</h3>
+  <p class="deep-lead">Operations dashboard comparing ticket sales against camera-detected boardings.</p>
+
+  <div class="visual-deduction-box">
+    <div class="visual-deduction-media">
+      <img src="assets/vip/funnivarium.png" alt="PassAudit OS Boarding Audit Panel">
+    </div>
+    <div class="visual-deduction-body">
+      <h4>Screen Reading: Ticket-Boarding Delta and Queue Density</h4>
+      <p>The panel tracks turnstile scan counts alongside real camera-detected passenger counts; discrepancies flag immediately into the audit queue. Unit occupancy and queue wait times are monitored in real time.</p>
     </div>
   </div>
 </div>
@@ -3527,18 +3515,19 @@ const galleries = {
     { src: 'assets/bozburun-yacht-club/byc-restaurant.png', cap: 'Restoran sayfası' },
     { src: 'assets/bozburun-yacht-club/byc-hotel-suites.png', cap: 'Süit tanıtımı' }
   ],
-  funnivarium: [
+  retailPulse: [
     { src: 'assets/retail-analytics/desktop-hero.png', cap: 'Yoğunluk ve ısı haritası' },
-    { src: 'assets/retail-analytics/desktop.png', cap: 'Analitik konsolu' },
-    { src: 'assets/retail-analytics/camera-analysis.png', cap: 'Kamera tespit görünümü' }
+    { src: 'assets/retail-analytics/desktop.png', cap: 'Analitik konsolu' }
   ],
   sanayiPulse: [
     { src: 'assets/retail-analytics/camera-analysis.png', cap: 'Rampa analiz görünümü' },
     { src: 'assets/retail-analytics/desktop.png', cap: 'Operasyon konsolu' }
   ],
+  funnivarium: [
+    { src: 'assets/vip/funnivarium.png', cap: 'Turnike & biniş denetim paneli' }
+  ],
   vent: [
     { src: 'assets/vent/vent-topic-request.jpeg', cap: 'Konu seçim ve eşleşme' },
-    { src: 'assets/vent/vent-language.png', cap: 'Dil seçimi' },
     { src: 'assets/vent/IMG_0162.PNG', cap: 'Sohbet ekranı' },
     { src: 'assets/vent/IMG_0163.PNG', cap: 'Profil ve ayarlar' }
   ],
@@ -3590,8 +3579,8 @@ const galEn = {
   'assets/retail-analytics/desktop-hero.png': 'Density & heatmap',
   'assets/retail-analytics/desktop.png': 'Analytics console',
   'assets/retail-analytics/camera-analysis.png': 'Camera detection view',
+  'assets/vip/funnivarium.png': 'Turnstile & boarding audit panel',
   'assets/vent/vent-topic-request.jpeg': 'Topic selection & matching',
-  'assets/vent/vent-language.png': 'Language selection',
   'assets/vent/IMG_0162.PNG': 'Chat screen',
   'assets/vent/IMG_0163.PNG': 'Profile & settings',
   'assets/forge/screenshot_navigation.png': 'Navigation & feed',
