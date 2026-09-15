@@ -2014,3 +2014,28 @@ body.has-reveal .rv.in {
     display: none !important;
   }
 }
+/* Mobile App Monetization & Revenue Stream Component */
+.card-monetization {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--paper-soft);
+}
+
+.card-monetization .mono-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+
+.card-monetization .mono-text {
+  color: #d1d5db;
+}
