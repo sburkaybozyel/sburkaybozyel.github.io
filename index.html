@@ -53,72 +53,48 @@
 
   <main class="page-container">
 
-    <!-- 1. BENİ TANITSIN (Giriş & Executive Profil) -->
+    <!-- 1. GİRİŞ (Executive Profil & CV Başlığı) -->
     <section class="section-block" id="intro">
-      <div class="intro-grid">
-        <div class="intro-main">
-          <h1 class="intro-title" data-i18n="introHeading">
-            Uçtan Uca Yazılım &<br>
-            <span>Edge AI Sistemleri</span>
-          </h1>
-          <p class="intro-desc" data-i18n="introBio">
-            Lüks otel ERP'lerinden yerel bilgisayarlı görü hatlarına ve mağazada canlı mobil uygulamalara kadar; yüksek performanslı dijital ürünleri tek elden, tam döngü mühendislik disipliniyle inşa ediyorum.
-          </p>
-
-          <div class="intro-actions no-print">
-            <a href="#erp-crm-web" class="btn-primary" data-i18n="btnExplore">Projeleri İnceleyin</a>
-            <a href="#experience" class="btn-secondary" data-i18n="btnViewCv">Özgeçmiş & Kariyer</a>
-            <button class="btn-secondary" onclick="window.print()" data-i18n="btnPdfCv">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              PDF Olarak Kaydet
-            </button>
-          </div>
-
-          <div class="contact-strip">
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="contactRoleLbl">Rol & Konum:</span>
-              <span class="contact-val" data-i18n="contactRole">Endüstri Mühendisliği & Yazılım · Eskişehir</span>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="phoneLbl">Telefon:</span>
-              <a href="tel:+905422755383" class="contact-link">+90 542 275 53 83</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label" data-i18n="mailLbl">E-posta:</span>
-              <a href="mailto:burkaybozyel@gmail.com" class="contact-link">burkaybozyel@gmail.com</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">LinkedIn:</span>
-              <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/salih-burkay-b</a>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">GitHub:</span>
-              <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
-            </div>
+      <div class="hero-clean">
+        <div class="hero-header-row">
+          <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" class="hero-avatar" onerror="this.style.display='none'">
+          <div class="hero-title-group">
+            <h1 class="hero-name">Salih Burkay Bozyel</h1>
+            <p class="hero-role" data-i18n="profileRole">ESOGÜ Endüstri Müh. · Founder, AEON LLC</p>
           </div>
         </div>
-
-        <div class="intro-card-side">
-          <div class="profile-card">
-            <div class="profile-img-wrap">
-              <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" class="profile-photo" onerror="this.style.display='none'">
-            </div>
-            <div class="profile-meta">
-              <h3 class="profile-name">Salih Burkay Bozyel</h3>
-              <p class="profile-role" data-i18n="profileRole">ESOGÜ Endüstri Müh. · Founder, AEON LLC</p>
-            </div>
-            <div class="profile-principles">
-              <div class="principle-row">
-                <span data-i18n="pPrinciple1"><strong>Uçtan Uca Mimari:</strong> Mobil uygulama (Flutter), dağıtık veritabanları ve API tasarımı.</span>
-              </div>
-              <div class="principle-row">
-                <span data-i18n="pPrinciple2"><strong>Edge AI & Görü:</strong> Nvidia Jetson üzerinde %100 yerel, sıfır bulut bağımlılıklı görüntü işleme.</span>
-              </div>
-              <div class="principle-row">
-                <span data-i18n="pPrinciple3"><strong>Süreç Optimizasyonu:</strong> ESOGÜ Endüstri Mühendisliği temelleriyle operasyonel verimlilik.</span>
-              </div>
-            </div>
+        <p class="hero-desc" data-i18n="introBio">
+          Eskişehir Osmangazi Üniversitesi Endüstri Mühendisliği öğrencisi. Lüks butik otel ERP omurgalarından uçta çalışan bilgisayarlı görü sistemlerine ve mağazada canlı mobil uygulamalara kadar tam döngü sistemler geliştiriyorum.
+        </p>
+        <div class="contact-strip contact-strip-print">
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contactRoleLbl">Rol & Konum:</span>
+            <span class="contact-val" data-i18n="contactRole">Endüstri Mühendisliği & Yazılım · Eskişehir</span>
           </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="phoneLbl">Telefon:</span>
+            <a href="tel:+905422755383" class="contact-link">+90 542 275 53 83</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="mailLbl">E-posta:</span>
+            <a href="mailto:burkaybozyel@gmail.com" class="contact-link">burkaybozyel@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/salih-burkay-b</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub:</span>
+            <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
+          </div>
+        </div>
+        <div class="intro-actions no-print">
+          <a href="#erp-crm-web" class="btn-primary" data-i18n="btnExplore">Projeleri İnceleyin</a>
+          <a href="#experience" class="btn-secondary" data-i18n="btnViewCv">Özgeçmiş & Kariyer</a>
+          <button class="btn-secondary" onclick="window.print()" data-i18n="btnPdfCv">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            PDF Olarak Kaydet
+          </button>
         </div>
       </div>
     </section>
@@ -688,6 +664,28 @@
             <p data-i18n="contactCardDesc">
               Görüşmede doğrudan canlı projeler (Vent App, AEON ERP, RetailPulse AI) üzerinden sistem mimarilerini canlı demo yapmaya hazırım.
             </p>
+          </div>
+          <div class="contact-strip contact-strip-bottom">
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="contactRoleLbl">Rol & Konum:</span>
+              <span class="contact-val" data-i18n="contactRole">Endüstri Mühendisliği & Yazılım · Eskişehir</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="phoneLbl">Telefon:</span>
+              <a href="tel:+905422755383" class="contact-link">+90 542 275 53 83</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label" data-i18n="mailLbl">E-posta:</span>
+              <a href="mailto:burkaybozyel@gmail.com" class="contact-link">burkaybozyel@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/salih-burkay-b</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub:</span>
+              <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
+            </div>
           </div>
           <div class="contact-action-group">
             <a href="tel:+905422755383" class="btn-primary" data-i18n="btnCall">
