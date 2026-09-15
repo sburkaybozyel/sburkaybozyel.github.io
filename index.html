@@ -639,22 +639,22 @@
               Matematik felsefesi, kuantum ölçüm problemi, görelilik ve zamanın döngüselliği üzerine kaleme alınmış kapsamlı araştırma metinleri.
             </p>
             <div class="article-action-grid">
-              <a href="assets/science-articles/math.html" target="_blank" class="article-btn">
+              <button type="button" onclick="openArticleModal('assets/science-articles/math.html', 'The Silent Crisis of Mathematics: A Language That Works But Falls Short')" class="article-btn">
                 <span>Matematik Felsefesi & Kriz</span>
-                <span class="art-arrow">↗</span>
-              </a>
-              <a href="assets/science-articles/copenhagen.html" target="_blank" class="article-btn">
+                <span class="art-arrow">→</span>
+              </button>
+              <button type="button" onclick="openArticleModal('assets/science-articles/copenhagen.html', 'The Copenhagen Ceiling: Why 1927 Still Holds Quantum Physics in Check')" class="article-btn">
                 <span>Kopenhag & Kuantum</span>
-                <span class="art-arrow">↗</span>
-              </a>
-              <a href="assets/science-articles/loop.html" target="_blank" class="article-btn">
+                <span class="art-arrow">→</span>
+              </button>
+              <button type="button" onclick="openArticleModal('assets/science-articles/loop.html', 'The Loop Universe: Time as a Dynamic Operator Rather Than a Coordinate')" class="article-btn">
                 <span>Döngüsel Evren & Zaman</span>
-                <span class="art-arrow">↗</span>
-              </a>
-              <a href="assets/science-articles/ctec.html" target="_blank" class="article-btn">
+                <span class="art-arrow">→</span>
+              </button>
+              <button type="button" onclick="openArticleModal('assets/science-articles/ctec.html', 'CTEC & Görelilik: Kozmolojik Zaman ve Enerji Dönüşümü')" class="article-btn">
                 <span>CTEC & Görelilik</span>
-                <span class="art-arrow">↗</span>
-              </a>
+                <span class="art-arrow">→</span>
+              </button>
             </div>
           </div>
         </div>
@@ -829,6 +829,22 @@
 
       <div class="tech-modal-body" id="modalBody">
         <!-- Dynamic content filled by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Article Reader Modal (Açılır Pencere) -->
+  <div class="article-modal-backdrop" id="articleModalBackdrop" onclick="closeArticleModal(event)">
+    <div class="article-modal-dialog" onclick="event.stopPropagation()">
+      <div class="article-modal-header">
+        <div class="article-modal-title-wrap">
+          <div class="modal-category">BİLİMSEL YAYIN & MAKALE</div>
+          <h3 class="article-modal-title" id="articleModalTitle">Makale Başlığı</h3>
+        </div>
+        <button class="tech-modal-close" onclick="closeArticleModal()">&times;</button>
+      </div>
+      <div class="article-modal-body">
+        <iframe id="articleFrame" src="" title="Makale Okuyucu"></iframe>
       </div>
     </div>
   </div>

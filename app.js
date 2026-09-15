@@ -3600,3 +3600,28 @@ window.addEventListener('keydown', (e) => {
     io.observe(el);
   });
 })();
+
+// ==========================================================================
+// In-Page Article Modal Reader
+// ==========================================================================
+function openArticleModal(url, title) {
+  const modal = document.getElementById("articleModalBackdrop");
+  const frame = document.getElementById("articleFrame");
+  const titleEl = document.getElementById("articleModalTitle");
+  if (!modal || !frame) return;
+
+  if (titleEl) titleEl.textContent = title || "Bilimsel Makale";
+  frame.src = url;
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeArticleModal(e) {
+  const modal = document.getElementById("articleModalBackdrop");
+  const frame = document.getElementById("articleFrame");
+  if (modal) {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+    if (frame) frame.src = "";
+  }
+}
