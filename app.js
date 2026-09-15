@@ -48,14 +48,14 @@ const i18n = {
     "aiSubtitle": "Mevcut güvenlik kameralarını buluta bağımlı kalmadan; perakende dönüşüm, fabrika lojistiği ve eğlence parkı analitik merkezine dönüştüren yapay zekâ hattı.",
     "retailAiSummary": "Tavan IP ve balıkgözü kameralardan kuşbakışı kişi tespiti, 2D zemin homografi projeksiyonu, reyon bekleme süresi (dwell-time) ve mağaza içi yoğunluk haritaları çıkaran yerel analiz motoru.",
     "sanayiPulseSummary": "Endüstriyel tesis ve fabrikaların yükleme rampalarında TIR varış-çıkış takibi, rampa bekleme sürelerinin ölçülmesi ve lojistikte demurrage (gecikme) cezalarını önleyen görsel analitik denetimi.",
-    "funnivariumSummary": "Eğlence merkezleri ve tematik parklar için bilet satışları ile fiziksel biniş sayılarını karşılaştıran, ünitelerin doluluk oranlarını ve kuyruk bekleme sürelerini anlık raporlayan simülasyon ve analiz paneli.",
+    "funnivariumSummary": "Eğlence ve ulaşım tesisleri için bilet satışları ile fiziksel biniş sayılarını mikrosaniye hassasiyetinde karşılaştıran, turnike kaçak geçişlerini ve kuyruk bekleme sürelerini anlık raporlayan denetim paneli.",
     "edgeHwSummary": "Video akışları internete veya üçüncü taraf bulut sağlayıcılarına asla iletilmez. Tüm tespitler yerel Nvidia Jetson Orin veya endüstriyel Mini PC ünitelerinde RAM üzerinde işlenir ve ham kareler analiz bittiği milisaniyede silinir. Merkeze yalnızca anonim JSON telemetri verisi akar.",
     "mobileEyebrow": "Mobil Ekosistem",
     "mobileTitle": "Mobil Uygulamalar <span>(Canlı & Geliştirilenler)</span>",
     "mobileSubtitle": "App Store ve Google Play'de küresel kullanıcıya ulaşan canlı ürünler ve yayına hazırlanan mobil topluluklar.",
     "ventSummary": "İnsanları profil fotoğraflarına göre değil; konuşmak istedikleri duyguya ve konuya göre bir araya getiren sosyal mobil uygulama. Kullanıcı önce konu ve niyetini seçer; karşılıklı kabul sonrasında güvenli sohbet başlar.",
     "forgeSummary": "Sosyal akışı gerçek hayattaki fiziksel harekete bağlayan hibrit spor ağı. Harita üzerinden spor kulüplerini keşfetme, topluluk etkinliklerine katılma, sporcu profili rozetleri ve antrenör pazar yeri mekanikleri.",
-    "bobSummary": "Kullanıcıyı erteleme (snooze) alışkanlığından kurtarmak için psikolojik baskı ve alaycı yapay zekâ diyalogları kullanan yenilikçi uyanma uygulaması. Görev tabanlı kilit açma ve streak serisi mekanikleri.",
+    "bobSummary": "Kullanıcıyı erteleme (snooze) alışkanlığından kurtarmak için standart melodiler yerine alaycı ve acımasız yapay zekâ uyarıları kullanan karakter tabanlı uyanma uygulaması. Gemini AI ve Edge-TTS nöral ses motoru ile dinamik sabah roast'ları.",
     "undrgrndSummary": "Bağımsız hip-hop sanatçıları, graffiti yazarları ve sokak kültürü takipçilerini bir araya getiren niş topluluk platformu. Yeraltı etkinlik haritası, cypher alanları ve sanatçı keşif ağı.",
     "extrasEyebrow": "Araştırma, Medya & İleri Teknoloji",
     "extrasTitle": "Ekstralar: <span>Makaleler, Yazılar & Ar-Ge</span>",
@@ -170,7 +170,7 @@ const i18n = {
     "mNeck": "Darboğaz Tespiti",
     "mDemur": "Ceza Risk Azaltımı",
     "funCat": "Kaçak Biniş & Kuyruk Zekâsı · EĞLENCE & ULAŞIM",
-    "funHead": "Funnivarium OS: Turnike & Kaçak Biniş Denetimi",
+    "funHead": "PassAudit OS: Turnike & Kaçak Biniş Denetimi",
     "funSum": "Eğlence ve ulaşım tesislerinde turnikeden okutulan bilet sayısı ile kameranın tespit ettiği gerçek biniş sayısını anlık olarak karşılaştıran denetim paneli. Bilet basmadan turnikeden atlayan veya usulsüz geçen binişleri anında yakalayarak her gün uğranılan ciddi bilet geliri sızıntısını durdurur.",
     "mLeak": "+82 Kaçak",
     "mBoard": "Canlı Biniş Tespiti",
@@ -190,8 +190,8 @@ const i18n = {
     "mDiscover": "Yer & Grup Keşfi",
     "bobCat": "Edge-TTS & Gemini AI · GELİŞTİRİLME AŞAMASINDA",
     "bobHead": "BOB: Erteleme Karşıtı Alaycı Akıllı Alarm",
-    "bobSum": "Sabah alarmını sürekli erteleyen kullanıcıları; standart melodiler yerine yapay zekâ destekli alaycı, sert sesli uyarılar ve zorunlu mantık görevleriyle yataktan kaldıran disiplin motorudur. Erteleme refleksini ve güne geç başlama döngüsünü bilişsel görevlerle kırar.",
-    "mWake": "Zorunlu Uyanma Görevi",
+    "bobSum": "Sabah alarmını sürekli erteleyen kullanıcıları standart melodiler yerine yapay zekâ destekli alaycı, sarkastik ve acımasız sesli uyarılarla (roast) yataktan kaldıran karakter tabanlı akıllı alarm. Gemini AI destekli dinamik mizah motoru ve Edge-TTS nöral ses senteziyle her sabah uykuyu psikolojik olarak böler ve erteleme refleksini kırar.",
+    "mWake": "Sarkastik Sabah Roasting'i",
     "mNeural": "Nöral Ses",
     "mVoice": "Dinamik AI Seslendirme",
     "undCat": "Kültür & Müzik Topluluğu · GELİŞTİRİLME AŞAMASINDA",
@@ -245,12 +245,12 @@ const i18n = {
     "artModalCat": "BİLİMSEL YAYIN & MAKALE",
     "abySum": "+24 yetişkin psikolojik bilimkurgu ve distopya evreninde geçen, 5 sezon ve 40 bölümden oluşan kapsamlı senaryo mimarisi ve prodüksiyon üretim incilidir (Series Bible). Kurgusal dünya kuralları, karakter ilişkileri ve dramatik çatışma matrislerini eksiksiz belgeler.",
     "rayCat": "React Remotion + Python · MEDYA OTOMASYONU",
-    "rayHead": "By Rayana: React Tabanlı Otomatize Video Motoru",
+    "rayHead": "CreativePulse: React Tabanlı Otomatize Video Motoru",
     "raySum": "Video kurgu programı açmadan React bileşenleri ve Python betikleriyle dinamik fiyatlı kampanya videolarını ve hikayeleri saniyeler içinde render eden otomasyon motoru. Tasarımcılara ödenen yüksek ajans maliyetlerini ve saatler süren manuel montaj yükünü sıfırlar.",
     "zoomBadge": "Görseli İncele",
     "ventMonetization": "Vent Plus premium abonelik (öncelikli eşleşme & derin filtreler), dinleyici jeton (IAP token) mikro-ödemeleri ve şirketler için B2B kurumsal esenlik (wellness) paketleri.",
     "forgeMonetization": "Forge Pro aboneliği (ayrıntılı PR analizleri & video form denetimi), spor salonu/PT partner pazar yeri komisyonları (%15) ve sporcu markaları için sponsorlu meydan okumalar.",
-    "bobMonetization": "BOB Savage aboneliği (sınırsız alaycı yapay zekâ sesleri & zorlu bilişsel görevler), özel ses/karakter paketleri (IAP) ve sınav/odaklanma kurumsal disiplin lisansları.",
+    "bobMonetization": "BOB Savage aboneliği (sınırsız alaycı yapay zekâ ses üretimi & yeni roast motorları), özel persona ses paketleri (alaycı oda arkadaşı, acımasız antrenör vb. IAP) ve premium alarm temaları.",
     "undrgrndMonetization": "Beatmaker pazar yeri satış/kiralama komisyonu (%15-20), canlı cypher stüdyo kayıt token'ları ve sanatçı profil/parça öne çıkarma vitrin modelleri.",
     "bioTag": "Kişisel Arka Plan & Yaşam Felsefesi",
     "bioMeta": "28 Nisan 1999, Mersin · Eskişehir",
@@ -329,14 +329,14 @@ const i18n = {
     "aiSubtitle": "Transforming existing security cameras into retail conversion and factory logistics analytics centers without cloud dependencies.",
     "retailAiSummary": "On-premise vision engine calculating top-down person tracking, 2D floor homography projection, aisle dwell times, and store heatmaps from ceiling IP cameras using YOLOv8s and ByteTrack.",
     "sanayiPulseSummary": "Industrial visual monitoring tracking truck arrivals, loading dock occupancy, and dwell times to eliminate demurrage bottlenecks in manufacturing and warehouse facilities.",
-    "funnivariumSummary": "Entertainment facility analytics correlating ticketing numbers with physical ridership, tracking ride queue times, and generating real-time capacity and safety alerts.",
+    "funnivariumSummary": "Transit and entertainment facility analytics cross-checking ticketing numbers against physical ridership, identifying turnstile fraud, and generating real-time capacity and safety alerts.",
     "edgeHwSummary": "Video streams never leave the facility. All inference runs entirely in RAM on local Nvidia Jetson Orin or industrial Mini PCs and raw frames are destroyed instantly. Only anonymous JSON telemetry is transmitted.",
     "mobileEyebrow": "Mobile Ecosystem",
     "mobileTitle": "Mobile Apps <span>(Live & In Development)</span>",
     "mobileSubtitle": "Live consumer products reaching global users on App Store and Google Play, alongside upcoming communities.",
     "ventSummary": "Social mobile app connecting people based on topics and emotional context rather than profiles. Users select emotional topics and intentions; conversations unlock upon mutual consent.",
     "forgeSummary": "Hybrid fitness social network linking digital feeds to real-world movement. Features gym exploration, community events, athlete badges, and coach marketplace mechanics.",
-    "bobSummary": "Sarcastic wake-up nemesis app using psychological annoyance mechanics and Gemini AI dialogues to cure morning snooze habits with task-based alarms.",
+    "bobSummary": "Character-driven AI alarm clock replacing standard ringtones with savage morning roasts. Uses Gemini AI humor modeling and Edge-TTS neural speech to wake users up through psychological disruption.",
     "undrgrndSummary": "Niche culture platform uniting underground hip-hop artists, graffiti writers, and street culture fans with an underground event map and artist discovery engine.",
     "extrasEyebrow": "Research, Media & Advanced Tech",
     "extrasTitle": "Extras: <span>Articles, Research & R&D</span>",
@@ -451,7 +451,7 @@ const i18n = {
     "mNeck": "Bottleneck Alerts",
     "mDemur": "Penalty-Risk Reduction",
     "funCat": "Fare Evasion & Queue Intelligence · LEISURE & TRANSPORT",
-    "funHead": "Funnivarium OS: Turnstile & Boarding Audit",
+    "funHead": "PassAudit OS: Turnstile & Ticket Fraud Audit",
     "funSum": "An audit panel instantly comparing turnstile ticket scans against camera-detected real boardings at leisure and transport facilities. It catches jump-overs and irregular boardings on the spot, stopping serious daily ticket-revenue leakage.",
     "mLeak": "+82 Detected",
     "mBoard": "Live Boarding Detection",
@@ -471,8 +471,8 @@ const i18n = {
     "mDiscover": "Place & Group Discovery",
     "bobCat": "Edge-TTS & Gemini AI · IN DEVELOPMENT",
     "bobHead": "BOB: Anti-Snooze Sarcastic Smart Alarm",
-    "bobSum": "A discipline engine that gets chronic snoozers out of bed with AI-powered sarcastic voice alerts and mandatory logic tasks instead of standard melodies. It breaks the snooze reflex and late-start loop with cognitive tasks.",
-    "mWake": "Mandatory Wake Task",
+    "bobSum": "A character-driven AI alarm clock that gets chronic snoozers out of bed not with pleasant chimes, but with savage, sarcastic, and context-aware morning roasts. Powered by Gemini AI for dynamic humor generation and Edge-TTS neural speech to wake users up through witty psychological disruption.",
+    "mWake": "Sarcastic Morning Roasting",
     "mNeural": "Neural Voice",
     "mVoice": "Dynamic AI Voiceover",
     "undCat": "Culture & Music Community · IN DEVELOPMENT",
@@ -526,12 +526,12 @@ const i18n = {
     "artModalCat": "SCIENTIFIC PUBLICATION & RESEARCH",
     "abySum": "Mature (+24) psychological sci-fi & dystopian universe designed across 5 seasons and 40 episodes (Series Bible). Documents complete world canon, character arcs, and dramatic conflict matrices.",
     "rayCat": "React Remotion + Python · MEDIA AUTOMATION",
-    "rayHead": "By Rayana: React-Based Programmatic Video Engine",
+    "rayHead": "CreativePulse: React-Based Programmatic Video Engine",
     "raySum": "Programmatic video engine rendering dynamic campaign videos and social stories in seconds via React components and Python scripts, eliminating high agency costs and manual video editing.",
     "zoomBadge": "Inspect Image",
     "ventMonetization": "Vent Plus premium subscriptions (priority matching & deeper filters), listener token micropayments (IAP), and B2B corporate wellness tiers.",
     "forgeMonetization": "Forge Pro subscription (detailed PR analytics & video form audits), gym/trainer marketplace commissions (15%), and brand-sponsored challenges.",
-    "bobMonetization": "BOB Savage subscription (unlimited sarcastic AI personas & cognitive tasks), custom voice packs (IAP), and enterprise focus licenses.",
+    "bobMonetization": "BOB Savage subscription (unlimited AI roast generation & new roasting models), premium cynical persona/voice packs (cynical roommate, ruthless coach IAP), and custom alarm themes.",
     "undrgrndMonetization": "Beatmaker marketplace sales/licensing commissions (15-20%), live cypher studio tokens, and featured artist spotlight tiers.",
     "bioTag": "Personal Background & Philosophy",
     "bioMeta": "April 28, 1999 · Mersin / Eskisehir, TR",
@@ -1673,24 +1673,24 @@ const techData = {
   bob: {
     category: "Edge-TTS & Gemini AI · GELİŞTİRİLME AŞAMASINDA",
     title: "BOB: Erteleme Karşıtı Alaycı Akıllı Alarm",
-    subtitle: "Görev Kilitli Uyanma ve Dinamik Yapay Zekâ Seslendirme",
+    subtitle: "Yapay Zekâ Destekli Acımasız Sabah Roast'ları ve Nöral Ses Sentezi",
     overview: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Genel Bakış & Çalışma Prensibi</h3>
-  <p class="deep-lead">Sabah alarmını sürekli erteleyen kullanıcıları; standart melodiler yerine yapay zekâ destekli alaycı sesli uyarılar ve zorunlu mantık görevleriyle yataktan kaldıran disiplin motorudur.</p>
+  <p class="deep-lead">Sabah alarmını sürekli erteleyen kullanıcıları; standart melodiler yerine yapay zekâ destekli alaycı, sarkastik ve acımasız sesli uyarılarla yataktan kaldıran karakter tabanlı akıllı alarmdır. Yastığa sığınmayı konfor olmaktan çıkarıp kullanıcıyı güldürerek ve sinir ederek uyandırır.</p>
 
   <div class="spec-grid">
     <div class="spec-card">
-      <h4>Zorunlu Uyanma Görevi</h4>
-      <p>Bilişsel görev tamamlanmadan alarm susmaz; erteleme refleksi kırılır.</p>
+      <h4>Dinamik Sarcastic Roast Motoru</h4>
+      <p>Gemini AI prompt motoru her sabaha özel, kullanıcının uyanmama bahaneleriyle dalga geçen benzersiz replikler üretir.</p>
     </div>
     <div class="spec-card">
-      <h4>Dinamik AI Seslendirme</h4>
-      <p>Edge-TTS ile üretilen alaycı uyarılar her sabaha özel ve tekrarsızdır.</p>
+      <h4>Edge-TTS Nöral Seslendirme</h4>
+      <p>Doğal tonlamalı nöral ses motoru, BOB'un alaycı ve bıkkın karakter tonunu arka planda susmaksızın canlı tutar.</p>
     </div>
     <div class="spec-card">
-      <h4>Seri Takibi</h4>
-      <p>Ertelemesiz uyanma serileri (streak) disiplin döngüsünü ödüllendirir.</p>
+      <h4>Ertelemesiz Seri (Streak) Takibi</h4>
+      <p>Zamanında yataktan kalkılan günleri sayarak kullanıcıya psikolojik süreklilik ve disiplin kazandırır.</p>
     </div>
   </div>
 </div>
@@ -1701,8 +1701,8 @@ const techData = {
 
   <div class="deep-card-grid">
     <div class="deep-card">
-      <h4>Erteleme Döngüsü ve Geç Başlayan Günler</h4>
-      <p>Standart alarmlar tek dokunuşla susturulur. Görev kilidi ve psikolojik baskı uyanmayı zorunlu kılar.</p>
+      <h4>Snooze Alışkanlığı ve Melodiye Duyarsızlaşma</h4>
+      <p>Standart alarm sesleri birkaç hafta içinde beyin tarafından arka plan gürültüsü sayılır. Sürekli değişen esprili ve sert yapay zekâ diyalogları duyarsızlaşmayı imkânsız kılar.</p>
     </div>
   </div>
 </div>
@@ -1710,7 +1710,7 @@ const techData = {
     technical: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Teknoloji Yığını</h3>
-  <p class="deep-lead">Cihaz üstü seslendirme ve Gemini destekli diyalog üretimi.</p>
+  <p class="deep-lead">Cihaz üstü ses akışı ve Gemini destekli alaycı diyalog hattı.</p>
 
   <div class="tech-stack-table-wrap">
     <table class="inventory-table">
@@ -1723,19 +1723,19 @@ const techData = {
       </thead>
       <tbody>
         <tr>
-          <td><strong>Mobil</strong></td>
+          <td><strong>Mobil İstemci</strong></td>
           <td><code>Flutter</code></td>
-          <td>Alarm zamanlayıcı ve görev kilit ekranları</td>
+          <td>Arka plan alarm servisi ve karakter etkileşim ekranı</td>
         </tr>
         <tr>
-          <td><strong>Ses</strong></td>
+          <td><strong>Ses Sentezi</strong></td>
           <td><code>Edge-TTS</code></td>
-          <td>Nöral sesle dinamik uyarı sentezi</td>
+          <td>Nöral sesle dinamik alaycı replik üretimi</td>
         </tr>
         <tr>
-          <td><strong>Diyalog</strong></td>
+          <td><strong>Roast Motoru</strong></td>
           <td><code>Gemini AI</code></td>
-          <td>Kullanıcı profiline göre alaycı replik üretimi</td>
+          <td>Uyanma saati ve erteleme geçmişine göre anlık mizah ve iğneleme üretimi</td>
         </tr>
       </tbody>
     </table>
@@ -1752,8 +1752,8 @@ const techData = {
       <img src="assets/bob/IMG_0155.jpeg" alt="BOB Karşılama Ekranı">
     </div>
     <div class="visual-deduction-body">
-      <h4>Ekran Çıkarımı: Persona ve Görev Akışı</h4>
-      <p>Karşılama ekranında BOB karakteri ve sert-şakacı ton, sonraki adımlarda görev kilitli alarm akışına bağlanır.</p>
+      <h4>Ekran Çıkarımı: Karakter Kimliği ve Sesli Alarm Akışı</h4>
+      <p>Karşılama ekranında tanıtılan BOB personası ("He is your alarm clock. He does not care that you are tired."), alarm çaldığında arka planda susmaksızın alaycı replikler fısıldayan bir disiplin ortağına dönüşür.</p>
     </div>
   </div>
 </div>
@@ -3052,24 +3052,24 @@ const techDataEn = {
   bob: {
     category: "Edge-TTS & Gemini AI · IN DEVELOPMENT",
     title: "BOB: Anti-Snooze Sarcastic Smart Alarm",
-    subtitle: "Task-Locked Wakeups with Dynamic AI Voiceover",
+    subtitle: "AI-Powered Savage Morning Roasts and Neural Voice Synthesis",
     overview: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Overview & Working Principle</h3>
-  <p class="deep-lead">A discipline engine that gets chronic snoozers out of bed with AI-powered sarcastic voice alerts and mandatory logic tasks instead of standard melodies.</p>
+  <p class="deep-lead">A character-driven smart alarm that pulls chronic snoozers out of bed not with soothing ringtones, but with relentlessly sarcastic, witty, and contextual morning roasts. Wakes you up by turning comfortable mornings into comedic peer pressure.</p>
 
   <div class="spec-grid">
     <div class="spec-card">
-      <h4>Mandatory Wake Task</h4>
-      <p>The alarm never silences until a cognitive task completes; the snooze reflex breaks.</p>
+      <h4>Dynamic Roast Engine</h4>
+      <p>Gemini AI prompt pipeline generates unique daily roasts mocking common wake-up excuses.</p>
     </div>
     <div class="spec-card">
-      <h4>Dynamic AI Voiceover</h4>
-      <p>Edge-TTS sarcastic alerts are unique to every morning, never repeated.</p>
+      <h4>Edge-TTS Neural Speech</h4>
+      <p>Natural intonation neural speech keeps Bob's cynical persona speaking persistently in the background.</p>
     </div>
     <div class="spec-card">
-      <h4>Streak Tracking</h4>
-      <p>Snooze-free morning streaks reward the discipline loop.</p>
+      <h4>Snooze-Free Streak Counter</h4>
+      <p>Gamifies discipline by counting consecutive days out of bed without snoozing.</p>
     </div>
   </div>
 </div>
@@ -3080,8 +3080,8 @@ const techDataEn = {
 
   <div class="deep-card-grid">
     <div class="deep-card">
-      <h4>Snooze Loops and Late-Starting Days</h4>
-      <p>Standard alarms die with one tap. Task locks and psychological pressure make waking mandatory.</p>
+      <h4>Alarm Habituation & Snooze Fatigue</h4>
+      <p>Standard chime alarms become subconscious background noise within weeks. Unpredictable, humorous AI dialogues make sensory habituation impossible.</p>
     </div>
   </div>
 </div>
@@ -3089,7 +3089,7 @@ const techDataEn = {
     technical: `
 <div class="deep-section-block">
   <h3 class="deep-h3">Technology Stack</h3>
-  <p class="deep-lead">On-device voiceover with Gemini-assisted dialogue generation.</p>
+  <p class="deep-lead">On-device alarm services with Gemini-driven dynamic dialogue generation.</p>
 
   <div class="tech-stack-table-wrap">
     <table class="inventory-table">
@@ -3102,19 +3102,19 @@ const techDataEn = {
       </thead>
       <tbody>
         <tr>
-          <td><strong>Mobile</strong></td>
+          <td><strong>Mobile Client</strong></td>
           <td><code>Flutter</code></td>
-          <td>Alarm scheduler and task-lock screens</td>
+          <td>Background alarm service and character interaction screen</td>
         </tr>
         <tr>
-          <td><strong>Voice</strong></td>
+          <td><strong>Voice Synthesis</strong></td>
           <td><code>Edge-TTS</code></td>
-          <td>Neural-voice synthesis of dynamic alerts</td>
+          <td>Neural-voice rendering of dynamic sarcastic lines</td>
         </tr>
         <tr>
-          <td><strong>Dialogue</strong></td>
+          <td><strong>Roast Engine</strong></td>
           <td><code>Gemini AI</code></td>
-          <td>Sarcastic line generation tuned to the user profile</td>
+          <td>Dynamic humor generation tailored to wake-up time and sleep history</td>
         </tr>
       </tbody>
     </table>
@@ -3131,8 +3131,8 @@ const techDataEn = {
       <img src="assets/bob/IMG_0155.jpeg" alt="BOB Welcome Screen">
     </div>
     <div class="visual-deduction-body">
-      <h4>Screen Reading: Persona and Task Flow</h4>
-      <p>The welcome screen's BOB character and tough-joking tone lead into the task-locked alarm flow.</p>
+      <h4>Screen Reading: Persona Identity & Audio Wakeup Flow</h4>
+      <p>Introduced as "He does not care that you are tired", BOB functions as an unrelenting wake-up companion delivering sarcastic morning roasts in the background.</p>
     </div>
   </div>
 </div>
@@ -3559,7 +3559,7 @@ const lbCaptions = {
   'assets/bozburun-yacht-club/byc-home.png': { tr: 'Lüks Butik Otel & Marina Web Portalları', en: 'Luxury boutique hotel & marina web portals' },
   'assets/retail-analytics/desktop-hero.png': { tr: 'RetailPulse AI: Mağaza Yoğunluk & Isı Haritası', en: 'RetailPulse AI: store density & heatmap' },
   'assets/retail-analytics/camera-analysis.png': { tr: 'SanayiPulse: Rampa Doluluk ve Lojistik Takibi', en: 'SanayiPulse: ramp occupancy & logistics tracking' },
-  'assets/vip/funnivarium.png': { tr: 'Funnivarium OS: Turnike vs. Kamera Biniş Kaçak Tespiti', en: 'Funnivarium OS: turnstile vs. camera boarding audit' },
+  'assets/vip/funnivarium.png': { tr: 'PassAudit OS: Turnike vs. Kamera Biniş Kaçak Tespiti', en: 'PassAudit OS: Turnstile vs. Camera Boarding Audit' },
   'assets/vent/vent-topic-request.jpeg': { tr: 'Vent App: Konu Odaklı Dertleşme ve Eşleşme Ekranı', en: 'Vent app: topic-based matching screen' },
   'assets/forge/screenshot_navigation.png': { tr: 'Forge: Sporcu Topluluğu ve PR Akışı', en: 'Forge: athlete community & PR feed' },
   'assets/bob/IMG_0155.jpeg': { tr: 'BOB: Alaycı Karakter ve Karşılama Ekranı', en: 'BOB: sarcastic character & welcome screen' },
