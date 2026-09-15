@@ -513,6 +513,108 @@ nav.main-nav a.active {
   flex-shrink: 0;
 }
 
+/* Bio & Personal Culture Card */
+.bio-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), #3b82f6);
+}
+
+.bio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.bio-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
+.bio-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.bio-meta-pill {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  background: rgba(212, 163, 89, 0.08);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 163, 89, 0.25);
+}
+
+.bio-text {
+  font-size: 14.5px;
+  line-height: 1.75;
+  color: var(--paper-soft);
+  margin-bottom: 14px;
+}
+
+.bio-traits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .bio-traits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trait-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  transition: all 0.2s ease;
+}
+
+.trait-item:hover {
+  border-color: var(--line-strong);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.trait-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.trait-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 /* 2. Timeline CV */
 .timeline-cv {
   display: flex;
