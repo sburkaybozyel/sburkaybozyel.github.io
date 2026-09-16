@@ -380,7 +380,7 @@ h1 span, h2 span, h3 span, h4 span {
   font-size: 16.5px;
   line-height: 1.7;
   color: var(--paper-soft);
-  margin: 0 0 24px;
+  margin: 0;
   max-width: 760px;
 }
 
@@ -1455,23 +1455,19 @@ footer.site-footer {
 @media (max-width: 768px) {
   header.site-header {
     height: auto;
-    min-height: 64px;
-    padding: 10px 0;
+    min-height: 48px;
+    padding: 8px 0;
   }
 
   .header-container {
-    padding: 0 12px;
+    padding: 0 14px;
     gap: 8px;
     flex-wrap: nowrap;
+    justify-content: flex-end;
   }
 
   header.site-header nav.main-nav {
     display: none;
-  }
-
-  .brand-wrapper {
-    gap: 8px;
-    min-width: 0;
   }
 
   .brand-text h1 {
