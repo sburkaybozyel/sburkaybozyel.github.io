@@ -3721,7 +3721,7 @@ const articlesData = {
   },
   ctec: {
     url: "assets/science-articles/ctec.html",
-    tr: "Korelasyon Etiketli Dolaşıklık İletişimi (CTEC): Işık-Hızı-Ötesi Çerçeve",
+    tr: "Korelasyon Etiketli Dolaşıklık İletişimi (CTEC): Işık Hızı Ötesi Çerçeve",
     en: "Correlation-Tagged Entanglement Communication (CTEC): FTL Framework"
   }
 };
