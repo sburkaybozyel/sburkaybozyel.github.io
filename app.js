@@ -3,6 +3,7 @@
 const i18n = {
   tr: {
     "navIntro": "Tanıtım",
+    "navBio": "Biyografi",
     "navExp": "Geçmiş",
     "navSkills": "Yetkinlikler",
     "navErpWeb": "ERP & Web",
@@ -12,6 +13,20 @@ const i18n = {
     "navOfferings": "İş Modelleri",
     "btnPrintCv": "CV Yazdır",
     "navContact": "İletişim",
+    "hubBioTag": "Kişisel Arka Plan",
+    "hubBioTitle": "Biyografi & Yaşam Kültürü",
+    "hubBioDesc": "DEHB'yi hiper-odaklama gücüne dönüştürme, Güneydoğu Asya dönemi ve çok yönlü üretim kültürü.",
+    "hubExpTag": "Kronolojik Özgeçmiş",
+    "hubExpTitle": "Kariyer & Eğitim Zaman Çizelgesi",
+    "hubExpDesc": "AEON LLC kuruculuğu, ESOGÜ Endüstri Mühendisliği ve canlı SaaS/Edge AI sistem sorumlulukları.",
+    "hubSkillsTag": "Mimari Yetkinlik",
+    "hubSkillsTitle": "Teknik Yetkinlik & Mimari Matris",
+    "hubSkillsDesc": "Flutter, Node.js, YOLOv8, Cloudflare, Jetson ve kurumsal multi-tenant veri tabanları.",
+    "hubContactTag": "İş Birliği & İletişim",
+    "hubContactTitle": "Canlı Demo, Ortaklık & İletişim",
+    "hubContactDesc": "Venture Studio, Kurumsal Modernizasyon ve Stratejik Hisse Ortaklığı modelleri.",
+    "openModalBtn": "Açılır Pencerede İncele →",
+    "expModalTitle": "Kariyer & Eğitim Zaman Çizelgesi",
     "introBadge": "Mobil Yazılım Geliştirici & Endüstri Mühendisi · AEON LLC",
     "introBio": "Flutter ve modern mobil teknolojilerle küresel uygulama mağazalarında (App Store & Google Play) canlı ürünler geliştiren mobil yazılım geliştirici ve kurucu. ESOGÜ Endüstri Mühendisliği temelleriyle süreç optimizasyonunu birleştirerek mobil ürünlerin yanı sıra uçtan uca backend mimarileri ve uçta (edge) çalışan yapay zekâ sistemleri inşa ediyorum.",
     "btnExplore": "Biyografi & Geçmişi İncele",
@@ -291,6 +306,7 @@ const i18n = {
 },
   en: {
     "navIntro": "About",
+    "navBio": "Biography",
     "navExp": "Experience",
     "navSkills": "Skills",
     "navErpWeb": "ERP & Web",
@@ -300,6 +316,20 @@ const i18n = {
     "navOfferings": "Business Models",
     "btnPrintCv": "Print CV",
     "navContact": "Contact",
+    "hubBioTag": "Personal Background",
+    "hubBioTitle": "Biography & Culture",
+    "hubBioDesc": "Harnessing ADHD as hyperfocus, 2 years across Southeast Asia, and multi-layered engineering culture.",
+    "hubExpTag": "Chronological Career",
+    "hubExpTitle": "Career & Education Timeline",
+    "hubExpDesc": "AEON LLC founder role, ESOGU Industrial Engineering foundation, and live SaaS/Edge AI systems.",
+    "hubSkillsTag": "Technical Matrix",
+    "hubSkillsTitle": "Technical Matrix & Architecture",
+    "hubSkillsDesc": "Flutter, Node.js, YOLOv8, Cloudflare, Jetson, and enterprise multi-tenant database architectures.",
+    "hubContactTag": "Partnership & Contact",
+    "hubContactTitle": "Live Demo, Partnership & Contact",
+    "hubContactDesc": "Venture Studio, Enterprise Modernization, and Strategic Equity Partnership models.",
+    "openModalBtn": "View in Modal Dialog →",
+    "expModalTitle": "Career & Education Timeline",
     "introBadge": "Mobile Software Developer & Industrial Engineer · AEON LLC",
     "introBio": "Mobile application developer and founder building high-performance, cross-platform apps with live products on the App Store and Google Play using Flutter and modern mobile stacks. Combining an ESOGU Industrial Engineering foundation with scalable backend architectures and edge AI systems.",
     "btnExplore": "Explore Biography & Timeline",
@@ -2058,6 +2088,69 @@ const techData = {
   </div>
 </div>
 `
+  },
+  mcp: {
+    category: "Anthropic Model Context Protocol · İLERİ PROTOKOL",
+    title: "Özel MCP Sunucuları & Otonom Ajan Hattı",
+    subtitle: "Claude ve DeepSeek LLM'lerini Şirket İçi Veri Tabanları ve API'lere Güvenli Bağlayan Protokol",
+    overview: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Genel Bakış & Protokol Mimarisi</h3>
+  <p class="deep-lead">Model Context Protocol (MCP); büyük dil modellerinin (LLM) şirket içi izole veritabanları, dosya sistemleri ve API servisleriyle güvenli, iki yönlü ve standardize edilmiş bir RPC protokolü üzerinden iletişim kurmasını sağlayan açık standarttır.</p>
+
+  <div class="spec-grid">
+    <div class="spec-card">
+      <h4>İki Yönlü JSON-RPC 2.0</h4>
+      <p>STDIO ve SSE (Server-Sent Events) taşıma katmanları üzerinde çalışan, deterministik ve düşük gecikmeli mesajlaşma omurgası.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Rol Tabanlı İzin & Güvenlik (RBAC)</h4>
+      <p>Ajanların sadece tanımlı şema ve fonksiyonlara (tools) erişmesini sağlayan, yetkisiz sorguları bloklayan koruma katmanı.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Dinamik Şema & Araç Çağırma (Tool Calling)</h4>
+      <p>LLM'in veritabanı şemasını anlık keşfetmesi, SQL sorgusu üretmesi ve sonuçları analiz edip aksiyona dökmesi.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Tamamen Yerel / Şirket İçi (On-Prem)</h4>
+      <p>Hassas şirket verilerini üçüncü taraf sunuculara göndermeden, yerel ağda çalışan MCP sunucusu üzerinden denetim.</p>
+    </div>
+  </div>
+</div>
+`,
+    problems: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Çözülen Problemler & Katma Değer</h3>
+  <div class="deep-card-grid">
+    <div class="deep-card">
+      <h4>Veri İzolasyonu ve Gizlilik</h4>
+      <p>Hassas veritabanı ve ERP verilerinin genel bulut API'lerine sızması riskini sıfırlar; tüm işlemler yerel MCP köprüsü üzerinden kontrollü yürütülür.</p>
+    </div>
+    <div class="deep-card">
+      <h4>Ajanların Otomasyon Yetkinliği</h4>
+      <p>LLM'lerin yalnızca metin üretmekle kalmayıp doğrudan kod tabanlarında test koşması, log analizi yapması ve veritabanı sağlık kontrolü gerçekleştirmesi sağlanır.</p>
+    </div>
+  </div>
+</div>
+`,
+    technical: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Teknoloji Yığını & Entegrasyon</h3>
+  <div class="tech-stack-table-wrap">
+    <table class="inventory-table">
+      <thead>
+        <tr><th>Katman</th><th>Teknoloji</th><th>Rol</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Protokol</td><td>Anthropic MCP SDK (TypeScript/Python)</td><td>Model ve araç köprüsü</td></tr>
+        <tr><td>Taşıma Katmanı</td><td>STDIO & Server-Sent Events (SSE)</td><td>Gerçek zamanlı iki yönlü akış</td></tr>
+        <tr><td>Veri Köprüsü</td><td>PostgreSQL, SQLite, AlaSQL</td><td>Doğrudan yapılandırılmış veri erişimi</td></tr>
+        <tr><td>Modeller</td><td>Claude 3.5 Sonnet, DeepSeek V3/R1</td><td>Muhakeme ve araç çağırma (Tool Calling)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`
   }
 };
 
@@ -3426,6 +3519,69 @@ const techDataEn = {
   </div>
 </div>
 `
+  },
+  mcp: {
+    category: "Anthropic Model Context Protocol · ADVANCED PROTOCOL",
+    title: "Custom MCP Servers & Autonomous Agent Pipeline",
+    subtitle: "Secure Protocol Connecting Claude and DeepSeek LLMs to Internal Databases and APIs",
+    overview: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Overview & Protocol Architecture</h3>
+  <p class="deep-lead">The Model Context Protocol (MCP) is an open standard that enables large language models (LLMs) to communicate with private on-premise databases, file systems, and API services via a secure, standardized two-way RPC protocol.</p>
+
+  <div class="spec-grid">
+    <div class="spec-card">
+      <h4>Bi-Directional JSON-RPC 2.0</h4>
+      <p>Deterministic, low-latency messaging backbone running over STDIO and SSE (Server-Sent Events) transport layers.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Role-Based Access Control (RBAC)</h4>
+      <p>Security layer ensuring autonomous agents only access explicitly declared tools and schemas, preventing unauthorized execution.</p>
+    </div>
+    <div class="spec-card">
+      <h4>Dynamic Schema Discovery & Tool Calling</h4>
+      <p>Enables LLMs to inspect schemas in real time, generate precise SQL queries, and execute structured workflows.</p>
+    </div>
+    <div class="spec-card">
+      <h4>100% On-Premises Data Privacy</h4>
+      <p>Processes proprietary enterprise telemetry without leaking confidential data to external cloud providers.</p>
+    </div>
+  </div>
+</div>
+`,
+    problems: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Solved Problems & Enterprise Value</h3>
+  <div class="deep-card-grid">
+    <div class="deep-card">
+      <h4>Data Privacy & Sovereign Execution</h4>
+      <p>Eliminates data leak risks by isolating database interactions behind local MCP bridges rather than uploading sensitive dumps to cloud LLMs.</p>
+    </div>
+    <div class="deep-card">
+      <h4>End-to-End Workflow Autonomy</h4>
+      <p>Transforms LLMs from passive chatbots into active agents capable of running tests, inspecting telemetry, and generating real-time operational reports.</p>
+    </div>
+  </div>
+</div>
+`,
+    technical: `
+<div class="deep-section-block">
+  <h3 class="deep-h3">Technical Stack & Protocol Specs</h3>
+  <div class="tech-stack-table-wrap">
+    <table class="inventory-table">
+      <thead>
+        <tr><th>Layer</th><th>Technology</th><th>Role</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Protocol</td><td>Anthropic MCP SDK (TypeScript / Python)</td><td>Standardized model-to-tool bridge</td></tr>
+        <tr><td>Transport</td><td>STDIO & Server-Sent Events (SSE)</td><td>Real-time streaming pipeline</td></tr>
+        <tr><td>Data Engine</td><td>PostgreSQL, SQLite, Cloudflare D1</td><td>Structured enterprise storage</td></tr>
+        <tr><td>LLM Engines</td><td>Claude 3.5 Sonnet, DeepSeek V3/R1</td><td>Reasoning & structured tool calling</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`
   }
 };
 
@@ -3753,3 +3909,56 @@ function closeArticleModal(e) {
     if (frame) frame.src = "";
   }
 }
+
+// ==========================================================================
+// Section Modal Engine (Biyografi, Geçmiş, Yetkinlikler, İletişim)
+// ==========================================================================
+
+function openSectionModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSectionModal(id) {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+  modal.classList.remove('active');
+  if (!document.querySelector('.tech-modal-backdrop.active, .article-modal-backdrop.active, .lightbox-backdrop.active')) {
+    document.body.style.overflow = '';
+  }
+}
+
+// Global Keyboard Handler (Escape closes active modal)
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeTechModal();
+    closeArticleModal();
+    closeLightbox();
+    document.querySelectorAll('.tech-modal-backdrop.active').forEach(m => {
+      m.classList.remove('active');
+    });
+    document.body.style.overflow = '';
+  }
+});
+
+// URL Hash Deep-Linking
+window.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.replace('#', '');
+  if (!hash) return;
+  if (hash === 'bio' || hash === 'biyografi') {
+    openSectionModal('bioModalBackdrop');
+  } else if (hash === 'experience' || hash === 'gecmis') {
+    openSectionModal('experienceModalBackdrop');
+  } else if (hash === 'skills' || hash === 'yetkinlikler') {
+    openSectionModal('skillsModalBackdrop');
+  } else if (hash === 'contact' || hash === 'iletisim') {
+    openSectionModal('contactModalBackdrop');
+  } else if (typeof techStore === 'function' && techStore()[hash]) {
+    openTechModal(hash);
+  } else if (typeof articlesData !== 'undefined' && articlesData[hash]) {
+    openArticleModal(hash);
+  }
+});
+

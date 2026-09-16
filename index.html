@@ -21,8 +21,9 @@
     <div class="header-container">
       <nav class="main-nav" id="mainNav">
         <a href="#intro" data-i18n="navIntro">Tanıtım</a>
-        <a href="#experience" data-i18n="navExp">Geçmiş</a>
-        <a href="#skills" data-i18n="navSkills">Yetkinlikler</a>
+        <button type="button" class="nav-modal-btn" onclick="openSectionModal('bioModalBackdrop')" data-i18n="navBio">Biyografi</button>
+        <button type="button" class="nav-modal-btn" onclick="openSectionModal('experienceModalBackdrop')" data-i18n="navExp">Geçmiş</button>
+        <button type="button" class="nav-modal-btn" onclick="openSectionModal('skillsModalBackdrop')" data-i18n="navSkills">Yetkinlikler</button>
         <a href="#mobile-apps" data-i18n="navMobile">Mobil Uygulamalar</a>
         <a href="#erp-crm-web" data-i18n="navErpWeb">ERP & Web</a>
         <a href="#edge-ai" data-i18n="navEdgeAi">Edge AI & Görü</a>
@@ -38,7 +39,7 @@
           <button class="lang-btn active" data-lang="tr" onclick="setLanguage('tr')">TR</button>
           <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
         </div>
-        <a href="#contact" class="btn-cta" data-i18n="navContact">İletişim</a>
+        <button type="button" class="btn-cta" onclick="openSectionModal('contactModalBackdrop')" data-i18n="navContact">İletişim</button>
       </div>
     </div>
   </header>
@@ -81,10 +82,82 @@
             <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
           </div>
         </div>
+
+        <!-- Screen Quick Hub Cards (Tüm Bölümleri Açılır Pencere Olarak İnceleme) -->
+        <div class="hub-cards-grid no-print">
+          <!-- 1. Biyografi & Vizyon -->
+          <div class="hub-card" onclick="openSectionModal('bioModalBackdrop')">
+            <div>
+              <div class="hub-card-tag" data-i18n="hubBioTag">Kişisel Arka Plan</div>
+              <h3 class="hub-card-title" data-i18n="hubBioTitle">Biyografi & Yaşam Kültürü</h3>
+              <p class="hub-card-desc" data-i18n="hubBioDesc">DEHB'yi hiper-odaklama gücüne dönüştürme, Güneydoğu Asya dönemi ve çok yönlü üretim kültürü.</p>
+              <div class="hub-card-badges">
+                <span class="hub-badge-pill">DEHB & Hiper-Odak</span>
+                <span class="hub-badge-pill">2 Yıl Asya</span>
+                <span class="hub-badge-pill">Analitik Felsefe</span>
+              </div>
+            </div>
+            <div class="hub-card-action">
+              <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
+            </div>
+          </div>
+
+          <!-- 2. Kariyer & Eğitim Zaman Çizelgesi -->
+          <div class="hub-card" onclick="openSectionModal('experienceModalBackdrop')">
+            <div>
+              <div class="hub-card-tag" data-i18n="hubExpTag">Kronolojik Özgeçmiş</div>
+              <h3 class="hub-card-title" data-i18n="hubExpTitle">Kariyer & Eğitim Zaman Çizelgesi</h3>
+              <p class="hub-card-desc" data-i18n="hubExpDesc">AEON LLC kuruculuğu, ESOGÜ Endüstri Mühendisliği ve canlı SaaS/Edge AI sistem sorumlulukları.</p>
+              <div class="hub-card-badges">
+                <span class="hub-badge-pill">AEON LLC (2026—)</span>
+                <span class="hub-badge-pill">ESOGÜ End. Müh.</span>
+                <span class="hub-badge-pill">Delaware & TR</span>
+              </div>
+            </div>
+            <div class="hub-card-action">
+              <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
+            </div>
+          </div>
+
+          <!-- 3. Teknik Yetkinlik & Mimari Matris -->
+          <div class="hub-card" onclick="openSectionModal('skillsModalBackdrop')">
+            <div>
+              <div class="hub-card-tag" data-i18n="hubSkillsTag">Mimari Yetkinlik</div>
+              <h3 class="hub-card-title" data-i18n="hubSkillsTitle">Teknik Yetkinlik & Mimari Matris</h3>
+              <p class="hub-card-desc" data-i18n="hubSkillsDesc">Flutter, Node.js, YOLOv8, Cloudflare, Jetson ve kurumsal multi-tenant veri tabanları.</p>
+              <div class="hub-card-badges">
+                <span class="hub-badge-pill">Flutter 3.24+</span>
+                <span class="hub-badge-pill">Edge AI & YOLOv8</span>
+                <span class="hub-badge-pill">Multi-Tenant Node.js</span>
+              </div>
+            </div>
+            <div class="hub-card-action">
+              <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
+            </div>
+          </div>
+
+          <!-- 4. Canlı Demo, Ortaklık & İletişim -->
+          <div class="hub-card" onclick="openSectionModal('contactModalBackdrop')">
+            <div>
+              <div class="hub-card-tag" data-i18n="hubContactTag">İş Birliği & İletişim</div>
+              <h3 class="hub-card-title" data-i18n="hubContactTitle">Canlı Demo, Ortaklık & İletişim</h3>
+              <p class="hub-card-desc" data-i18n="hubContactDesc">Venture Studio, Kurumsal Modernizasyon ve Stratejik Hisse Ortaklığı modelleri.</p>
+              <div class="hub-card-badges">
+                <span class="hub-badge-pill">Canlı Demo</span>
+                <span class="hub-badge-pill">Venture Studio</span>
+                <span class="hub-badge-pill">Doğrudan İletişim</span>
+              </div>
+            </div>
+            <div class="hub-card-action">
+              <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- 2. GEÇMİŞ (Biyografi, Kültür & Kronolojik Deneyim) -->
+    <!-- 2. GEÇMİŞ & 3. YETKİNLİKLER (Sadece Baskı/CV'de tam basılır; Ekranda açılır pencere olarak açılır) -->
+    <div class="print-only">
     <section class="section-block" id="experience">
       <div class="section-header">
         <h2 class="section-title" data-i18n="expTitle">Biyografi, Yaşam Kültürü & <span>Geçmiş</span></h2>
@@ -282,6 +355,9 @@
           </div>
         </div>
       </div>
+    </section>
+    </div>
+
     <!-- 4. MOBİL UYGULAMALAR (Amiral Gemisi & Geliştirilenler) -->
     <section class="section-block" id="mobile-apps">
       <div class="section-header">
@@ -293,8 +369,8 @@
 
       <div class="showcase-grid">
         <!-- 4.1 CANLI ÜRÜN: Vent App -->
-        <div class="showcase-card highlight-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/vent-cover.jpg', 'Vent: Konu Odaklı Eşleşme ve Güvenli Dertleşme Ekranı')">
+        <div class="showcase-card highlight-card" onclick="openTechModal('vent')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/vent-cover.jpg', 'Vent: Konu Odaklı Eşleşme ve Güvenli Dertleşme Ekranı')">
             <img src="assets/brand-cards/vent-cover.jpg" alt="Vent Mobil Uygulama">
           </div>
           <div class="card-body">
@@ -306,18 +382,18 @@
               <span class="mono-text" data-i18n="ventMonetization">Vent Plus premium abonelik (öncelikli eşleşme & derin filtreler), dinleyici jeton (IAP token) mikro-ödemeleri ve şirketler için B2B kurumsal esenlik (wellness) paketleri.</span>
             </div>
             <div class="store-links-row no-print">
-              <a href="https://apps.apple.com/us/app/vent-truly-heard/id6757230709" target="_blank" rel="noopener" class="btn-store apple">
+              <a href="https://apps.apple.com/us/app/vent-truly-heard/id6757230709" target="_blank" rel="noopener" class="btn-store apple" onclick="event.stopPropagation()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.76 1.05-1.81.93-2.87-.91.04-2.01.61-2.65 1.37-.57.66-1.07 1.74-.94 2.77.01 0 .03 0 .05.01 1.02-.01 1.99-.52 2.61-1.28z"/></svg>
                 <span data-i18n="storeApple">App Store'da Canlı</span>
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.burkaybozyel.ventapp" target="_blank" rel="noopener" class="btn-store google">
+              <a href="https://play.google.com/store/apps/details?id=com.burkaybozyel.ventapp" target="_blank" rel="noopener" class="btn-store google" onclick="event.stopPropagation()">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.122 2.122 0 01-.61-.926V2.74c.164-.354.382-.676.61-.926zm11.24 11.24l2.585-2.585-11.41-6.53 8.825 9.115zm0 1.892l-8.826 9.116 11.41-6.531-2.584-2.585zm1.488-1.488l3.197 1.83a1.44 1.44 0 000-2.493l-3.197-1.83.69 1.246-.69 1.247z"/></svg>
                 <span data-i18n="storeGoogle">Google Play'de Canlı</span>
               </a>
             </div>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive highlight-btn" onclick="openTechModal('vent')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive highlight-btn" onclick="event.stopPropagation(); openTechModal('vent')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -325,8 +401,8 @@
         </div>
 
         <!-- 4.2 GELİŞTİRİLEN: Forge -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/forge-cover.jpg', 'Forge: Sporcu Topluluğu & Antrenman Haritası')">
+        <div class="showcase-card" onclick="openTechModal('forge')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/forge-cover.jpg', 'Forge: Sporcu Topluluğu & Antrenman Haritası')">
             <img src="assets/brand-cards/forge-cover.jpg" alt="Forge Antrenman Ağı">
           </div>
           <div class="card-body">
@@ -338,8 +414,8 @@
               <span class="mono-text" data-i18n="forgeMonetization">Forge Pro aboneliği (ayrıntılı PR analizleri & video form denetimi), spor salonu/PT partner pazar yeri komisyonları (%15) ve sporcu markaları için sponsorlu meydan okumalar.</span>
             </div>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('forge')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('forge')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -347,8 +423,8 @@
         </div>
 
         <!-- 4.3 GELİŞTİRİLEN: BOB (Sarkastik AI Alarm) -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/bob-cover.jpg', 'BOB: Alaycı Akıllı Alarm & AI Sabah Roasting Ekranı')">
+        <div class="showcase-card" onclick="openTechModal('bob')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/bob-cover.jpg', 'BOB: Alaycı Akıllı Alarm & AI Sabah Roasting Ekranı')">
             <img src="assets/brand-cards/bob-cover.jpg" alt="BOB Akıllı Alarm">
           </div>
           <div class="card-body">
@@ -360,8 +436,8 @@
               <span class="mono-text" data-i18n="bobMonetization">BOB Savage aboneliği (sınırsız alaycı yapay zekâ ses üretimi & yeni roast motorları), özel persona ses paketleri (alaycı oda arkadaşı, acımasız antrenör vb. IAP) ve premium alarm temaları.</span>
             </div>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('bob')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('bob')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -369,8 +445,8 @@
         </div>
 
         <!-- 4.4 GELİŞTİRİLEN: UNDRGRND -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/undrgrnd-cover.jpg', 'UNDRGRND: Canlı Sahne Odaları & Beat Senkronu')">
+        <div class="showcase-card" onclick="openTechModal('undrgrnd')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/undrgrnd-cover.jpg', 'UNDRGRND: Canlı Sahne Odaları & Beat Senkronu')">
             <img src="assets/brand-cards/undrgrnd-cover.jpg" alt="UNDRGRND Müzik Topluluğu">
           </div>
           <div class="card-body">
@@ -382,8 +458,8 @@
               <span class="mono-text" data-i18n="undrgrndMonetization">Beatmaker pazar yeri satış/kiralama komisyonu (%15-20), canlı stüdyo kayıt token'ları ve sanatçı profil/parça öne çıkarma vitrin modelleri.</span>
             </div>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('undrgrnd')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('undrgrnd')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -403,8 +479,8 @@
 
       <div class="showcase-grid">
         <!-- 4.1 AEON Hospitality Core ERP -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/aeon-erp.jpg', 'AEON Hospitality Core ERP & POS')">
+        <div class="showcase-card" onclick="openTechModal('aeonCore')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/aeon-erp.jpg', 'AEON Hospitality Core ERP & POS')">
             <img src="assets/brand-cards/aeon-erp.jpg" alt="Aeon Core ERP">
           </div>
           <div class="card-body">
@@ -412,8 +488,8 @@
             <h3 class="card-heading">AEON Hospitality Core ERP & POS</h3>
             <p class="card-summary" data-i18n="aeonSum">Lüks butik oteller ve restoranlar için rezervasyon, oda folyoları, plaj/şezlong QR menü siparişleri ve mutfak şef ekranını (KDS) tek merkezde birleştiren işletim sistemi. Departmanlar arası koordinasyon kopukluğunu bitirir; masadan verilen siparişlerin kaybolmasını ve tahsil edilmeyen servis kaçaklarını sıfırlar.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('aeonCore')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('aeonCore')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -421,8 +497,8 @@
         </div>
 
         <!-- 4.2 HotelRunner Küresel Kanal Senkronizasyonu -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/aeon-sync.jpg', 'AEON Channel Sync & HotelRunner Entegrasyonu')">
+        <div class="showcase-card" onclick="openTechModal('hotelRunner')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/aeon-sync.jpg', 'AEON Channel Sync & HotelRunner Entegrasyonu')">
             <img src="assets/brand-cards/aeon-sync.jpg" alt="HotelRunner Entegrasyonu">
           </div>
           <div class="card-body">
@@ -430,8 +506,8 @@
             <h3 class="card-heading" data-i18n="hrHead">HotelRunner Çift Yönlü Kanal Entegrasyonu</h3>
             <p class="card-summary" data-i18n="hrSum">Otelin yerel oda yönetim sistemi ile Booking.com, Airbnb ve Expedia arasında anlık çift yönlü veri köprüsü kurar. Misafiri kapıda bırakan çifte rezervasyon (overbooking) riskini, acente ceza puanlarını ve personelin saatler süren manuel veri giriş yükünü ortadan kaldırır.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('hotelRunner')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('hotelRunner')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -439,8 +515,8 @@
         </div>
 
         <!-- 4.3 Butik İşletme CRM & Satış Paneli -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/aeon-crm.jpg', 'AEON CRM & Satış Hunisi')">
+        <div class="showcase-card" onclick="openTechModal('crm')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/aeon-crm.jpg', 'AEON CRM & Satış Hunisi')">
             <img src="assets/brand-cards/aeon-crm.jpg" alt="AEON CRM & Satış Hunisi">
           </div>
           <div class="card-body">
@@ -448,8 +524,8 @@
             <h3 class="card-heading" data-i18n="crmHead">Butik İşletme CRM & Satış Paneli</h3>
             <p class="card-summary" data-i18n="crmSum">WhatsApp, telefon ve DM üzerinden gelen tüm konaklama ve özel etkinlik taleplerini aşamalı bir satış hunisinde (pipeline) toplayan müşteri ilişkileri platformu. Personelin yoğunlukta unuttuğu yüksek değerli misafir taleplerini ve fiyat tutarsızlıklarını önleyerek doğrudan satış kapanış oranını artırır.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('crm')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('crm')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -457,8 +533,8 @@
         </div>
 
         <!-- 4.4 Lüks Butik Otel & Marina Web Portalları -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/brand-cards/aeon-web.jpg', 'AEON Web Studio & Prestij Portalları')">
+        <div class="showcase-card" onclick="openTechModal('hotelWeb')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/brand-cards/aeon-web.jpg', 'AEON Web Studio & Prestij Portalları')">
             <img src="assets/brand-cards/aeon-web.jpg" alt="Lüks Web Vitrini">
           </div>
           <div class="card-body">
@@ -466,8 +542,8 @@
             <h3 class="card-heading" data-i18n="webHead">Lüks Butik Otel & Marina Web Portalları</h3>
             <p class="card-summary" data-i18n="webSum">Seçkin kıyı otelleri ve marinalar için tasarlanan yüksek hızlı editoryal vitrin ve doğrudan rezervasyon motoru. Acentelere ödenen %15-%25 komisyon kesintilerini ortadan kaldırır ve üst segment misafire hitap eden prestijli marka kimliğini tesis eder.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('hotelWeb')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('hotelWeb')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -487,8 +563,8 @@
 
       <div class="showcase-grid">
         <!-- 5.1 RetailPulse AI -->
-        <div class="showcase-card highlight-card">
-          <div class="card-media" onclick="openLightbox('assets/retail-analytics/desktop-hero.png', 'RetailPulse AI: Mağaza Yoğunluk & Isı Haritası')">
+        <div class="showcase-card highlight-card" onclick="openTechModal('retailPulse')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/retail-analytics/desktop-hero.png', 'RetailPulse AI: Mağaza Yoğunluk & Isı Haritası')">
             <img src="assets/brand-cards/aeon-retailpulse.jpg" alt="AEON RetailPulse Kamera Analitiği">
           </div>
           <div class="card-body">
@@ -496,8 +572,8 @@
             <h3 class="card-heading" data-i18n="retHead">RetailPulse AI: Perakende Davranış Analitiği</h3>
             <p class="card-summary" data-i18n="retSum">Mağazadaki mevcut tavan kameralarından müşteri trafiğini ve reyon önü bekleme sürelerini ölçen, POS kasa fişleriyle eşleştirerek gerçek satışa dönüşüm oranını (% Conversion) hesaplayan yerel bilgisayarlı görü motoru. Görüntüleri buluta aktarmadan RAM üzerinde işleyip silerek %100 KVKK güvencesi sağlar.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive highlight-btn" onclick="openTechModal('retailPulse')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive highlight-btn" onclick="event.stopPropagation(); openTechModal('retailPulse')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -505,8 +581,8 @@
         </div>
 
         <!-- 5.2 SanayiPulse -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/retail-analytics/camera-analysis.png', 'SanayiPulse: Fabrika & Rampa Lojistiği')">
+        <div class="showcase-card" onclick="openTechModal('sanayiPulse')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/retail-analytics/camera-analysis.png', 'SanayiPulse: Fabrika & Rampa Lojistiği')">
             <img src="assets/brand-cards/aeon-sanayipulse.jpg" alt="AEON SanayiPulse Rampa Analitiği">
           </div>
           <div class="card-body">
@@ -514,8 +590,8 @@
             <h3 class="card-heading" data-i18n="sanHead">SanayiPulse: Fabrika & Rampa Lojistiği</h3>
             <p class="card-summary" data-i18n="sanSum">Ağır sanayi tesisleri ve yükleme rampalarında TIR giriş-çıkış sürelerini, rampa doluluklarını ve İSG güvenlik koridorlarını 7/24 izleyen endüstriyel görü sistemi. TIR bekleme sürelerinden doğan lojistik gecikme (demurrage) cezalarını ve fabrika içi forklift kazalarını önler.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('sanayiPulse')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('sanayiPulse')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -523,8 +599,8 @@
         </div>
 
         <!-- 5.3 PassAudit OS -->
-        <div class="showcase-card">
-          <div class="card-media" onclick="openLightbox('assets/vip/funnivarium.png', 'PassAudit OS: Turnike & Kaçak Biniş Denetimi')">
+        <div class="showcase-card" onclick="openTechModal('funnivarium')">
+          <div class="card-media" onclick="event.stopPropagation(); openLightbox('assets/vip/funnivarium.png', 'PassAudit OS: Turnike & Kaçak Biniş Denetimi')">
             <img src="assets/brand-cards/aeon-passaudit.jpg" alt="AEON PassAudit OS Turnike Denetimi">
           </div>
           <div class="card-body">
@@ -532,8 +608,8 @@
             <h3 class="card-heading" data-i18n="funHead">PassAudit OS: Turnike & Kaçak Biniş Denetimi</h3>
             <p class="card-summary" data-i18n="funSum">Eğlence ve ulaşım tesislerinde turnikeden okutulan bilet sayısı ile kameranın tespit ettiği gerçek biniş sayısını anlık olarak karşılaştıran denetim paneli. Bilet basmadan turnikeden atlayan veya usulsüz geçen binişleri anında yakalayarak her gün uğranılan ciddi bilet geliri sızıntısını durdurur.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('funnivarium')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive" onclick="event.stopPropagation(); openTechModal('funnivarium')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -608,14 +684,14 @@
 
 
         <!-- 7.3 CreativePulse Video Otomasyonu -->
-        <div class="extra-card">
+        <div class="extra-card clickable-card" onclick="openTechModal('studio')">
           <div class="card-body">
             <div class="card-category" data-i18n="rayCat">React Remotion + Python · MEDYA OTOMASYONU</div>
             <h3 class="card-heading" data-i18n="rayHead">CreativePulse: React Tabanlı Otomatize Video Motoru</h3>
             <p class="card-summary" data-i18n="raySum">Video kurgu programı açmadan React bileşenleri ve Python betikleriyle dinamik fiyatlı kampanya videolarını ve hikayeleri saniyeler içinde render eden otomasyon motoru. Tasarımcılara ödenen yüksek ajans maliyetlerini ve saatler süren manuel montaj yükünü sıfırlar.</p>
             <div class="card-action-bar no-print">
-              <button class="btn-deep-dive" onclick="openTechModal('studio')">
-                <span data-i18n="deepDive">Teknik İnceleme & Detaylar</span>
+              <button class="btn-deep-dive highlight-btn" onclick="event.stopPropagation(); openTechModal('studio')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -623,13 +699,19 @@
         </div>
 
         <!-- 7.4 Özel MCP Sunucuları & Otonom Ajanlar -->
-        <div class="extra-card">
+        <div class="extra-card clickable-card" onclick="openTechModal('mcp')">
           <div class="card-body">
             <div class="card-category" data-i18n="mcpCat">Anthropic Model Context Protocol · İLERİ PROTOKOL</div>
             <h3 class="card-heading" data-i18n="mcpHead">Özel MCP Sunucuları & Otonom Ajan Hattı</h3>
             <p class="card-summary" data-i18n="mcpSummary">
               Claude ve DeepSeek büyük dil modellerini güvenli yerel köprülerle şirket içi veritabanlarına bağlayan Model Context Protocol (MCP) sunucuları. Ajanların kod tabanlarını bağımsız denetlemesini ve iş akışlarını yürütmesini sağlayan protokol mimarisi.
             </p>
+            <div class="card-action-bar no-print">
+              <button class="btn-deep-dive highlight-btn" onclick="event.stopPropagation(); openTechModal('mcp')">
+                <span data-i18n="openModalBtn">Açılır Pencerede İncele →</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -668,6 +750,13 @@
               <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
             </div>
           </div>
+
+          <div class="card-action-bar no-print" style="margin-top: 24px;">
+            <button class="btn-deep-dive highlight-btn" onclick="openSectionModal('contactModalBackdrop')">
+              <span data-i18n="hubContactTitle">Canlı Demo, Ortaklık & İletişim Penceresini Aç</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -690,6 +779,262 @@
       </div>
     </div>
   </footer>
+
+  <!-- 1. Biyografi Açılır Penceresi (Modal) -->
+  <div class="tech-modal-backdrop" id="bioModalBackdrop" onclick="closeSectionModal('bioModalBackdrop')">
+    <div class="tech-modal-dialog" onclick="event.stopPropagation()">
+      <div class="tech-modal-header">
+        <div class="tech-header-info">
+          <div class="modal-category" data-i18n="bioTag">Kişisel Arka Plan & Yaşam Felsefesi</div>
+          <h2 class="tech-modal-title">Salih Burkay Bozyel</h2>
+          <p class="tech-modal-subtitle" data-i18n="bioMeta">28 Nisan 1999, Mersin · Eskişehir</p>
+        </div>
+        <button class="tech-modal-close" onclick="closeSectionModal('bioModalBackdrop')">&times;</button>
+      </div>
+      <div class="tech-modal-body" style="padding: 28px; overflow-y: auto;">
+        <p class="bio-text" data-i18n="bioPara1" style="font-size: 15px; line-height: 1.8; color: var(--paper-soft); margin-bottom: 20px;">
+          Çocukluk yıllarımda konulan DEHB (ADHD) tanısını bir kısıt değil; zihinsel bir hiper-odaklanma gücü, tükenmeyen öğrenme açlığı ve araştırma motoru olarak benimsedim. Turistik bölgelerde büyümenin kazandırdığı doğal çift dillilik ve ileri seviye İngilizce altyapısıyla; dünya gündemini, modern yapay zekâyı, kuantum mekaniğini ve yeni nesil motor/tahrik teknolojilerini her gün bir önceki günden daha ileri taşımak üzere takip ediyorum.
+        </p>
+        <p class="bio-text" data-i18n="bioPara2" style="font-size: 15px; line-height: 1.8; color: var(--paper-soft); margin-bottom: 28px;">
+          Dünyayı, insan doğasını ve toplumları derinlemesine anlayabilmek adına 2 yılımı Güneydoğu Asya'da geçirdim. Lise yıllarından gelen analitik ve temel bilimler merakı, 3 yıllık lisanslı amatör basketbol disiplini, dünya mutfaklarına duyduğum gastronomi tutkusu, Anadolu rock ve elektronik müziğe olan ilgim kendime has çok katmanlı bir üretim kültürü oluşturdu. Hayatın getirdiği dönemsel engeller sebebiyle bir süre ara verdiğim ESOGÜ Endüstri Mühendisliği eğitimimde edindiğim süreç optimizasyonu ve yöneylem disiplinini geliştirdiğim tüm canlı yazılımlara aktararak aktif eğitim hayatıma geri döndüm.
+        </p>
+
+        <div class="spec-grid" style="margin-top: 16px;">
+          <div class="spec-card">
+            <h4>Uçtan Uca Mimari</h4>
+            <p data-i18n="pPrinciple1">Mobil uygulama (Flutter), dağıtık veritabanları ve API tasarımı.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Edge AI & Görü</h4>
+            <p data-i18n="pPrinciple2">Nvidia Jetson üzerinde %100 yerel, sıfır bulut bağımlılıklı görüntü işleme.</p>
+          </div>
+          <div class="spec-card">
+            <h4>Süreç Optimizasyonu</h4>
+            <p data-i18n="pPrinciple3">ESOGÜ Endüstri Mühendisliği temelleriyle operasyonel verimlilik.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Kariyer & Zaman Çizelgesi Açılır Penceresi (Modal) -->
+  <div class="tech-modal-backdrop" id="experienceModalBackdrop" onclick="closeSectionModal('experienceModalBackdrop')">
+    <div class="tech-modal-dialog" onclick="event.stopPropagation()">
+      <div class="tech-modal-header">
+        <div class="tech-header-info">
+          <div class="modal-category" data-i18n="expEyebrow">Kişisel Yolculuk & Profesyonel Kronoloji</div>
+          <h2 class="tech-modal-title" data-i18n="expModalTitle">Kariyer & Eğitim Zaman Çizelgesi</h2>
+          <p class="tech-modal-subtitle" data-i18n="expSubtitle">Merak ve hiper-odakla beslenen kişisel vizyon, çok kültürlü yaşam deneyimi ve kronolojik mühendislik sorumlulukları.</p>
+        </div>
+        <button class="tech-modal-close" onclick="closeSectionModal('experienceModalBackdrop')">&times;</button>
+      </div>
+      <div class="tech-modal-body" style="padding: 28px; overflow-y: auto;">
+        <div class="timeline-cv">
+          <!-- AEON LLC -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeNow">2026 — Günümüz</span>
+              <span class="cv-loc" data-i18n="cvLocAeon">Delaware, ABD & Türkiye</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Yazılım Geliştirici</h3>
+                <span class="cv-company">AEON LLC</span>
+              </div>
+              <p class="cv-desc" data-i18n="expAeonDesc">
+                Butik otel ve restoranlar için modüler AEON Hospitality ERP'sinin mimarisini sıfırdan kurdu. Perakende ve sanayi sahaları için Nvidia Jetson tabanlı RetailPulse AI / SanayiPulse bilgisayarlı görü motorunu geliştirdi. Global mobil ekosistemde Vent (v3.0.5/3.0.6) ve Forge ürünlerinin teknik omurgasını yönetti.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="expAeonBullet1">Node.js 20, Express, AlaSQL/SQLite ve Cloudflare D1 üzerinde çok kiracılı (multi-tenant) veri izolasyonu mimarisi kuruldu.</li>
+                <li data-i18n="expAeonBullet2">HotelRunner API ile Booking.com ve Airbnb için çift yönlü gerçek zamanlı kanal senkronizasyonu entegre edildi.</li>
+                <li data-i18n="expAeonBullet3">YOLOv8 + ByteTrack ile %100 yerel (on-prem) kamera analitiği ve 1.5m temas süresi korelasyon pipeline'ı kodlandı.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ESOGÜ Endüstri Mühendisliği -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeEdu">2018 — Günümüz (Aktif)</span>
+              <span class="cv-loc" data-i18n="cvLocEsogu">Eskişehir</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleEsogu">Eskişehir Osmangazi Üniversitesi (ESOGÜ)</h3>
+                <span class="cv-company" data-i18n="cvCompEsogu">Endüstri Mühendisliği Bölümü (Lisans Öğrencisi)</span>
+              </div>
+              <p class="cv-desc" data-i18n="expEsoguDesc">
+                Üretim ve hizmet süreçlerinin optimizasyonu, yöneylem araştırması, darboğaz analizi ve sistem dinamiği temelleri. Hayatın getirdiği dönemsel engeller sebebiyle bir süre ara verilmiş olsa da edinilen tüm analitik mühendislik disiplinleri canlı yazılım ve ERP sistemlerine fiilen uygulandı; eğitim hayatına aktif olarak devam etmektedir.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="cvEsoguB1">Sistem analizi ve süreç iyileştirme prensiplerinin dijital ERP/SaaS platformlarına uyarlanması.</li>
+                <li data-i18n="cvEsoguB2">Saha bilgisayarlı görü ve veri akışlarında operasyonel verimlilik ve kayıp/kaçak önleme modellemeleri.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Lise Eğitimi -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeHs">2013 — 2017</span>
+              <span class="cv-loc" data-i18n="cvLocHs">Denizli</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleHs">Mustafa Kaynak Anadolu Lisesi</h3>
+                <span class="cv-company" data-i18n="cvCompHs">Sayısal Bölüm Mezuniyeti (2017)</span>
+              </div>
+              <p class="cv-desc" data-i18n="expEduDesc">
+                Sayısal bölüm eğitimi (Matematik &amp; Fen Bilimleri). Temel fen bilimleri, analitik düşünme ve problem çözme altyapısı.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Yetkinlikler Açılır Penceresi (Modal) -->
+  <div class="tech-modal-backdrop" id="skillsModalBackdrop" onclick="closeSectionModal('skillsModalBackdrop')">
+    <div class="tech-modal-dialog" onclick="event.stopPropagation()">
+      <div class="tech-modal-header">
+        <div class="tech-header-info">
+          <div class="modal-category" data-i18n="skillsEyebrow">Teknik Matris</div>
+          <h2 class="tech-modal-title" data-i18n="skillsTitle">Bilgi & <span>Yeterlilikler</span></h2>
+          <p class="tech-modal-subtitle" data-i18n="skillsSubtitle">Üretim kalitesinde kullanılan diller, çerçeveler, mimari desenler ve altyapı yetkinlikleri.</p>
+        </div>
+        <button class="tech-modal-close" onclick="closeSectionModal('skillsModalBackdrop')">&times;</button>
+      </div>
+      <div class="tech-modal-body" style="padding: 28px; overflow-y: auto;">
+        <div class="skills-list">
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skMob">Mobil Uygulama</h3>
+              <p data-i18n="skMobDesc">Flutter ile cross-platform uygulama mimarisi; App Store ve Google Play'de canlı ürünler.</p>
+            </div>
+            <div class="skill-row-items">
+              Flutter 3.24+ · Dart · Firebase Auth &amp; Messaging · In-App Purchase (IAP) · RevenueCat · Offline-First Sync · <span data-i18n="skLoc">Yerelleştirme (37 Dil)</span> · <span data-i18n="skStore">App Store / Play Store Dağıtım</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skBe">Sunucu &amp; Veri Tabanı</h3>
+              <p data-i18n="skBeDesc">Multi-tenant servis mimarisi; gerçek zamanlı veri akışı ve bulut-kenar (edge) dağıtımı.</p>
+            </div>
+            <div class="skill-row-items">
+              Node.js 20 (ESM) · Express.js · Python (FastAPI) · Cloudflare Workers &amp; D1 · Server-Sent Events (SSE) · WebPush API · RESTful API · Multi-Tenant Mimari
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skAi">Yapay Görü &amp; Edge AI</h3>
+              <p data-i18n="skAiDesc">Nvidia Jetson üzerinde tamamen yerel çalışan bilgisayarlı görü pipeline'ları ve ses sentezi.</p>
+            </div>
+            <div class="skill-row-items">
+              OpenCV · YOLOv8 &amp; ByteTrack · PyTorch · Nvidia Jetson &amp; Mini PC · Homografi &amp; Zemin Projeksiyonu · <span data-i18n="skRtsp">RTSP Akış İşleme</span> · <span data-i18n="skWhisper">Whisper AI Altyazı</span> · Edge-TTS Ses Sentezi
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skDb">Veri &amp; Güvenlik</h3>
+              <p data-i18n="skDbDesc">KVKK/GDPR uyumlu, sıfır bulut bağımlılıklı veri işleme ve erişim kontrolü.</p>
+            </div>
+            <div class="skill-row-items">
+              PostgreSQL &amp; Supabase RLS · SQLite &amp; AlaSQL · Firebase Firestore · <span data-i18n="skMtls">mTLS Güvenli İletişim</span> · <span data-i18n="skOnprem">%100 Yerel Veri İşleme</span> · <span data-i18n="skKvkkMin">KVKK / GDPR Minimizasyonu</span> · <span data-i18n="skRbac">Rol Tabanlı Erişim (RBAC)</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skFe">Web &amp; Medya</h3>
+              <p data-i18n="skFeDesc">Modern frontend mimarisi; tasarım sistemleri ve programatik video üretimi.</p>
+            </div>
+            <div class="skill-row-items">
+              Next.js / React · Modern CSS &amp; Design Tokens · Remotion Video Motoru · Figma UI/UX Prototipleme · Responsive / Mobile-First · <span data-i18n="skSem">Semantik Web Standartları</span>
+            </div>
+          </div>
+
+          <div class="skill-row">
+            <div class="skill-row-label">
+              <h3 data-i18n="skInteg">Entegrasyonlar &amp; Yapay Zekâ</h3>
+              <p data-i18n="skIntegDesc">Harici servis entegrasyonları, LLM orkestrasyonu ve DevOps altyapısı.</p>
+            </div>
+            <div class="skill-row-items">
+              HotelRunner OTA API · Booking.com / Airbnb Sync · Anthropic MCP · <span data-i18n="skDeep">DeepSeek &amp; Claude Entegrasyonları</span> · Git &amp; GitHub CI/CD · <span data-i18n="skDocker">Docker &amp; Edge Dağıtımı</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. İletişim & Teklifler Açılır Penceresi (Modal) -->
+  <div class="tech-modal-backdrop" id="contactModalBackdrop" onclick="closeSectionModal('contactModalBackdrop')">
+    <div class="tech-modal-dialog" onclick="event.stopPropagation()">
+      <div class="tech-modal-header">
+        <div class="tech-header-info">
+          <div class="modal-category" data-i18n="offersEyebrow">İş Birlikleri & Teklifler</div>
+          <h2 class="tech-modal-title" data-i18n="contactCardTitle">Canlı Demo ve Ortaklık Görüşmesi</h2>
+          <p class="tech-modal-subtitle" data-i18n="contactCardDesc">Görüşmede doğrudan canlı projeler (Vent App, AEON ERP, RetailPulse AI) üzerinden sistem mimarilerini canlı demo yapmaya hazırım.</p>
+        </div>
+        <button class="tech-modal-close" onclick="closeSectionModal('contactModalBackdrop')">&times;</button>
+      </div>
+      <div class="tech-modal-body" style="padding: 28px; overflow-y: auto;">
+        <div class="contact-strip-bottom" style="margin-bottom: 24px; border-top: none; padding-top: 0;">
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="contactRoleLbl">Rol & Konum:</span>
+            <span class="contact-val" data-i18n="contactRole">Endüstri Mühendisliği & Yazılım · Eskişehir</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="phoneLbl">Telefon:</span>
+            <a href="tel:+905422755383" class="contact-link">+90 542 275 53 83</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label" data-i18n="mailLbl">E-posta:</span>
+            <a href="mailto:burkaybozyel@gmail.com" class="contact-link">burkaybozyel@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/salih-burkay-b-2351b5128/" target="_blank" rel="noopener" class="contact-link">linkedin.com/in/salih-burkay-b</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">GitHub:</span>
+            <a href="https://github.com/sburkaybozyel" target="_blank" rel="noopener" class="contact-link">github.com/sburkaybozyel</a>
+          </div>
+        </div>
+
+        <h3 class="deep-h3" data-i18n="offersTitle" style="margin-bottom: 16px; font-size: 18px; font-weight: 700; color: var(--paper);">Birlikte Nasıl Değer Yaratabiliriz?</h3>
+        <div class="spec-grid">
+          <div class="spec-card">
+            <h4 data-i18n="offer1Title">Venture Studio & Yeni Girişim Ortaklığı</h4>
+            <p data-i18n="offer1Desc">Sermayeniz ve sektör tecrübenizle benim yüksek hızlı yazılım geliştirme yetkinliğimi birleştirelim. Kârlı bir sektör problemini 2-4 hafta içinde çalışan, test edilmiş bir ürüne çevirip pazara sürelim.</p>
+          </div>
+          <div class="spec-card">
+            <h4 data-i18n="offer2Title">Kurumsal Modernizasyon & Entegrasyon</h4>
+            <p data-i18n="offer2Desc">Portföyünüzdeki otel, restoran, perakende mağaza zinciri veya sanayi şirketlerine Aeon ERP ve RetailPulse AI sistemlerimi entegre edelim. Operasyonel kaçakları durdurup iş gücü verimini maksimize edelim.</p>
+          </div>
+          <div class="spec-card">
+            <h4 data-i18n="offer3Title">Stratejik Hisse & Ürün Yatırımı</h4>
+            <p data-i18n="offer3Desc">Halihazırda mağazalarda olan (Vent App - 37 dil, küresel pazar) ve lansman hazırlığındaki mobil ürünlerimin (Forge) küresel büyümesine, pazarlamasına ve kullanıcı kazanımına stratejik hisse ortağı olun.</p>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;" class="no-print">
+          <a href="mailto:burkaybozyel@gmail.com?subject=Gorusme%20Talebi%20-%20Salih%20Burkay%20Bozyel" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 12px 20px; background: var(--gold); color: #000; font-weight: 700; border-radius: var(--radius-sm);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <span data-i18n="btnDirectEmail">E-posta Gönder</span>
+          </a>
+          <button class="btn-action" onclick="window.print()" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: var(--surface-raised); color: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+            <span data-i18n="btnPrintCvBottom">CV Olarak Yazdır / PDF İndir</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Deep-Dive Technical Modal -->
   <div class="tech-modal-backdrop" id="techModalBackdrop" onclick="closeTechModal(event)">
