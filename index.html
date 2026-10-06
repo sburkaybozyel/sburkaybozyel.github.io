@@ -24,9 +24,8 @@
     <div class="header-container">
       <nav class="main-nav" id="mainNav">
         <a href="#intro" data-i18n="navIntro">Tanıtım</a>
-        <button type="button" class="nav-modal-btn" onclick="openSectionModal('bioModalBackdrop')" data-i18n="navBio">Biyografi</button>
-        <button type="button" class="nav-modal-btn" onclick="openSectionModal('experienceModalBackdrop')" data-i18n="navExp">Geçmiş</button>
-        <button type="button" class="nav-modal-btn" onclick="openSectionModal('skillsModalBackdrop')" data-i18n="navSkills">Yetkinlikler</button>
+        <a href="#experience" data-i18n="navExp">Özgeçmiş & Geçmiş</a>
+        <a href="#skills" data-i18n="navSkills">Yetkinlikler</a>
         <a href="#mobile-apps" data-i18n="navMobile">Mobil Uygulamalar</a>
         <a href="#erp-crm-web" data-i18n="navErpWeb">ERP & Web</a>
         <a href="#edge-ai" data-i18n="navEdgeAi">Edge AI & Görü</a>
@@ -34,6 +33,10 @@
       </nav>
 
       <div class="header-actions">
+        <a href="cv.html" target="_blank" class="btn-action a4-btn" title="A4 Formatında CV Görüntüle / PDF İndir" style="text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <span class="btn-text" data-i18n="btnA4Cv">A4 CV</span>
+        </a>
         <button class="btn-action print-btn" onclick="window.print()" title="CV Olarak Yazdır / PDF İndir">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
           <span class="btn-text" data-i18n="btnPrintCv">CV Yazdır</span>
@@ -159,14 +162,29 @@
       </div>
     </section>
 
-    <!-- 2. GEÇMİŞ & 3. YETKİNLİKLER (Sadece Baskı/CV'de tam basılır; Ekranda açılır pencere olarak açılır) -->
-    <div class="print-only">
+    <!-- 2. GEÇMİŞ & CV (ÖZGEÇMİŞ & KARİYER ZAMAN ÇİZELGESİ) -->
     <section class="section-block" id="experience">
       <div class="section-header">
         <h2 class="section-title" data-i18n="expTitle">Biyografi, Yaşam Kültürü & <span>Geçmiş</span></h2>
         <p class="section-subtitle" data-i18n="expSubtitle">
           Merak ve hiper-odakla beslenen kişisel vizyon, çok kültürlü yaşam deneyimi ve kronolojik mühendislik sorumlulukları.
         </p>
+      </div>
+
+      <!-- CV Aksiyon ve İndirme Araç Çubuğu -->
+      <div class="cv-action-toolbar no-print" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
+        <a href="cv.html" target="_blank" class="btn-action highlight-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 700; background: var(--gold); color: #000;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          <span data-i18n="btnViewA4Cv">A4 Formatında Yazılım & Mühendislik CV'sini Aç (PDF İndir)</span>
+        </a>
+        <a href="cv-otel-salih-burkay-bozyel.html" target="_blank" class="btn-action" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; background: var(--surface-raised); border: 1px solid var(--line); color: var(--paper);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-i18n="btnViewHotelCv">A4 Formatında Otelcilik & Turizm CV'sini Aç</span>
+        </a>
+        <button class="btn-action" onclick="window.print()" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; background: var(--surface-raised); border: 1px solid var(--line); color: var(--paper); cursor: pointer;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+          <span data-i18n="btnPrintCv">Sayfayı CV Olarak Yazdır</span>
+        </button>
       </div>
 
       <!-- Biyografi & Yaşam Kültürü Kartı -->
@@ -184,21 +202,20 @@
         <p class="bio-text" data-i18n="bioPara2">
           Dünyayı, insan doğasını ve toplumları derinlemesine anlayabilmek adına 2 yılımı Güneydoğu Asya'da geçirdim. Lise yıllarından gelen analitik ve temel bilimler merakı, 3 yıllık lisanslı amatör basketbol disiplini, dünya mutfaklarına duyduğum gastronomi tutkusu, Anadolu rock ve elektronik müziğe olan ilgim kendime has çok katmanlı bir üretim kültürü oluşturdu. Hayatın getirdiği dönemsel engeller sebebiyle bir süre ara verdiğim ESOGÜ Endüstri Mühendisliği eğitimimde edindiğim süreç optimizasyonu ve yöneylem disiplinini geliştirdiğim tüm canlı yazılımlara aktararak aktif eğitim hayatıma geri döndüm.
         </p>
-
       </div>
 
       <!-- Kronolojik Zaman Çizelgesi -->
       <div class="timeline-cv">
-        <!-- 1. AEON LLC (2026 — Günümüz) -->
+        <!-- 1. AEON LLC (2024 — Günümüz) -->
         <div class="cv-item">
           <div class="cv-time">
-            <span class="time-badge" data-i18n="cvTimeNow">2026 — Günümüz</span>
+            <span class="time-badge" data-i18n="cvTimeNow">2024 — Günümüz</span>
             <span class="cv-loc" data-i18n="cvLocAeon">Delaware, ABD & Türkiye</span>
           </div>
           <div class="cv-content">
             <div class="cv-role-wrap">
-              <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Yazılım Geliştirici</h3>
-              <span class="cv-company">AEON LLC</span>
+              <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Sistem Mimarı / Full-Stack & Mobil Geliştirici</h3>
+              <span class="cv-company" data-i18n="cvCompAeon">AEON LLC</span>
             </div>
             <p class="cv-desc" data-i18n="expAeonDesc">
               Butik otel ve restoranlar için modüler AEON Hospitality ERP'sinin mimarisini sıfırdan kurdu. Perakende ve sanayi sahaları için Nvidia Jetson tabanlı RetailPulse AI / SanayiPulse bilgisayarlı görü motorunu geliştirdi. Global mobil ekosistemde Vent (v3.0.5/3.0.6) ve Forge ürünlerinin teknik omurgasını yönetti.
@@ -207,11 +224,76 @@
               <li data-i18n="expAeonBullet1">Node.js 20, Express, AlaSQL/SQLite ve Cloudflare D1 üzerinde çok kiracılı (multi-tenant) veri izolasyonu mimarisi kuruldu.</li>
               <li data-i18n="expAeonBullet2">HotelRunner API ile Booking.com ve Airbnb için çift yönlü gerçek zamanlı kanal senkronizasyonu entegre edildi.</li>
               <li data-i18n="expAeonBullet3">YOLOv8 + ByteTrack ile %100 yerel (on-prem) kamera analitiği ve 1.5m temas süresi korelasyon pipeline'ı kodlandı.</li>
+              <li data-i18n="expAeonBullet4">Turnike ve barkod korelasyonlu PassAudit OS geçiş güvenliği ve kaçak biniş önleme mimarisi geliştirildi.</li>
             </ul>
           </div>
         </div>
 
-        <!-- 4. ESOGÜ Endüstri Mühendisliği (2018 — Günümüz) -->
+        <!-- 2. INDIE BUILDER (2022 — 2024) -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeIndie">2022 — 2024</span>
+            <span class="cv-loc" data-i18n="cvLocIndie">Uzaktan / Global</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleIndie">Bağımsız Mobil & SaaS Yazılım Geliştirici (Indie Builder)</h3>
+              <span class="cv-company" data-i18n="cvCompIndie">Bağımsız Ar-Ge & Ürün Geliştirme</span>
+            </div>
+            <p class="cv-desc" data-i18n="expIndieDesc">
+              App Store ve Google Play üzerinde küresel kullanıcıya ulaşan mobil ürünlerin ve SaaS platformlarının uçtan uca mimarisi, tasarımı ve kodlaması yürütüldü.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="expIndieBullet1">Vent (v3.0.6 Canlı Ürün): Flutter, Dart ve Firebase ile 37 dilde yerelleştirilmiş, çift rızalı anonim esenlik ve dertleşme ağı. IAP ve RevenueCat entegrasyonu.</li>
+              <li data-i18n="expIndieBullet2">Forge: Sporcular ve antrenman tutkunları için performans ve topluluk mobil uygulaması prototipi.</li>
+              <li data-i18n="expIndieBullet3">BOB AI & UNDRGRND: Whisper AI ve Edge-TTS ses motorlu hicivli akıllı alarm (BOB); bağımsız müzisyenler ve sahneler için etkinlik platformu (UNDRGRND).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. FERRO TEKNİK (Mart 2022 — Eylül 2022) -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeFerro">Mart 2022 — Eylül 2022</span>
+            <span class="cv-loc" data-i18n="cvLocFerro">Eskişehir</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleFerro">Kalite Kontrol Uzman Yardımcısı</h3>
+              <span class="cv-company" data-i18n="cvCompFerro">Ferro Teknik</span>
+            </div>
+            <p class="cv-desc" data-i18n="expFerroDesc">
+              Endüstriyel üretim hattında kalite güvence, süreç standardizasyonu ve operasyonel denetim süreçleri yürütüldü.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="cvFerroB1">Standart kontrol listeleri (checklist), hata payı analizi ve 5S/yalın üretim prensiplerinin saha takibi.</li>
+              <li data-i18n="cvFerroB2">Mühendislik süreç analitiğinin ve hata önleme metodolojilerinin operasyonel süreçlere uyarlanması.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. GÜNEYDOĞU ASYA (2020 — 2022) -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeSea">2020 — 2022</span>
+            <span class="cv-loc" data-i18n="cvLocSea">Güneydoğu Asya</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleSea">Kültürel Keşif & Küresel Saha Gözlemi (2 Yıl)</h3>
+              <span class="cv-company" data-i18n="cvCompSea">Bağımsız Yaşam & Vizyon Geliştirme</span>
+            </div>
+            <p class="cv-desc" data-i18n="cvDescSea">
+              Dünyayı, farklı kültürleri ve insan doğasını yakından tanıyıp vizyonunu genişletmek amacıyla Güneydoğu Asya'da 2 yıl bağımsız yaşam ve saha araştırması yürüttü. Çok kültürlü problem çözme yeteneğini ve küresel insan perspektifini pekiştirdi.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="cvSeaB1">Farklı kültürler ve uluslararası topluluklar arasında doğrudan adaptasyon ve kriz çözme becerisi.</li>
+              <li data-i18n="cvSeaB2">Kendi yaşam ve çalışma kültürünü küresel dinamikler ve yerel gözlemlerle zenginleştirme.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. ESOGÜ Endüstri Mühendisliği (2018 — Günümüz) -->
         <div class="cv-item">
           <div class="cv-time">
             <span class="time-badge" data-i18n="cvTimeEdu">2018 — Günümüz (Aktif)</span>
@@ -232,7 +314,29 @@
           </div>
         </div>
 
-        <!-- 5. Lise Eğitimi (2013 — 2017) -->
+        <!-- 6. TURİZM & MİSAFİR İLİŞKİLERİ (2012 — 2019) -->
+        <div class="cv-item">
+          <div class="cv-time">
+            <span class="time-badge" data-i18n="cvTimeYel">2012 — 2019 (7 Yaz Sezonu)</span>
+            <span class="cv-loc" data-i18n="cvLocYel">Ölüdeniz / Fethiye (Muğla)</span>
+          </div>
+          <div class="cv-content">
+            <div class="cv-role-wrap">
+              <h3 class="cv-role" data-i18n="cvRoleYel">Misafir İlişkileri & Ön Büro Saha Operasyonu</h3>
+              <span class="cv-company" data-i18n="cvCompYel">Yel Holiday Resort</span>
+            </div>
+            <p class="cv-desc" data-i18n="expYelDesc">
+              Fethiye resort bölgesinde 7 sezon boyunca Avrupa ve İngiltere ağırlıklı uluslararası misafirlerin karşılama, operasyon koordinasyonu ve ön büro süreçleri yönetildi.
+            </p>
+            <ul class="cv-bullets">
+              <li data-i18n="cvYelB1">Sahada kesintisiz yüz yüze İngilizce iletişimle C1 seviyesinde akıcı konuşma ve profesyonel yazışma pratiği.</li>
+              <li data-i18n="cvYelB2">ElektraWeb ve Elektra PMS otel otomasyonu: Check-in/out, folyo transferleri, oda blokajı ve rezervasyon koordinasyonu.</li>
+              <li data-i18n="cvYelB3">Misafir talep ve şikayetlerinin sahada anlık çözümü, departmanlar arası koordinasyon ve yüksek misafir memnuniyeti.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. LİSE EĞİTİMİ (2013 — 2017) -->
         <div class="cv-item">
           <div class="cv-time">
             <span class="time-badge" data-i18n="cvTimeHs">2013 — 2017</span>
@@ -247,6 +351,21 @@
               Sayısal bölüm eğitimi (Matematik &amp; Fen Bilimleri). Temel fen bilimleri, analitik düşünme ve problem çözme altyapısı.
             </p>
           </div>
+        </div>
+      </div>
+
+      <!-- Yabancı Diller & Sertifikalar Grid -->
+      <div class="spec-grid" style="margin-top: 32px;">
+        <div class="spec-card">
+          <h4 data-i18n="cvLangTitle">Yabancı Diller & İletişim</h4>
+          <p><strong data-i18n="cvLangEn">İngilizce: C1 (İleri Düzey / Akıcı & Profesyonel)</strong> — <span data-i18n="cvLangEnDesc">7 sezon resort otelde uluslararası misafirlerle ve global müşterilerle kesintisiz yüz yüze iletişim pratiği.</span></p>
+          <p style="margin-top: 6px;"><strong data-i18n="cvLangTr">Türkçe: Anadil</strong></p>
+        </div>
+        <div class="spec-card">
+          <h4 data-i18n="cvCertTitle">Sertifikalar & Lisanslar</h4>
+          <p>• <span data-i18n="cvCert1">ElektraWeb / PMS Ön Büro ve Rezervasyon Yönetimi (Ön Büro, Rezervasyon, Folyo)</span></p>
+          <p style="margin-top: 4px;">• <span data-i18n="cvCert2">Google & Microsoft Dijital Sertifikaları (İşletme Yönetimi & Müşteri İletişimi)</span></p>
+          <p style="margin-top: 4px;">• <span data-i18n="cvCert3">Lisanslı Amatör Sporcu (3 Sezon Basketbol Disiplini & Takım Koordinasyonu)</span></p>
         </div>
       </div>
     </section>
@@ -359,7 +478,6 @@
         </div>
       </div>
     </section>
-    </div>
 
     <!-- 4. MOBİL UYGULAMALAR (Amiral Gemisi & Geliştirilenler) -->
     <section class="section-block" id="mobile-apps">
@@ -832,17 +950,33 @@
         <button class="tech-modal-close" onclick="closeSectionModal('experienceModalBackdrop')">&times;</button>
       </div>
       <div class="tech-modal-body" style="padding: 28px; overflow-y: auto;">
+        <!-- CV Aksiyon ve İndirme Araç Çubuğu -->
+        <div class="cv-action-toolbar" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
+          <a href="cv.html" target="_blank" class="btn-action highlight-btn" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 700; background: var(--gold); color: #000;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+            <span data-i18n="btnViewA4Cv">A4 Formatında Yazılım & Mühendislik CV'sini Aç (PDF İndir)</span>
+          </a>
+          <a href="cv-otel-salih-burkay-bozyel.html" target="_blank" class="btn-action" style="text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; background: var(--surface-raised); border: 1px solid var(--line); color: var(--paper);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <span data-i18n="btnViewHotelCv">A4 Formatında Otelcilik & Turizm CV'sini Aç</span>
+          </a>
+          <button class="btn-action" onclick="window.print()" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 13px; font-weight: 600; background: var(--surface-raised); border: 1px solid var(--line); color: var(--paper); cursor: pointer;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+            <span data-i18n="btnPrintCv">Sayfayı CV Olarak Yazdır</span>
+          </button>
+        </div>
+
         <div class="timeline-cv">
-          <!-- AEON LLC -->
+          <!-- 1. AEON LLC (2024 — Günümüz) -->
           <div class="cv-item">
             <div class="cv-time">
-              <span class="time-badge" data-i18n="cvTimeNow">2026 — Günümüz</span>
+              <span class="time-badge" data-i18n="cvTimeNow">2024 — Günümüz</span>
               <span class="cv-loc" data-i18n="cvLocAeon">Delaware, ABD & Türkiye</span>
             </div>
             <div class="cv-content">
               <div class="cv-role-wrap">
-                <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Yazılım Geliştirici</h3>
-                <span class="cv-company">AEON LLC</span>
+                <h3 class="cv-role" data-i18n="cvRoleAeon">Kurucu & Sistem Mimarı / Full-Stack & Mobil Geliştirici</h3>
+                <span class="cv-company" data-i18n="cvCompAeon">AEON LLC</span>
               </div>
               <p class="cv-desc" data-i18n="expAeonDesc">
                 Butik otel ve restoranlar için modüler AEON Hospitality ERP'sinin mimarisini sıfırdan kurdu. Perakende ve sanayi sahaları için Nvidia Jetson tabanlı RetailPulse AI / SanayiPulse bilgisayarlı görü motorunu geliştirdi. Global mobil ekosistemde Vent (v3.0.5/3.0.6) ve Forge ürünlerinin teknik omurgasını yönetti.
@@ -851,11 +985,76 @@
                 <li data-i18n="expAeonBullet1">Node.js 20, Express, AlaSQL/SQLite ve Cloudflare D1 üzerinde çok kiracılı (multi-tenant) veri izolasyonu mimarisi kuruldu.</li>
                 <li data-i18n="expAeonBullet2">HotelRunner API ile Booking.com ve Airbnb için çift yönlü gerçek zamanlı kanal senkronizasyonu entegre edildi.</li>
                 <li data-i18n="expAeonBullet3">YOLOv8 + ByteTrack ile %100 yerel (on-prem) kamera analitiği ve 1.5m temas süresi korelasyon pipeline'ı kodlandı.</li>
+                <li data-i18n="expAeonBullet4">Turnike ve barkod korelasyonlu PassAudit OS geçiş güvenliği ve kaçak biniş önleme mimarisi geliştirildi.</li>
               </ul>
             </div>
           </div>
 
-          <!-- ESOGÜ Endüstri Mühendisliği -->
+          <!-- 2. INDIE BUILDER (2022 — 2024) -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeIndie">2022 — 2024</span>
+              <span class="cv-loc" data-i18n="cvLocIndie">Uzaktan / Global</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleIndie">Bağımsız Mobil & SaaS Yazılım Geliştirici (Indie Builder)</h3>
+                <span class="cv-company" data-i18n="cvCompIndie">Bağımsız Ar-Ge & Ürün Geliştirme</span>
+              </div>
+              <p class="cv-desc" data-i18n="expIndieDesc">
+                App Store ve Google Play üzerinde küresel kullanıcıya ulaşan mobil ürünlerin ve SaaS platformlarının uçtan uca mimarisi, tasarımı ve kodlaması yürütüldü.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="expIndieBullet1">Vent (v3.0.6 Canlı Ürün): Flutter, Dart ve Firebase ile 37 dilde yerelleştirilmiş, çift rızalı anonim esenlik ve dertleşme ağı. IAP ve RevenueCat entegrasyonu.</li>
+                <li data-i18n="expIndieBullet2">Forge: Sporcular ve antrenman tutkunları için performans ve topluluk mobil uygulaması prototipi.</li>
+                <li data-i18n="expIndieBullet3">BOB AI & UNDRGRND: Whisper AI ve Edge-TTS ses motorlu hicivli akıllı alarm (BOB); bağımsız müzisyenler ve sahneler için etkinlik platformu (UNDRGRND).</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. FERRO TEKNİK (Mart 2022 — Eylül 2022) -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeFerro">Mart 2022 — Eylül 2022</span>
+              <span class="cv-loc" data-i18n="cvLocFerro">Eskişehir</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleFerro">Kalite Kontrol Uzman Yardımcısı</h3>
+                <span class="cv-company" data-i18n="cvCompFerro">Ferro Teknik</span>
+              </div>
+              <p class="cv-desc" data-i18n="expFerroDesc">
+                Endüstriyel üretim hattında kalite güvence, süreç standardizasyonu ve operasyonel denetim süreçleri yürütüldü.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="cvFerroB1">Standart kontrol listeleri (checklist), hata payı analizi ve 5S/yalın üretim prensiplerinin saha takibi.</li>
+                <li data-i18n="cvFerroB2">Mühendislik süreç analitiğinin ve hata önleme metodolojilerinin operasyonel süreçlere uyarlanması.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. GÜNEYDOĞU ASYA (2020 — 2022) -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeSea">2020 — 2022</span>
+              <span class="cv-loc" data-i18n="cvLocSea">Güneydoğu Asya</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleSea">Kültürel Keşif & Küresel Saha Gözlemi (2 Yıl)</h3>
+                <span class="cv-company" data-i18n="cvCompSea">Bağımsız Yaşam & Vizyon Geliştirme</span>
+              </div>
+              <p class="cv-desc" data-i18n="cvDescSea">
+                Dünyayı, farklı kültürleri ve insan doğasını yakından tanıyıp vizyonunu genişletmek amacıyla Güneydoğu Asya'da 2 yıl bağımsız yaşam ve saha araştırması yürüttü. Çok kültürlü problem çözme yeteneğini ve küresel insan perspektifini pekiştirdi.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="cvSeaB1">Farklı kültürler ve uluslararası topluluklar arasında doğrudan adaptasyon ve kriz çözme becerisi.</li>
+                <li data-i18n="cvSeaB2">Kendi yaşam ve çalışma kültürünü küresel dinamikler ve yerel gözlemlerle zenginleştirme.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 5. ESOGÜ Endüstri Mühendisliği (2018 — Günümüz) -->
           <div class="cv-item">
             <div class="cv-time">
               <span class="time-badge" data-i18n="cvTimeEdu">2018 — Günümüz (Aktif)</span>
@@ -876,7 +1075,29 @@
             </div>
           </div>
 
-          <!-- Lise Eğitimi -->
+          <!-- 6. TURİZM & MİSAFİR İLİŞKİLERİ (2012 — 2019) -->
+          <div class="cv-item">
+            <div class="cv-time">
+              <span class="time-badge" data-i18n="cvTimeYel">2012 — 2019 (7 Yaz Sezonu)</span>
+              <span class="cv-loc" data-i18n="cvLocYel">Ölüdeniz / Fethiye (Muğla)</span>
+            </div>
+            <div class="cv-content">
+              <div class="cv-role-wrap">
+                <h3 class="cv-role" data-i18n="cvRoleYel">Misafir İlişkileri & Ön Büro Saha Operasyonu</h3>
+                <span class="cv-company" data-i18n="cvCompYel">Yel Holiday Resort</span>
+              </div>
+              <p class="cv-desc" data-i18n="expYelDesc">
+                Fethiye resort bölgesinde 7 sezon boyunca Avrupa ve İngiltere ağırlıklı uluslararası misafirlerin karşılama, operasyon koordinasyonu ve ön büro süreçleri yönetildi.
+              </p>
+              <ul class="cv-bullets">
+                <li data-i18n="cvYelB1">Sahada kesintisiz yüz yüze İngilizce iletişimle C1 seviyesinde akıcı konuşma ve profesyonel yazışma pratiği.</li>
+                <li data-i18n="cvYelB2">ElektraWeb ve Elektra PMS otel otomasyonu: Check-in/out, folyo transferleri, oda blokajı ve rezervasyon koordinasyonu.</li>
+                <li data-i18n="cvYelB3">Misafir talep ve şikayetlerinin sahada anlık çözümü, departmanlar arası koordinasyon ve yüksek misafir memnuniyeti.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 7. LİSE EĞİTİMİ (2013 — 2017) -->
           <div class="cv-item">
             <div class="cv-time">
               <span class="time-badge" data-i18n="cvTimeHs">2013 — 2017</span>
@@ -891,6 +1112,21 @@
                 Sayısal bölüm eğitimi (Matematik &amp; Fen Bilimleri). Temel fen bilimleri, analitik düşünme ve problem çözme altyapısı.
               </p>
             </div>
+          </div>
+        </div>
+
+        <!-- Yabancı Diller & Sertifikalar Grid -->
+        <div class="spec-grid" style="margin-top: 32px;">
+          <div class="spec-card">
+            <h4 data-i18n="cvLangTitle">Yabancı Diller & İletişim</h4>
+            <p><strong data-i18n="cvLangEn">İngilizce: C1 (İleri Düzey / Akıcı & Profesyonel)</strong> — <span data-i18n="cvLangEnDesc">7 sezon resort otelde uluslararası misafirlerle ve global müşterilerle kesintisiz yüz yüze iletişim pratiği.</span></p>
+            <p style="margin-top: 6px;"><strong data-i18n="cvLangTr">Türkçe: Anadil</strong></p>
+          </div>
+          <div class="spec-card">
+            <h4 data-i18n="cvCertTitle">Sertifikalar & Lisanslar</h4>
+            <p>• <span data-i18n="cvCert1">ElektraWeb / PMS Ön Büro ve Rezervasyon Yönetimi (Ön Büro, Rezervasyon, Folyo)</span></p>
+            <p style="margin-top: 4px;">• <span data-i18n="cvCert2">Google & Microsoft Dijital Sertifikaları (İşletme Yönetimi & Müşteri İletişimi)</span></p>
+            <p style="margin-top: 4px;">• <span data-i18n="cvCert3">Lisanslı Amatör Sporcu (3 Sezon Basketbol Disiplini & Takım Koordinasyonu)</span></p>
           </div>
         </div>
       </div>
@@ -1029,6 +1265,10 @@
           <a href="mailto:burkaybozyel@gmail.com?subject=Gorusme%20Talebi%20-%20Salih%20Burkay%20Bozyel" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 12px 20px; background: var(--gold); color: #000; font-weight: 700; border-radius: var(--radius-sm);">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
             <span data-i18n="btnDirectEmail">E-posta Gönder</span>
+          </a>
+          <a href="cv.html" target="_blank" class="btn-action" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 12px 20px; background: var(--surface-raised); color: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+            <span data-i18n="btnA4Cv">A4 CV Görüntüle</span>
           </a>
           <button class="btn-action" onclick="window.print()" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; background: var(--surface-raised); color: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-sm); cursor: pointer;">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>

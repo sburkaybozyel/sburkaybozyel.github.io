@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salih Burkay Bozyel - CV (Yazılım Geliştirici & Endüstri Mühendisi)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    :root {
+      --primary: #0a192f;
+      --primary-light: #172a45;
+      --accent: #b89358;
+      --accent-dark: #967439;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --bg-side: #0e2032;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #e2e8f0;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+      line-height: 1.45;
+    }
+
+    .toolbar {
+      width: 210mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .toolbar-left a {
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+
+    .toolbar-left a:hover {
+      background: #f8fafc;
+    }
+
+    .btn-print {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      transition: background 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: var(--accent-dark);
+    }
+
+    .page-a4 {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      background: #ffffff;
+      display: flex;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* LEFT SIDEBAR */
+    .sidebar {
+      width: 68mm;
+      height: 100%;
+      background: var(--bg-side);
+      color: #f8fafc;
+      padding: 26px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .photo-area {
+      text-align: center;
+      margin-bottom: 2px;
+    }
+
+    .profile-img {
+      width: 102px;
+      height: 102px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .side-sec-title {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--accent);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 9.5px;
+      margin-bottom: 5px;
+      color: #cbd5e1;
+    }
+
+    .contact-item svg {
+      width: 12px;
+      height: 12px;
+      fill: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: #cbd5e1;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-item a:hover {
+      color: #ffffff;
+    }
+
+    .lang-item {
+      margin-bottom: 6px;
+    }
+
+    .lang-name {
+      font-size: 10px;
+      font-weight: 700;
+      color: #f8fafc;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .lang-sub {
+      font-size: 8.5px;
+      color: #94a3b8;
+      line-height: 1.25;
+      margin-top: 1px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .tag {
+      font-size: 8.5px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      background: rgba(255,255,255,0.08);
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    .tag.primary {
+      background: rgba(184, 147, 88, 0.25);
+      color: #f1dfbf;
+      border: 1px solid rgba(184, 147, 88, 0.5);
+      font-weight: 700;
+    }
+
+    .edu-row {
+      margin-bottom: 7px;
+    }
+
+    .edu-deg {
+      font-size: 10px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .edu-sch {
+      font-size: 9px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .edu-date {
+      font-size: 8.5px;
+      color: #94a3b8;
+    }
+
+    /* RIGHT MAIN CONTENT */
+    .main {
+      width: 142mm;
+      height: 100%;
+      padding: 24px 22px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+
+    .cand-name {
+      font-size: 23px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.4px;
+      line-height: 1.1;
+      margin-bottom: 3px;
+    }
+
+    .cand-role {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+
+    .cand-bio {
+      font-size: 9.8px;
+      color: #334155;
+      line-height: 1.45;
+    }
+
+    .sec-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: 3px;
+      margin-bottom: 7px;
+      border-bottom: 1.5px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sec-title::after {
+      content: '';
+      position: absolute;
+      bottom: -1.5px;
+      left: 0;
+      width: 32px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    /* EXPERIENCE */
+    .exp-item {
+      margin-bottom: 9px;
+    }
+
+    .exp-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .exp-title {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .exp-org {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--accent-dark);
+    }
+
+    .exp-period {
+      font-size: 8.8px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: #f1f5f9;
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    .exp-desc {
+      font-size: 9.2px;
+      color: #334155;
+      line-height: 1.35;
+      margin-bottom: 2px;
+    }
+
+    .exp-list {
+      list-style-type: disc;
+      padding-left: 14px;
+      font-size: 8.8px;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    .exp-list li {
+      margin-bottom: 1.5px;
+    }
+
+    /* EXPERTISE PILLARS */
+    .skills-summary {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent);
+      padding: 5px 8px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .skill-card h4 {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1px;
+    }
+
+    .skill-card p {
+      font-size: 8.5px;
+      color: #475569;
+      line-height: 1.3;
+    }
+
+    /* CERTIFICATES */
+    .certs-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .cert-box {
+      flex: 1;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 5px 8px;
+    }
+
+    .cert-box strong {
+      font-size: 9px;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .cert-box span {
+      font-size: 8px;
+      color: var(--text-muted);
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .page-a4 {
+        box-shadow: none !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        overflow: hidden !important;
+      }
+      .sidebar {
+        background: #0e2032 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .tag.primary {
+        background: #e9d7b8 !important;
+        color: #000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .skill-card {
+        background: #f8fafc !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-left">
+      <a href="index.html">← Portföy Ana Sayfasına Dön</a>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+      <span>PDF Olarak Yazdır / Kaydet</span>
+    </button>
+  </div>
+
+  <div class="page-a4">
+    <!-- SOL PANEL (SIDEBAR) -->
+    <aside class="sidebar">
+      <div class="photo-area">
+        <img src="assets/profile/burkay-profile.png" alt="Salih Burkay Bozyel" class="profile-img" onerror="this.style.display='none'">
+      </div>
+
+      <!-- İLETİŞİM -->
+      <div>
+        <div class="side-sec-title">İletişim & Profil</div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <a href="tel:+905422755383">+90 542 275 53 83</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:burkaybozyel@gmail.com">burkaybozyel@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>Eskişehir & Delaware, ABD</span>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          <a href="https://linkedin.com/in/salih-burkay-b-2351b5128" target="_blank">linkedin.com/in/salih-burkay-b</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <a href="https://github.com/sburkaybozyel" target="_blank">github.com/sburkaybozyel</a>
+        </div>
+      </div>
+
+      <!-- YABANCI DİL -->
+      <div>
+        <div class="side-sec-title">Yabancı Diller</div>
+        <div class="lang-item">
+          <div class="lang-name">
+            <span>İngilizce</span>
+            <span style="color:var(--accent);">C1 / İleri Seviye</span>
+          </div>
+          <div class="lang-sub">Akıcı konuşma & profesyonel yazışma (7 sezon resort otel pratiği).</div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-name">
+            <span>Türkçe</span>
+            <span style="color:var(--accent);">Anadil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TEKNİK YETKİNLİKLER -->
+      <div>
+        <div class="side-sec-title">Teknik Yığın & Araçlar</div>
+        <div class="tags">
+          <span class="tag primary">Flutter 3.24+</span>
+          <span class="tag primary">Node.js 20 ESM</span>
+          <span class="tag primary">Dart</span>
+          <span class="tag primary">Python</span>
+          <span class="tag primary">YOLOv8 & ByteTrack</span>
+          <span class="tag primary">Nvidia Jetson</span>
+          <span class="tag">Cloudflare D1 & Workers</span>
+          <span class="tag">SQLite / AlaSQL</span>
+          <span class="tag">PostgreSQL / Supabase</span>
+          <span class="tag">Express.js</span>
+          <span class="tag">Firebase Auth & IAP</span>
+          <span class="tag">RevenueCat</span>
+          <span class="tag">HotelRunner OTA API</span>
+          <span class="tag">OpenCV & RTSP</span>
+          <span class="tag">Whisper AI & TTS</span>
+          <span class="tag">Docker & CI/CD</span>
+          <span class="tag">ElektraWeb & PMS</span>
+          <span class="tag">Multi-Tenant RBAC</span>
+        </div>
+      </div>
+
+      <!-- EĞİTİM -->
+      <div>
+        <div class="side-sec-title">Eğitim</div>
+        <div class="edu-row">
+          <div class="edu-deg">Endüstri Mühendisliği</div>
+          <div class="edu-sch">Eskişehir Osmangazi Üniversitesi</div>
+          <div class="edu-date">2018 – Günümüz (Aktif)</div>
+        </div>
+        <div class="edu-row">
+          <div class="edu-deg">Mustafa Kaynak Anadolu Lisesi</div>
+          <div class="edu-sch">Sayısal Bölüm (Mat & Fen)</div>
+          <div class="edu-date">2013 – 2017 (Denizli)</div>
+        </div>
+      </div>
+
+      <!-- SERTİFİKALAR -->
+      <div>
+        <div class="side-sec-title">Sertifikalar & Lisans</div>
+        <div class="lang-sub" style="color:#e2e8f0; margin-bottom: 3px;">• <strong>ElektraWeb / PMS:</strong> Otel Ön Büro & Rezervasyon</div>
+        <div class="lang-sub" style="color:#e2e8f0; margin-bottom: 3px;">• <strong>Google & MS:</strong> Dijital İşletme & İletişim (2022)</div>
+        <div class="lang-sub" style="color:#e2e8f0;">• <strong>3 Yıl Lisanslı Amatör Sporcu:</strong> Basketbol Disiplini</div>
+      </div>
+    </aside>
+
+    <!-- SAĞ ANA İÇERİK (MAIN) -->
+    <main class="main">
+      <!-- BAŞLIK & ÖZET -->
+      <section class="header">
+        <h1 class="cand-name">Salih Burkay Bozyel</h1>
+        <div class="cand-role">Mobil Yazılım Geliştirici & Endüstri Müh. · Kurucu, AEON LLC</div>
+        <p class="cand-bio">
+          Flutter ve modern web/mobil ekosisteminde küresel mağazalarda (App Store & Google Play) canlı ürünler geliştiren yazılım mimarı ve kurucu. ESOGÜ Endüstri Mühendisliği analitik altyapısını; yüksek performanslı çapraz platform mobil uygulamalar, çok kiracılı (multi-tenant) B2B ERP/SaaS mimarileri ve Nvidia Jetson üzerinde çalışan yerel bilgisayarlı görü (Edge AI) sistemleri üretmek için kullanır. 7 sezon uluslararası turizm saha pratiğiyle akıcı C1 İngilizce iletişimine ve Güneydoğu Asya bağımsız saha vizyonuna sahiptir.
+        </p>
+      </section>
+
+      <!-- TEMEL MİMARİ DİREKLER -->
+      <section>
+        <div class="sec-title">Temel Mühendislik Odakları</div>
+        <div class="skills-summary">
+          <div class="skill-card">
+            <h4>Mobil Mimariler & Flutter</h4>
+            <p>App Store/Google Play'de canlı ürünler, 37 dil yerelleştirme, RevenueCat/IAP, offline-first senkronizasyon.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Edge AI & Bilgisayarlı Görü</h4>
+            <p>Nvidia Jetson & Mini PC'de %100 yerel YOLOv8, ByteTrack, homografi projeksiyonu ve sıfır bulut bağımlılığı.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Multi-Tenant B2B SaaS & Dağıtık DB</h4>
+            <p>Node.js 20, Cloudflare D1/Workers, SQLite ve tenant izolasyonu; HotelRunner OTA API çift yönlü kanal bağı.</p>
+          </div>
+          <div class="skill-card">
+            <h4>Endüstri Müh. Süreç Optimizasyonu</h4>
+            <p>Yöneylem araştırması, darboğaz analizi, kuyruk modelleri, kaçak biniş/servis önleme ve sistem dinamiği.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- İŞ & PROJE DENEYİMİ -->
+      <section>
+        <div class="sec-title">Profesyonel Deneyim & Kronoloji</div>
+
+        <!-- 1. AEON LLC -->
+        <div class="exp-item">
+          <div class="exp-top">
+            <div>
+              <span class="exp-title">Kurucu & Sistem Mimarı / Full-Stack & Mobil Geliştirici</span> · 
+              <span class="exp-org">AEON LLC</span> (Delaware, ABD & TR)
+            </div>
+            <span class="exp-period">2024 – Günümüz</span>
+          </div>
+          <p class="exp-desc">
+            Lüks butik oteller ve restoranlar için modüler AEON Hospitality ERP mimarisini sıfırdan kurdu. Perakende/sanayi için Nvidia Jetson tabanlı RetailPulse AI / SanayiPulse uçta kamera analitik motorunu ve PassAudit OS turnike korelasyon sistemini geliştirdi.
+          </p>
+          <ul class="exp-list">
+            <li>Node.js 20 ESM, Express, SQLite/AlaSQL ve Cloudflare D1 üzerinde kiracı başına izole veri tabanı mimarisi kurdu.</li>
+            <li>HotelRunner API entegrasyonu ile Booking.com ve Airbnb için çift yönlü anlık oda/fiyat senkronizasyonu sağladı.</li>
+            <li>Nvidia Jetson üzerinde YOLOv8 + ByteTrack ile %100 yerel (KVKK/GDPR uyumlu) kamera analitiği pipeline'ı kodladı.</li>
+          </ul>
+        </div>
+
+        <!-- 2. INDIE BUILDER -->
+        <div class="exp-item">
+          <div class="exp-top">
+            <div>
+              <span class="exp-title">Bağımsız Mobil & SaaS Geliştirici (Indie Builder)</span> · 
+              <span class="exp-org">Bağımsız Ar-Ge & Ürünler</span>
+            </div>
+            <span class="exp-period">2022 – 2024</span>
+          </div>
+          <p class="exp-desc">
+            Küresel kullanıcıya ulaşan mobil ürünlerin ve SaaS platformlarının fikir aşamasından App Store & Play Store yayınlanmasına kadar tüm yaşam döngüsünü yönetti.
+          </p>
+          <ul class="exp-list">
+            <li><strong>Vent (v3.0.6 Canlı Ürün):</strong> Flutter & Firebase ile 37 dilde çift rızalı anonim esenlik ağı; IAP & RevenueCat abonelik modeli.</li>
+            <li><strong>Forge, BOB & UNDRGRND:</strong> Spor performans uygulaması (Forge); Whisper AI ve Edge-TTS sesli asistan (BOB); bağımsız müzik platformu (UNDRGRND).</li>
+          </ul>
+        </div>
+
+        <!-- 3. FERRO TEKNİK -->
+        <div class="exp-item">
+          <div class="exp-top">
+            <div>
+              <span class="exp-title">Kalite Kontrol Uzman Yardımcısı</span> · 
+              <span class="exp-org">Ferro Teknik</span> (Eskişehir)
+            </div>
+            <span class="exp-period">Mart 2022 – Eylül 2022</span>
+          </div>
+          <ul class="exp-list">
+            <li>Üretim hattında checklist denetimleri, 5S ve hata minimizasyonu yürüttü; mühendislik süreç disiplinini pekiştirdi.</li>
+          </ul>
+        </div>
+
+        <!-- 4. GÜNEYDOĞU ASYA & TURİZM SAHA -->
+        <div class="exp-item">
+          <div class="exp-top">
+            <div>
+              <span class="exp-title">Kültürel Keşif (Güneydoğu Asya, 2 Yıl) & Misafir İlişkileri (7 Sezon)</span> · 
+              <span class="exp-org">Yel Holiday Resort / Global Saha</span>
+            </div>
+            <span class="exp-period">2012 – 2022</span>
+          </div>
+          <ul class="exp-list">
+            <li><strong>Güneydoğu Asya (2020–2022):</strong> 2 yıl bağımsız yaşam ve saha araştırmasıyla çok kültürlü kriz çözümü ve küresel vizyon.</li>
+            <li><strong>Yel Holiday Resort (2012–2019):</strong> 7 yaz sezonu Ölüdeniz/Fethiye'de uluslararası misafir ilişkileri, ElektraWeb/PMS ön büro otomasyonu ve kesintisiz C1 İngilizce pratiği.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CANLI PORTFÖY BAĞLANTILARI -->
+      <section>
+        <div class="sec-title">Seçilmiş Canlı Sistem Portföyü</div>
+        <div class="certs-row">
+          <div class="cert-box">
+            <strong>AEON Hospitality ERP & POS</strong>
+            <span>Multi-tenant rezervasyon, folio & HotelRunner OTA senkronizasyonu</span>
+          </div>
+          <div class="cert-box">
+            <strong>Vent Mobil Uygulaması (v3.0.6)</strong>
+            <span>App Store & Google Play'de canlı · 37 Dil · Flutter & Firebase</span>
+          </div>
+          <div class="cert-box">
+            <strong>RetailPulse & SanayiPulse AI</strong>
+            <span>Nvidia Jetson üzerinde %100 yerel YOLOv8 mağaza ve fabrika görü analitiği</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>

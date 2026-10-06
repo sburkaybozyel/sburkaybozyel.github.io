@@ -700,7 +700,23 @@ h1 span, h2 span, h3 span, h4 span {
   line-height: 1.5;
 }
 
-/* 2. Timeline CV */
+/* 2. Timeline CV & Action Toolbar */
+.cv-action-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.cv-action-toolbar .btn-action {
+  transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cv-action-toolbar .btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
 .timeline-cv {
   display: flex;
   flex-direction: column;
@@ -2000,6 +2016,10 @@ footer.site-footer {
     transform: none !important;
   }
 
+  .print-only {
+    display: block !important;
+  }
+
   /* Hide web-only UI, showcase sections, and irrelevant modules */
   .site-header,
   .ambient-top,
@@ -2192,6 +2212,8 @@ footer.site-footer {
     background: #f8fafc !important;
     border: 1px solid #e2e8f0 !important;
     border-radius: 4px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   .time-badge {
@@ -2279,6 +2301,35 @@ footer.site-footer {
     font-size: 7pt !important;
     line-height: 1.25 !important;
     color: #334155 !important;
+  }
+
+  .spec-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6px 12px !important;
+    margin-top: 6px !important;
+  }
+
+  .spec-card {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    border-left: 2.5px solid #1e3a8a !important;
+    border-radius: 3px !important;
+    padding: 4px 7px !important;
+  }
+
+  .spec-card h4 {
+    font-size: 7.5pt !important;
+    font-weight: 700 !important;
+    color: #1e3a8a !important;
+    margin: 0 0 2px 0 !important;
+  }
+
+  .spec-card p {
+    font-size: 6.8pt !important;
+    line-height: 1.25 !important;
+    color: #334155 !important;
+    margin: 0 !important;
   }
 
   /* 4. Flagship Projects & Architecture Portfolio (Print Only Full-Page Block) */
