@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Bob App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #0a0a0a; color: #e5e7eb; font-family: 'Inter', sans-serif; line-height: 1.8; }
+    nav { padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #2a2a2a; }
+    .nav-logo { font-size: 18px; font-weight: 900; color: #f59e0b; text-decoration: none; }
+    nav a { color: #6b7280; text-decoration: none; font-size: 14px; }
+    nav a:hover { color: #fff; }
+    .main { max-width: 700px; margin: 0 auto; padding: 80px 24px 100px; }
+    h1 { font-size: 42px; font-weight: 900; letter-spacing: -1px; color: #fff; margin-bottom: 8px; }
+    .updated { color: #6b7280; font-size: 13px; margin-bottom: 52px; }
+    h2 { font-size: 18px; font-weight: 700; color: #fff; margin: 40px 0 10px; }
+    p, li { font-size: 15px; color: #9ca3af; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    footer { border-top: 1px solid #2a2a2a; padding: 24px; text-align: center; }
+    footer p { font-size: 12px; color: #4b5563; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../" class="nav-logo">Bob 😈</a>
+  <a href="../">← Back</a>
+</nav>
+
+<div class="main">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: November 2, 2026</p>
+
+  <p>Bob App ("we," "our," "Bob") is committed to protecting your privacy. This policy explains what data we collect, how we use it, and your rights.</p>
+
+  <h2>1. Data We Collect</h2>
+  <ul>
+    <li><strong style="color:#e5e7eb;">Email address</strong> — for account creation and login.</li>
+    <li><strong style="color:#e5e7eb;">Subscription status</strong> — managed through Apple's in-app purchase system.</li>
+    <li><strong style="color:#e5e7eb;">Profile and personalization data</strong> — optional name, wake-up reason, preferences, tone settings, and personal details you choose to enter. Stored on your device and optionally synced to Firebase.</li>
+    <li><strong style="color:#e5e7eb;">Alarm and session data</strong> — alarm settings, snooze counts, and session history used for app features and personalization.</li>
+    <li><strong style="color:#e5e7eb;">Generated Bob text and voice quota</strong> — personalized wake-up lines, plus monthly and daily counts used to enforce the Premium cloud voice allowance.</li>
+  </ul>
+
+  <h2>2. Data We Do NOT Collect</h2>
+  <ul>
+    <li>Location data</li>
+    <li>Contacts</li>
+    <li>Health or fitness information</li>
+    <li>Financial information beyond subscription status</li>
+    <li>Voice recordings or microphone audio</li>
+  </ul>
+
+  <h2>3. How We Use Your Data</h2>
+  <ul>
+    <li>To provide and maintain the alarm service</li>
+    <li>To sync your data across devices (cloud backup)</li>
+    <li>To restore purchases through Apple's in-app purchase system</li>
+    <li>To create personalized wake-up text when you use Bob's premium personalization features</li>
+    <li>To adapt wake-up behavior using your selected tone, alarm persona, and recent session state</li>
+  </ul>
+
+  <h2>4. Third-Party Services</h2>
+  <p>We use Firebase (Google) for authentication, cloud storage, and app services. When premium personalization is used, Bob sends your preferred name, up to four selected profile details, and the selected persona to Google Vertex AI through a Firebase Cloud Function to generate wake-up text. A pack has two lines for each selected profile detail, up to eight personalized lines, and is reused during a 15-day cycle. The current account pack is replaced when a refreshed pack is generated and is removed when the account is deleted. Bob mixes seven pre-generated audio clips bundled in the app with the personalized lines to make a 15-line rotation. Premium can synthesize up to 16 new personalized spoken lines per calendar month, with a daily limit of eight. For a new line, Bob sends its text and selected persona to Google Vertex AI through an authenticated Firebase Cloud Function and receives synthesized audio. Google creates and stores reusable synthetic character voice profiles in our Cloud project from fixed text descriptions. These profiles are shared by app users and are not based on an uploaded recording; they provide consistent Bob character voices but do not clone the bundled Bob1 audio. The returned audio is cached in the app's private on-device storage to avoid repeat synthesis; it is not retained on our server. Bundled clips use no cloud voice allowance. A local device speech service is used when cloud synthesis is unavailable or the allowance is exhausted. The account's current monthly and daily usage counts are stored in Firebase to enforce the allowance and are removed when the account is deleted. Bob does not collect microphone input or voice recordings. Google's privacy terms apply to data processed by Firebase and Vertex AI. We do not share your data with advertising networks.</p>
+
+  <h2>5. Data Retention & Deletion</h2>
+  <p>You can delete your account in Bob from Settings → Danger Zone → Delete Account. If you cannot access the app, you can <a href="../delete-account/" style="color:#f59e0b;">request account deletion by email</a>. Account deletion removes the Firebase account and associated cloud profile and streak data, synced session history, achievements, generated Bob text pack, and cloud voice usage counts. The in-app deletion flow also clears app preferences and generated audio cached on that device. A request made by email cannot erase data stored only on your device; uninstall Bob or clear its app data after submitting the request.</p>
+  <p>Google Play and Apple manage their own purchase records and subscriptions. Deleting a Bob account does not cancel a store subscription or remove the store's transaction records. Cancel subscriptions separately in the relevant store. We may retain information only where required for legal, security, or platform reasons.</p>
+
+  <h2>6. Security</h2>
+  <p>Your data is transmitted over HTTPS and stored with industry-standard encryption. We do not sell your data to any third parties.</p>
+
+  <h2>7. Contact</h2>
+  <p>Questions? Email us at <a href="mailto:privacy@bobapp.dev" style="color:#f59e0b;">privacy@bobapp.dev</a></p>
+</div>
+
+<footer>
+  <p>© 2026 Bob App · <a href="../delete-account/" style="color:#6b7280;">Delete Account</a></p>
+</footer>
+
+</body>
+</html>
